@@ -14,20 +14,6 @@ static int read_inp_image (char *infile, image *img);
 static int write_out_image (char *outfile, image res_img);
 static void print_usage (char *msg);
 
-//only gets used at the end to normalize the resultant matrix
-void normalize (int *h, int W, int H) {
-	int x, y;
-
-	//normalize image
-	for (y=0 ; y<H ; y++) { // for each row of I
-		for (x=0 ; x<W ; x++) { // for each column of I
-			if(h[y*W+x] > 255) h[y*W+x] = 255;
-			if(h[y*W+x] < 0) h[y*W+x] = 0;
-		}
-	}
-
-}
-
 int main (int argc, char *argv[]) {
   image img, res_img, filter;
   int f_width, i, fcode, num_threads = 1;
@@ -50,17 +36,6 @@ int main (int argc, char *argv[]) {
 	return 0;
   } 
 
-  // compute the filter for the desired width
-  if (fcode==0)  {  // used only with convolve2D
-    filter = new_img(f_width, f_width, BW);
-    if (!filter) {
-	fprintf (stderr, "Error creating filter\n");
-	return 0;
-    }
-    if (!sharpen(filter->buf, f_width)) return 0;
-    //print_gauss (filter->buf, f_width); //print the kernel used
-  }
-
   // Initialize Papi and its events
   //int nbr_papi_runs = papi_init ();
   int nbr_papi_runs = 1; //for testing we just run one time
@@ -79,12 +54,12 @@ int main (int argc, char *argv[]) {
  //   papi_start_event (i);
 
      switch (fcode) {
-       case 0:     // convolve2D
+       case 0:
 	  omp_set_num_threads(num_threads);
 	  skeletonize(res_img->buf, img->buf, img->width, img->height);
 	  break;
        case 1:
-	  //convolve3x1 (res_img->buf, img->buf, img->width, img->height);
+	  //skeletonize_serial(res_img->buf, img->buf, img->width, img->height);
 	  break;
        default:
 	    print_usage ((char *)"Unknown function code!");
@@ -95,9 +70,6 @@ int main (int argc, char *argv[]) {
 //     papi_stop_event (i);
 
      print_gauss (res_img->buf, img->width); //print result
-
-	//normalizing results
-	//normalize (res_img->buf,  img->width, img->height);
 
 //	PAPI_stop = PAPI_get_real_usec();
 //	printf("Time in microseconds: %lld\n", PAPI_stop - PAPI_start);
@@ -189,49 +161,3 @@ static int write_out_image (char *outfile, image res_img) {
 	output_ppm(f, res_img);
 	fclose (f);
 }
-
-// main function for adding noise to an image
-// commented out!!!
-
-/* void main (int argc, char *argv[]) {
-	image img;
-	FILE *f;
-	int f_width;
-	char infile[256], outfile[256];
-
-	if (!verify_command_line (argc, argv, infile, outfile, &f_width)) {
-		return;
-	}
-
-	// open input file
-	// NOTE: it must be open as binary, otherwise reading might stop at \0 chars
-	f = fopen (infile, "rb");
-	if (!f) {
-		fprintf (stderr, "Error opening input file: %s\n", infile);
-		return;
-	}
-
-	img = read_ppm(f);
-	if (!img) {
-		fprintf (stderr, "Error reading image file:%s\n", infile);
-		return;
-	}
-	fclose (f);
-
-	add_noise (img, 100);
-	// open output file
-	// NOTE: it must be open as binary, otherwise errors arise with the CR+LF and the LF convention of Win/Unix
-	f = fopen (outfile, "wb");
-	if (!f) {
-		fprintf (stderr, "Error opening output file: %s\n", outfile);
-		return;
-	}
-	output_ppm(f, img);
-	fclose (f);
-
-	free_img (img); 
-
-
-	printf ("\nThat's all, folks\n");
-}
-  */

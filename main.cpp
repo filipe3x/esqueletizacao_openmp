@@ -80,7 +80,8 @@ int main (int argc, char *argv[]) {
 
      switch (fcode) {
        case 0:     // convolve2D
-	  skeletonize(res_img->buf, img->buf, img->width, img->height, filter->buf, f_width, num_threads);
+	  omp_set_num_threads(num_threads);
+	  skeletonize(res_img->buf, img->buf, img->width, img->height);
 	  break;
        case 1:
 	  //convolve3x1 (res_img->buf, img->buf, img->width, img->height);
@@ -127,18 +128,15 @@ static int verify_command_line (int argc, char *argv[], char *infile, char *outf
 	*fcode = atoi (argv[3]);
 	switch (*fcode) {
 	  case 0:
-	    if (argc<6) {
-		print_usage ((char *)"skeletonize requires the filter_width parameter and number of threads!");
+	    if (argc<5) {
+		print_usage ((char *)"skeletonize parallel requires number of threads!");
 		return 0;
 	    }
-	    *f_width = atoi (argv[4]);
-	    if (*(f_width)%2==0) {
-		print_usage ((char *)"Filter width must be an odd number!");
-		return 0;
-	    }
-		*num_threads = atoi (argv[5]);
+	    *num_threads = atoi (argv[4]);
+	    printf("running skeletonize parallel with %d threads\n", *num_threads);
 	    break;
 	  case 1:
+	    printf("running skeletonize serial\n"); 
 	    break;
 	  default:
 	    print_usage ((char *)"Unknown function code!");
@@ -150,9 +148,9 @@ static int verify_command_line (int argc, char *argv[], char *infile, char *outf
 
 static void print_usage (char *msg) {
 	fprintf (stderr, "Command Line Error! %s\n", msg);
-	fprintf (stderr, "Usage:\tskeletonize <input filename> <output filename> <function code> [Specific Parameters] <filter_width> <n_threads>\n\n");
-	fprintf (stderr, "\t<function code> = 0 : skeletonize [Specific Parameters] = <filter_width> <n_threads>\n");
-	fprintf (stderr, "\t<function code> = 1 : convolve3x1 [Specific Parameters] = NULL\n");
+	fprintf (stderr, "Usage:\tskeletonize <input filename> <output filename> <function code> [Specific Parameters]\n\n");
+	fprintf (stderr, "\t<function code> = 0 : skeletonize_Parallel [Specific Parameters] = <n_threads>\n");
+	fprintf (stderr, "\t<function code> = 1 : skeletonize_Serial [Specific Parameters] = NULL\n");
 	fprintf (stderr, "\n");
 }
 

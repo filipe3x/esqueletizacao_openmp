@@ -58,7 +58,7 @@ int main (int argc, char *argv[]) {
      switch (fcode) {
        case 0:
 	  omp_set_num_threads(num_threads);
-	  skeletonize_serial(img->buf, img->width, img->height);
+	  skeletonize(img->buf, img->width, img->height);
 	  break;
        case 1:
 	  skeletonize_serial(img->buf, img->width, img->height);

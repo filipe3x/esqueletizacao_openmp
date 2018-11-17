@@ -1,4 +1,5 @@
 *.swp
 *.o
+ppmimages/skeleton.pgm
 .DS_Store
 skeletonize

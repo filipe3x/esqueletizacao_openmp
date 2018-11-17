@@ -82,3 +82,23 @@ void print_gauss (int *f, int U) {
 		fprintf (stdout, "\n");
 	}
 }
+
+void print_img (int *f, int H, int W) {
+	int j,i;
+
+	for (j=0 ; j<H ; j++) {
+		for (i=0 ; i<W ; i++) {
+			fprintf (stdout, "%d\t", f[H*j + i]);
+		}
+		fprintf (stdout, "\n");
+	}
+}
+
+
+int addPadding(int* img, int W, int H, int pad) {
+	return 0;
+}
+
+int removePadding(int* img, int W, int H, int pad) {
+	return 0;
+}

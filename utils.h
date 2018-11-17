@@ -5,5 +5,6 @@ int gauss (int *f, int U);
 int sharpen (int *f, int U);
 int identity (int *f, int U);
 void print_gauss (int *f, int U);
+void print_img (int *f, int H, int W);
 
 #endif

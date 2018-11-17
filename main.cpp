@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <papi.h>
+#include <omp.h>
 
 #include "papi_inst.h"
 
@@ -31,6 +32,7 @@ int main (int argc, char *argv[]) {
 
   // create output image
   res_img = new_img (img->width, img->height, BW);
+  res_img = img; // output image same as origin
   if (!res_img) {
 	fprintf (stderr, "Error creating result image\n");
 	return 0;
@@ -49,17 +51,17 @@ int main (int argc, char *argv[]) {
 //    long long PAPI_start, PAPI_stop; 
 //    PAPI_start = PAPI_get_real_usec();
 
-     print_gauss (img->buf, img->width); //print original image
+     print_img (img->buf, img->height, img->width); //print original image
 
  //   papi_start_event (i);
 
      switch (fcode) {
        case 0:
 	  omp_set_num_threads(num_threads);
-	  skeletonize(res_img->buf, img->buf, img->width, img->height);
+	  skeletonize_serial(img->buf, img->width, img->height);
 	  break;
        case 1:
-	  //skeletonize_serial(res_img->buf, img->buf, img->width, img->height);
+	  skeletonize_serial(img->buf, img->width, img->height);
 	  break;
        default:
 	    print_usage ((char *)"Unknown function code!");
@@ -69,25 +71,23 @@ int main (int argc, char *argv[]) {
 
 //     papi_stop_event (i);
 
-     print_gauss (res_img->buf, img->width); //print result
+     print_img (res_img->buf, img->height, img->width); //print result
 
 //	PAPI_stop = PAPI_get_real_usec();
 //	printf("Time in microseconds: %lld\n", PAPI_stop - PAPI_start);
 
   }
   
-  papi_print ();
+//  papi_print ();
   
-  papi_finalize ();
+//  papi_finalize ();
 
 
   if (!write_out_image (outfile, res_img)) return 0;
 
-  free_img (filter); 
   free_img (img);
   free_img (res_img); 
 
-  printf ("\nThat's all, folks\n");
 }
 
 static int verify_command_line (int argc, char *argv[], char *infile, char *outfile, int *fcode, int *f_width, int *num_threads) {

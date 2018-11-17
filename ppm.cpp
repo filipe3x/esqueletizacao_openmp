@@ -75,7 +75,7 @@ void output_ppm(FILE *fd, image img)
   int *from;
   unsigned char data;
 
-  fprintf(fd, "P5\n%d %d\n255\n", img->width, img->height);
+  fprintf(fd, "P5\n%d %d\n1\n", img->width, img->height);
   n = img->width * img->height;
   for (i=0, from = img->buf ; i<n ; i++, from++) {
 	  data = (unsigned char)(*from);

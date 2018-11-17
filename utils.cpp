@@ -88,7 +88,7 @@ void print_img (int *f, int H, int W) {
 
 	for (j=0 ; j<H ; j++) {
 		for (i=0 ; i<W ; i++) {
-			fprintf (stdout, "%d\t", f[H*j + i]);
+			fprintf (stdout, "%d ", f[H*j + i]);
 		}
 		fprintf (stdout, "\n");
 	}

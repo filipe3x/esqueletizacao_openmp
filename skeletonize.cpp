@@ -1,56 +1,96 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <omp.h>
 #include <papi.h>
 
+#define BLACKPIXEL 0
+#define WHITEPIXEL 1
+
 /*
 
-void skeletonize(res_img->buf, img->buf, img->width, img->height, filter->buf, f_width, num_threads)
+Call:
+void skeletonize(img->buf, img->width, img->height) 
 
 The strategy is to aglomerate data and therefore, computations. Ideally we should have each data chunck fitting L2 cache. Each chunck should be given to a thread/core.
 We can check if memory calls are flooding to L3 with papi counters.
 
 */
-void skeletonize(int *h, int *I, int W, int H, int *f, int U, int num_threads) {
-	int x, y, i, j;
-	int halfU;
-	int sumW;
+
+void skeletonize_serial(int *I, int W, int H) {
+	int *neighbors = (int*) malloc(9*sizeof(int)); // each pixel will have 8 neighbors
+	int *chan1to0 = (int*) malloc(W*H*sizeof(int)); // which pixels we are going to change
+	int *cont = (int*) malloc(2*sizeof(int)); // for checking if we already finished
+
+	int X_index[8] = {-1,-1,0,1,1,1,0,-1}; // neighbors relative coordinates
+	int Y_index[8] = {0,1,1,1,0,-1,-1,-1};
+
+	int i, j, k; // indexes
+	int total; // total of neighbors
+	int ans; // total transitions from 0 to 1
 
 	long long PAPI_start, PAPI_stop; 
 	double stop, start = omp_get_wtime();
 	PAPI_start = PAPI_get_real_usec();
 
-	halfU = U/2;
+	// each thread will have its own value of x, total, i, j
+	// #pragma omp parallel for private(x, total, i, j) schedule(static)
+	while(cont[0] > 0 || cont[1] > 0) {
+		cont[0] = 0;
+		cont[1] = 0;
 
-	omp_set_num_threads(num_threads);
-	// each thread will have its own value of x, sumW, i, j
-	#pragma omp parallel for private(x, sumW, i, j) schedule(static)
-	for (y=0 ; y<H ; y++) { // for each row of I
-		for (x=0 ; x<W ; x++) { // for each column of I
+		for(i=1; i < H-1; i++) {
+			for(j=1; j < W-1; j++) {
+				total = 0;
+				ans = 0;
+				chan1to0[i*H+j] = 0;
 
-			// compute h[y][x]
-			sumW = h[y*W+x] = 0;
-			for (i=-halfU ; i<=halfU ; i++) {
-				// verify I horizontal bounds
-				if (x+i<0 || x+i>=W) continue;
+				for(k=0; k < 8; k++) { // get all neighbors
+					neighbors[k] = I[(i+X_index[k])*W + (j+Y_index[k])];
+					total += neighbors[k];
+				}
+				neighbors[8] = total;
 
-				for (j=-halfU ; j<=halfU ; j++) {
-					// verify I vertical bounds
-					if (y+j<0 || y+j>=H) continue;
+				for(k=0; k < 7; k++) { // count nr transitions from 0 to 1
+					if(neighbors[k] == 0 && neighbors[k+1] == 1)
+						ans += 1;
+				}
 
-					h[y*W+x] += (f[(j+halfU)*U+i+halfU] * I[(y+j)*W + (x+i)]);
-					sumW += f[(j+halfU)*U+i+halfU];
+				if(neighbors[7] == 0 && neighbors[0] == 1) ans += 1;
+
+				if(i % 2 != 0 && I[i*W+j] == 1 && neighbors[8] >= 2 && neighbors[8] <= 6 && ans == 1 
+					&& neighbors[0] * neighbors[2] * neighbors[4] == 0 
+					&& neighbors[2] * neighbors[4] * neighbors[6] == 0) {
+					
+					chan1to0[i*H+j] = 1; // we mark pixel for deletion
+					cont[0] = 1;
+
+				}
+
+				if(i % 2 == 0 && I[i*W+j] == 1 && neighbors[8] >= 2 && neighbors[8] <= 6 && ans == 1 
+					&& neighbors[0] * neighbors[2] * neighbors[6] == 0 
+					&& neighbors[0] * neighbors[4] * neighbors[6] == 0) {
+					
+					chan1to0[i*H+j] = 1; // we mark pixel for deletion
+					cont[1] = 1;
+
 				}
 			}
-			h[y*W+x] /= (sumW ? sumW : 1);
-		} // y loop
-	} // x loop
+		}
 
+		// we delete pixels
+		for(i=1; i < H-1; i++) {
+			for(j=1; j < W-1; j++) {
+				if(chan1to0[i*W+j] == 1) I[i*W+j] = 0;
+			}
+		}
+	}
 	stop = omp_get_wtime();
 	PAPI_stop = PAPI_get_real_usec();
 	printf("papi Time in microseconds: %lld\n", PAPI_stop - PAPI_start);
 	printf("omp Time in microseconds: %f\n",(stop - start)*1000000 );
 }
 
+/*
 // i -> line, j -> collum
 int* posicao(int i, int j, int** img) {
 	return &img[i][j];	
@@ -111,4 +151,4 @@ int kernel(int* neighbors, int nth) {
 		return (neighborsN >= 3 && neighborsN <= 6) && (sequenceCounter(neighbors) == 1) && secondPassDiagonal(neighbors);
 		
 }
-
+*/

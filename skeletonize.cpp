@@ -24,6 +24,7 @@ void skeletonize_serial(int *I, int W, int H) {
 	int X_index[8] = {-1,-1,0,1,1,1,0,-1}; // neighbors relative coordinates
 	int Y_index[8] = {0,1,1,1,0,-1,-1,-1};
 
+	int it = 0; // total iterations count
 	int i, j, k; // indexes
 	int total; // total of neighbors
 	int ans; // total transitions from 0 to 1
@@ -37,6 +38,7 @@ void skeletonize_serial(int *I, int W, int H) {
 	while(cont[0] > 0 || cont[1] > 0) {
 		cont[0] = 0;
 		cont[1] = 0;
+		it = it + 1;
 
 		for(i=1; i < H-1; i++) {
 			for(j=1; j < W-1; j++) {
@@ -57,8 +59,8 @@ void skeletonize_serial(int *I, int W, int H) {
 
 				if(neighbors[7] == 0 && neighbors[0] == 1) ans += 1;
 
-				if(i % 2 != 0 && I[i*W+j] == 1 && neighbors[8] >= 2 && neighbors[8] <= 6 && ans == 1 
-					&& neighbors[0] * neighbors[2] * neighbors[4] == 0 
+				if(it % 2 != 0 && I[i*W+j] == 1 && neighbors[8] >= 2 && neighbors[8] <= 6 && ans == 1 
+					&& neighbors[0] * neighbors[4] * neighbors[6] == 0 
 					&& neighbors[2] * neighbors[4] * neighbors[6] == 0) {
 					
 					chan1to0[i*H+j] = 1; // we mark pixel for deletion
@@ -66,9 +68,9 @@ void skeletonize_serial(int *I, int W, int H) {
 
 				}
 
-				if(i % 2 == 0 && I[i*W+j] == 1 && neighbors[8] >= 2 && neighbors[8] <= 6 && ans == 1 
-					&& neighbors[0] * neighbors[2] * neighbors[6] == 0 
-					&& neighbors[0] * neighbors[4] * neighbors[6] == 0) {
+				if(it % 2 == 0 && I[i*W+j] == 1 && neighbors[8] >= 2 && neighbors[8] <= 6 && ans == 1 
+					&& neighbors[0] * neighbors[2] * neighbors[4] == 0 
+					&& neighbors[0] * neighbors[2] * neighbors[6] == 0) {
 					
 					chan1to0[i*H+j] = 1; // we mark pixel for deletion
 					cont[1] = 1;
@@ -89,6 +91,8 @@ void skeletonize_serial(int *I, int W, int H) {
 	printf("papi Time in microseconds: %lld\n", PAPI_stop - PAPI_start);
 	printf("omp Time in microseconds: %f\n",(stop - start)*1000000 );
 }
+
+void skeletonize(int *I, int W, int H) { return skeletonize_serial(I, W, H); }
 
 /*
 // i -> line, j -> collum

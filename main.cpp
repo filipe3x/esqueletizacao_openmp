@@ -48,10 +48,12 @@ int main (int argc, char *argv[]) {
 
   for (i = 0; i < nbr_papi_runs; i++) {
 
-//    long long PAPI_start, PAPI_stop; 
-//    PAPI_start = PAPI_get_real_usec();
+     long long PAPI_start, PAPI_stop; 
+     double stop, start = omp_get_wtime();
+     PAPI_start = PAPI_get_real_usec();
+     int it = 0;
 
-     if(img->height < 55) print_img (img->buf, img->height, img->width); //print original image
+     if(img->width < 55) print_img (img->buf, img->height, img->width); //print original image
 
      printf("Image size %d x %d \n", img->height, img->width); 
      printf("changing matrix allocated of size: %ld Kbytes\n", img->height * img->width * sizeof(int)/1024);
@@ -61,10 +63,10 @@ int main (int argc, char *argv[]) {
      switch (fcode) {
        case 0:
 	  omp_set_num_threads(num_threads);
-	  skeletonize(img->buf, img->width, img->height);
+	  it = skeletonize(img->buf, img->width, img->height);
 	  break;
        case 1:
-	  skeletonize_serial(img->buf, img->width, img->height);
+	  it = skeletonize_serial(img->buf, img->width, img->height);
 	  break;
        default:
 	    print_usage ((char *)"Unknown function code!");
@@ -74,10 +76,14 @@ int main (int argc, char *argv[]) {
 
 //     papi_stop_event (i);
 
-     if(img->height < 55) print_img (res_img->buf, img->height, img->width); //print result
+     if(img->width < 55) print_img (res_img->buf, img->height, img->width); //print result
 
-//	PAPI_stop = PAPI_get_real_usec();
-//	printf("Time in microseconds: %lld\n", PAPI_stop - PAPI_start);
+     stop = omp_get_wtime();
+     PAPI_stop = PAPI_get_real_usec();
+     printf("papi Time in microseconds: %lld\n", PAPI_stop - PAPI_start);
+     printf("omp Time in microseconds: %f\n",(stop - start)*1000000 );
+     printf("total iterations: %d\n", it);
+     printf("time per iteration in us: %.2f\n",  ( (double) (stop-start) * 1000000) /  (double) it );
 
   }
   

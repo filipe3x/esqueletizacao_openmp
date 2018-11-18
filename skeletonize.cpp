@@ -18,7 +18,7 @@ Each pixel = 4 bytes
 
 */
 
-void skeletonize_serial (int *I, int W, int H) {
+int skeletonize_serial (int *I, int W, int H) {
 	int *neighbors = (int*) malloc(9*sizeof(int)); // each pixel will have 8 neighbors
 	int *chan1to0 = (int*) malloc(W*H*sizeof(int)); // which pixels we are going to change
 	int *cont = (int*) malloc(2*sizeof(int)); // for checking if we already finished
@@ -30,10 +30,6 @@ void skeletonize_serial (int *I, int W, int H) {
 	int i, j, k; // indexes
 	int total; // total of neighbors
 	int ans; // total transitions from 0 to 1
-
-	long long PAPI_start, PAPI_stop; 
-	double stop, start = omp_get_wtime();
-	PAPI_start = PAPI_get_real_usec();
 
 	while(cont[0] > 0 || cont[1] > 0) {
 		cont[0] = 0;
@@ -87,16 +83,12 @@ void skeletonize_serial (int *I, int W, int H) {
 			}
 		}
 	}
-	stop = omp_get_wtime();
-	PAPI_stop = PAPI_get_real_usec();
-	printf("papi Time in microseconds: %lld\n", PAPI_stop - PAPI_start);
-	printf("omp Time in microseconds: %f\n",(stop - start)*1000000 );
-	printf("total iterations: %d\n", it);
-	printf("time per iteration in us: %.2f\n",  ( (double) (stop-start) * 1000000) /  (double) it );
+
+        return it;
 }
 
 
-void skeletonize (int *I, int W, int H) { 
+int skeletonize (int *I, int W, int H) { 
 	int *neighbors = (int*) malloc(9*sizeof(int)); // each pixel will have 8 neighbors
 	int *chan1to0 = (int*) malloc(W*H*sizeof(int)); // which pixels we are going to change
 	int *cont = (int*) malloc(2*sizeof(int)); // for checking if we already finished
@@ -108,10 +100,6 @@ void skeletonize (int *I, int W, int H) {
 	int i, j, k; // indexes
 	int total; // total of neighbors
 	int ans; // total transitions from 0 to 1
-
-	long long PAPI_start, PAPI_stop; 
-	double stop, start = omp_get_wtime();
-	PAPI_start = PAPI_get_real_usec();
 
 	while(cont[0] > 0 || cont[1] > 0) {
 		cont[0] = 0;
@@ -171,11 +159,7 @@ void skeletonize (int *I, int W, int H) {
 			}
 		}
 	}
-	stop = omp_get_wtime();
-	PAPI_stop = PAPI_get_real_usec();
-	printf("papi Time in microseconds: %lld\n", PAPI_stop - PAPI_start);
-	printf("omp Time in microseconds: %f\n",(stop - start)*1000000 );
-	printf("total iterations: %d\n", it);
-	printf("time per iteration in us: %.2f\n",  ( (double) (stop-start) * 1000000) /  (double) it );
+
+	return it;
 }
 

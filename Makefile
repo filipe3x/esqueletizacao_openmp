@@ -16,7 +16,7 @@ CCFLAGS = -O3 -march=native -fopenmp
 #CCFLAGS = -O3
 
 # compiler
-CCC = g++ 
+CCC = g++-6 
 #CCC = /opt/intel/Compiler/11.1/073/bin/ia32/icpc 
 #CCC = g++-4.5
 # library paths

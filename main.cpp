@@ -51,7 +51,10 @@ int main (int argc, char *argv[]) {
 //    long long PAPI_start, PAPI_stop; 
 //    PAPI_start = PAPI_get_real_usec();
 
-     print_img (img->buf, img->height, img->width); //print original image
+     if(img->height < 55) print_img (img->buf, img->height, img->width); //print original image
+
+     printf("Image size %d x %d \n", img->height, img->width); 
+     printf("changing matrix allocated of size: %ld Kbytes\n", img->height * img->width * sizeof(int)/1024);
 
  //   papi_start_event (i);
 
@@ -71,7 +74,7 @@ int main (int argc, char *argv[]) {
 
 //     papi_stop_event (i);
 
-     print_img (res_img->buf, img->height, img->width); //print result
+     if(img->height < 55) print_img (res_img->buf, img->height, img->width); //print result
 
 //	PAPI_stop = PAPI_get_real_usec();
 //	printf("Time in microseconds: %lld\n", PAPI_stop - PAPI_start);

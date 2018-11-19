@@ -31,7 +31,7 @@ int main (int argc, char *argv[]) {
   if (!read_inp_image (infile, &img)) return 0;
 
   // create output image
-  res_img = new_img (img->width, img->height, BW);
+  // res_img = new_img (img->width, img->height, BW); //let's not waste memory
   res_img = img; // output image same as origin
   if (!res_img) {
 	fprintf (stderr, "Error creating result image\n");

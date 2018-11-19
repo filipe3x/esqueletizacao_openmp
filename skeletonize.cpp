@@ -31,6 +31,8 @@ int skeletonize_serial (int *I, int W, int H) {
 	int total; // total of neighbors
 	int ans; // total transitions from 0 to 1
 
+	cont[0] = 1;
+
 	while(cont[0] > 0 || cont[1] > 0) {
 		cont[0] = 0;
 		cont[1] = 0;
@@ -101,14 +103,17 @@ int skeletonize (int *I, int W, int H) {
 	int total; // total of neighbors
 	int ans; // total transitions from 0 to 1
 
+	cont[0] = 1;
+
 	while(cont[0] > 0 || cont[1] > 0) {
 		cont[0] = 0;
 		cont[1] = 0;
 		it = it + 1;
 
+		#pragma omp proc_bind(close)
 		#pragma omp target map (to : neighbors[:9], X_index[:8], Y_index[:8]) map (tofrom : I[:W*H], chan1to0[:W*H], cont[:2])
 		{
-			#pragma omp parallel for private(i, j, k) proc_bind(close) schedule(static) collapse(1)
+			#pragma omp parallel for private(i, j, k) schedule(static) collapse(1)
 			for(i=1; i < H-1; i++) {
 				for(j=1; j < W-1; j++) {
 					total = 0;
@@ -151,7 +156,7 @@ int skeletonize (int *I, int W, int H) {
 			// ** implicit barrier **
 
 			// we delete pixels
-			#pragma omp parallel for schedule(static) proc_bind(close) collapse(1)
+			#pragma omp parallel for schedule(static) collapse(1)
 			for(i=1; i < H-1; i++) {
 				for(j=1; j < W-1; j++) {
 					if(chan1to0[i*W+j] == 1) I[i*W+j] = 0;

@@ -111,7 +111,6 @@ int skeletonize (int *I, int W, int H) {
 		cont[1] = 0;
 		it = it + 1;
 
-		#pragma omp proc_bind(close)
 		#pragma omp target map (to : neighbors[:9], X_index[:8], Y_index[:8]) map (tofrom : I[:W*H], chan1to0[:W*H], cont[:2])
 		{
 			#pragma omp parallel for private(i, j, k, ans, total) schedule(static) collapse(1)

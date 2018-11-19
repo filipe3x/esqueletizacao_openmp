@@ -16,7 +16,7 @@ static int write_out_image (char *outfile, image res_img);
 static void print_usage (char *msg);
 
 int main (int argc, char *argv[]) {
-  image img, res_img;
+  image img;
   int f_width, i, fcode, num_threads = 1;
   char infile[256], outfile[256];
 
@@ -29,14 +29,6 @@ int main (int argc, char *argv[]) {
 
   // Read input file
   if (!read_inp_image (infile, &img)) return 0;
-
-  // create output image
-  // res_img = new_img (img->width, img->height, BW); //let's not waste memory
-  res_img = img; // output image same as origin
-  if (!res_img) {
-	fprintf (stderr, "Error creating result image\n");
-	return 0;
-  } 
 
   // Initialize Papi and its events
   //int nbr_papi_runs = papi_init ();
@@ -76,7 +68,7 @@ int main (int argc, char *argv[]) {
 
 //     papi_stop_event (i);
 
-     if(img->width < 55) print_img (res_img->buf, img->height, img->width); //print result
+     if(img->width < 55) print_img (img->buf, img->height, img->width); //print result
 
      stop = omp_get_wtime();
      PAPI_stop = PAPI_get_real_usec();
@@ -92,10 +84,9 @@ int main (int argc, char *argv[]) {
 //  papi_finalize ();
 
 
-  if (!write_out_image (outfile, res_img)) return 0;
+  if (!write_out_image (outfile, img)) return 0;
 
   free_img (img);
-  free_img (res_img); 
 
 }
 

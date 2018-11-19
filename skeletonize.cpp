@@ -113,7 +113,7 @@ int skeletonize (int *I, int W, int H) {
 		#pragma omp proc_bind(close)
 		#pragma omp target map (to : neighbors[:9], X_index[:8], Y_index[:8]) map (tofrom : I[:W*H], chan1to0[:W*H], cont[:2])
 		{
-			#pragma omp parallel for private(i, j, k) schedule(static) collapse(1)
+			#pragma omp parallel for private(i, j, k, ans, total) schedule(static) collapse(1)
 			for(i=1; i < H-1; i++) {
 				for(j=1; j < W-1; j++) {
 					total = 0;
@@ -156,7 +156,7 @@ int skeletonize (int *I, int W, int H) {
 			// ** implicit barrier **
 
 			// we delete pixels
-			#pragma omp parallel for schedule(static) collapse(1)
+			#pragma omp parallel for private(i, j) schedule(static) collapse(1)
 			for(i=1; i < H-1; i++) {
 				for(j=1; j < W-1; j++) {
 					if(chan1to0[i*W+j] == 1) I[i*W+j] = 0;

@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <omp.h>
 #include <papi.h>
+#include <malloc.h>
 
 #define BLACKPIXEL 0
 #define WHITEPIXEL 1
@@ -20,7 +21,7 @@ Each pixel = 4 bytes
 
 int skeletonize_serial (int *I, int W, int H) {
 	int *neighbors = (int*) malloc(9*sizeof(int)); // each pixel will have 8 neighbors
-	int *chan1to0 = (int*) malloc(W*H*sizeof(int)); // which pixels we are going to change
+	int *chan1to0 = (int*) memalign (0x20, W*H*sizeof(int)); // which pixels we are going to change
 	int *cont = (int*) malloc(2*sizeof(int)); // for checking if we already finished
 
 	int X_index[8] = {-1,-1,0,1,1,1,0,-1}; // neighbors relative coordinates

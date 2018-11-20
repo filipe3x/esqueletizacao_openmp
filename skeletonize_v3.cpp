@@ -26,7 +26,7 @@ Each pixel = 4 bytes
 */
 
 int skeletonize_serial (int *I, int W, int H) {
-	int *neighbors = (int*) malloc(10 * sizeof(int)); // each pixel will have 8 neighbors
+	int neighbors[10];									 // each pixel will have 8 neighbors
 	int *ch_image = (int*) malloc (W * H * sizeof(int)); // which pixels we are going to change
 	int *cont = (int*) malloc(2 * sizeof(int)); // for checking if we already finished
 
@@ -163,10 +163,12 @@ int skeletonize (int *I, int W, int H) {
 	int cont0 = 1, cont1 = 1;
 
 	// cleaning the padding
+	#pragma omp parallel for
 	for(int u = 0; u < H-1; u++) {
 		ch_image[u*W + 0] = BLACKPIXEL;
 		ch_image[u*W + (W-1)] = BLACKPIXEL;
 	}
+	#pragma omp parallel for
 	for(int u = 0; u < W-1; u++) {
 		ch_image[0 + u] = BLACKPIXEL;
 		ch_image[(H-1)*W + u] = BLACKPIXEL;
@@ -178,7 +180,7 @@ int skeletonize (int *I, int W, int H) {
 		iterations = iterations + 1;
 		//cout << "it=" << iterations << endl;
 
-		#pragma omp parallel for schedule(static) reduction(+:cont0) reduction(+:cont1)
+		#pragma omp parallel for schedule(dynamic) reduction(+:cont0) reduction(+:cont1)
 		for(int i=1; i < H-1; i++) {
 			for(int j=1; j < W-1; j++) {
 				int ans, total, neigh_ant;

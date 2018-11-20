@@ -17,7 +17,7 @@ INCLUDES = -I. -I/usr/include
 #CCFLAGS = -O2 -Wall -static
 #CCFLAGS = -O3 -fopenmp -mavx -march=native
 #CCFLAGS = -O0
-CCFLAGS = -O3 -Wall -march=native -fopenmp
+CCFLAGS = -pg -Wall -march=native -fopenmp
 #CCFLAGS = -O3
 
 # compiler

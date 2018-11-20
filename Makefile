@@ -1,17 +1,17 @@
 # source files.
-SRC = img.cpp skeletonize.cpp ppm.cpp utils.cpp papi_inst.cpp main.cpp
+SRC = img.cpp skeletonize_v3.cpp ppm.cpp utils.cpp papi_inst.cpp main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
 OUT = skeletonize
 
-PAPI = 5.4.1
+PAPI = 5.4.3
 
 # include directories
 #INCLUDES = -I. -I/share/apps/papi/$(PAPI)/include
 #INCLUDES = -I. -I/usr/local/papi/include
-INCLUDES = -I. -I/usr/local/include/
-#INCLUDES = -I. -I/usr/include
+#INCLUDES = -I. -I/usr/local/include/
+INCLUDES = -I. -I/usr/include
  
 # C++ compiler flags (-g -O2 -Wall)
 #CCFLAGS = -O2 -Wall -static
@@ -26,9 +26,9 @@ CCC = g++
 #CCC = g++-4.5
 # library paths
 #LIBS = -L/share/apps/papi/$(PAPI)/lib -lm -lpapi
-LIBS = -L/usr/local/lib/ -lm -lpapi -static
+#LIBS = -L/usr/local/lib/ -lm -lpapi -static
 #LIBS = -L/usr/local/papi/lib -lm -lpapi
-#LIBS = -L/usr/lib/x86_64-linux-gnu -lm -lpapi
+LIBS = -L/usr/lib/x86_64-linux-gnu -lm -lpapi
 
 # compile flags
 LDFLAGS = -g

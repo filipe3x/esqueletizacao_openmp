@@ -6,7 +6,7 @@
 
 #include "papi_inst.h"
 
-#include "skeletonize.h"
+#include "skeletonize_v3.h"
 #include "ppm.h"
 #include "utils.h"
 
@@ -54,7 +54,7 @@ int main (int argc, char *argv[]) {
 
      switch (fcode) {
        case 0:
-	  omp_set_num_threads(num_threads);
+	  //omp_set_num_threads(num_threads);
 	  it = skeletonize(img->buf, img->width, img->height);
 	  break;
        case 1:

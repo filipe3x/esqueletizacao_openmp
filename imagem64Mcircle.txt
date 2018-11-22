@@ -1,0 +1,33 @@
+./skeletonize ppmimages/64Mcircle.pgm ppmimages/skeleton.pgm 0 8
+running skeletonize parallel with 8 threads
+Image size 8192 x 8192 
+changing matrix allocated of size: 262144 Kbytes
+papi Time in microseconds: 606148826
+omp Time in microseconds: 606148830.746999
+total iterations: 5792
+time per iteration in us: 104652.77
+
+10 MINUTOS para correr uma imagem....
+
+./skeletonize ppmimages/64Mcircle.pgm ppmimages/skeleton.pgm 0 4
+running skeletonize parallel with 4 threads
+Image size 8192 x 8192 
+changing matrix allocated of size: 262144 Kbytes
+papi Time in microseconds: 551738893
+omp Time in microseconds: 551738898.259000
+total iterations: 5792
+time per iteration in us: 95258.79
+
+9 minutos
+
+./skeletonize ppmimages/64Mcircle.pgm ppmimages/skeleton.pgm 0 2
+running skeletonize parallel with 2 threads
+Image size 8192 x 8192 
+changing matrix allocated of size: 262144 Kbytes
+papi Time in microseconds: 875087944
+omp Time in microseconds: 875087950.873000
+total iterations: 5792
+time per iteration in us: 151085.63
+
+14 minutos
+

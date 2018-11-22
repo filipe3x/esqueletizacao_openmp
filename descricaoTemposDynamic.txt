@@ -1,0 +1,1387 @@
+------------------------------------------------------------------------------------------------------------
+PRAGMA SCHEDULE(DYNAMIC)
+------------------------------------------------------------------------------------------------------------
+
+IMAGEM :  50KCIRCLE
+
+./skeletonize ppmimages/50Kcircle.pgm ppmimages/skeleton.pgm 0 1
+3
+running skeletonize parallel with 1 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 23653
+omp Time in microseconds: 23667.670000
+total iterations: 142
+time per iteration in us: 166.67
+4
+running skeletonize parallel with 1 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 23765
+omp Time in microseconds: 23778.697000
+total iterations: 142
+time per iteration in us: 167.46
+5
+running skeletonize parallel with 1 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 23897
+omp Time in microseconds: 23911.105000
+total iterations: 142
+time per iteration in us: 168.39
+6
+running skeletonize parallel with 1 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 23691
+omp Time in microseconds: 23706.098000
+total iterations: 142
+time per iteration in us: 166.94
+7
+running skeletonize parallel with 1 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 23855
+omp Time in microseconds: 23869.279000
+total iterations: 142
+time per iteration in us: 168.09
+
+
+./skeletonize ppmimages/50Kcircle.pgm ppmimages/skeleton.pgm 0 2
+1
+running skeletonize parallel with 2 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 13274
+omp Time in microseconds: 13286.361000
+total iterations: 142
+time per iteration in us: 93.57
+3
+running skeletonize parallel with 2 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 13480
+omp Time in microseconds: 13494.513000
+total iterations: 142
+time per iteration in us: 95.03
+6
+running skeletonize parallel with 2 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 13442
+omp Time in microseconds: 13453.970000
+total iterations: 142
+time per iteration in us: 94.75
+7
+running skeletonize parallel with 2 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 13395
+omp Time in microseconds: 13409.818000
+total iterations: 142
+time per iteration in us: 94.44
+8
+running skeletonize parallel with 2 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 13242
+omp Time in microseconds: 13257.892000
+total iterations: 142
+time per iteration in us: 93.37
+
+
+./skeletonize ppmimages/50Kcircle.pgm ppmimages/skeleton.pgm 0 3
+1
+running skeletonize parallel with 3 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 12093
+omp Time in microseconds: 12109.609000
+total iterations: 142
+time per iteration in us: 85.28
+4
+running skeletonize parallel with 3 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 12860
+omp Time in microseconds: 12874.825000
+total iterations: 142
+time per iteration in us: 90.67
+6
+running skeletonize parallel with 3 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 9835
+omp Time in microseconds: 9848.261000
+total iterations: 142
+time per iteration in us: 69.35
+7
+running skeletonize parallel with 3 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 11164
+omp Time in microseconds: 11173.924000
+total iterations: 142
+time per iteration in us: 78.69
+8
+running skeletonize parallel with 3 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 12795
+omp Time in microseconds: 12810.038000
+total iterations: 142
+time per iteration in us: 90.21
+
+
+./skeletonize ppmimages/50Kcircle.pgm ppmimages/skeleton.pgm 0 4
+3
+running skeletonize parallel with 4 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 9874
+omp Time in microseconds: 9885.352000
+total iterations: 142
+time per iteration in us: 69.62
+7
+running skeletonize parallel with 4 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 13464
+omp Time in microseconds: 13477.921000
+total iterations: 142
+time per iteration in us: 94.91
+8
+running skeletonize parallel with 4 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 11786
+omp Time in microseconds: 11802.812000
+total iterations: 142
+time per iteration in us: 83.12
+9
+running skeletonize parallel with 4 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 10844
+omp Time in microseconds: 10851.093000
+total iterations: 142
+time per iteration in us: 76.42
+10
+running skeletonize parallel with 4 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 12328
+omp Time in microseconds: 12344.085000
+total iterations: 142
+time per iteration in us: 86.93
+
+
+./skeletonize ppmimages/50Kcircle.pgm ppmimages/skeleton.pgm 0 5
+3
+running skeletonize parallel with 5 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 14055
+omp Time in microseconds: 14069.960000
+total iterations: 142
+time per iteration in us: 99.08
+4
+running skeletonize parallel with 5 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 12154
+omp Time in microseconds: 12170.163000
+total iterations: 142
+time per iteration in us: 85.71
+8
+running skeletonize parallel with 5 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 12282
+omp Time in microseconds: 12297.744000
+total iterations: 142
+time per iteration in us: 86.60
+9
+running skeletonize parallel with 5 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 14679
+omp Time in microseconds: 14693.572000
+total iterations: 142
+time per iteration in us: 103.48
+10
+running skeletonize parallel with 5 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 13305
+omp Time in microseconds: 13321.262000
+total iterations: 142
+time per iteration in us: 93.81
+
+
+./skeletonize ppmimages/50Kcircle.pgm ppmimages/skeleton.pgm 0 6
+3
+running skeletonize parallel with 6 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 17479
+omp Time in microseconds: 17494.406000
+total iterations: 142
+time per iteration in us: 123.20
+5
+running skeletonize parallel with 6 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 13526
+omp Time in microseconds: 13536.169000
+total iterations: 142
+time per iteration in us: 95.33
+6
+running skeletonize parallel with 6 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 12049
+omp Time in microseconds: 12060.518000
+total iterations: 142
+time per iteration in us: 84.93
+7
+running skeletonize parallel with 6 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 15465
+omp Time in microseconds: 15476.688000
+total iterations: 142
+time per iteration in us: 108.99
+8
+running skeletonize parallel with 6 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 12672
+omp Time in microseconds: 12687.120000
+total iterations: 142
+time per iteration in us: 89.35
+
+
+./skeletonize ppmimages/50Kcircle.pgm ppmimages/skeleton.pgm 0 7
+1
+running skeletonize parallel with 7 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 19267
+omp Time in microseconds: 19282.406000
+total iterations: 142
+time per iteration in us: 135.79
+3
+running skeletonize parallel with 7 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 21431
+omp Time in microseconds: 21447.090000
+total iterations: 142
+time per iteration in us: 151.04
+4
+running skeletonize parallel with 7 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 21348
+omp Time in microseconds: 21359.497000
+total iterations: 142
+time per iteration in us: 150.42
+9
+running skeletonize parallel with 7 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 13801
+omp Time in microseconds: 13815.188000
+total iterations: 142
+time per iteration in us: 97.29
+10
+running skeletonize parallel with 7 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 20370
+omp Time in microseconds: 20386.872000
+total iterations: 142
+time per iteration in us: 143.57
+
+
+./skeletonize ppmimages/50Kcircle.pgm ppmimages/skeleton.pgm 0 8
+4
+running skeletonize parallel with 8 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 20132
+omp Time in microseconds: 20146.974000
+total iterations: 142
+time per iteration in us: 141.88
+5
+running skeletonize parallel with 8 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 29277
+omp Time in microseconds: 29291.749000
+total iterations: 142
+time per iteration in us: 206.28
+6
+running skeletonize parallel with 8 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 28309
+omp Time in microseconds: 28323.676000
+total iterations: 142
+time per iteration in us: 199.46
+9
+running skeletonize parallel with 8 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 37178
+omp Time in microseconds: 37192.587000
+total iterations: 142
+time per iteration in us: 261.92
+10
+running skeletonize parallel with 8 threads
+Image size 203 x 203 
+changing matrix allocated of size: 160 Kbytes
+papi Time in microseconds: 30658
+omp Time in microseconds: 30673.198000
+total iterations: 142
+time per iteration in us: 216.01
+
+
+IMAGEM :  256KCIRCLE
+
+./skeletonize ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 1
+3
+running skeletonize parallel with 1 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 354215
+omp Time in microseconds: 354219.532000
+total iterations: 362
+time per iteration in us: 978.51
+5
+running skeletonize parallel with 1 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 354265
+omp Time in microseconds: 354269.502000
+total iterations: 362
+time per iteration in us: 978.65
+7
+running skeletonize parallel with 1 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 355322
+omp Time in microseconds: 355342.330000
+total iterations: 362
+time per iteration in us: 981.61
+8
+running skeletonize parallel with 1 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 354918
+omp Time in microseconds: 354922.859000
+total iterations: 362
+time per iteration in us: 980.45
+10
+running skeletonize parallel with 1 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 355399
+omp Time in microseconds: 355403.054000
+total iterations: 362
+time per iteration in us: 981.78
+
+
+./skeletonize ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 2
+1
+running skeletonize parallel with 2 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 194958
+omp Time in microseconds: 194961.918000
+total iterations: 362
+time per iteration in us: 538.57
+3
+running skeletonize parallel with 2 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 195609
+omp Time in microseconds: 195613.632000
+total iterations: 362
+time per iteration in us: 540.37
+4
+running skeletonize parallel with 2 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 195000
+omp Time in microseconds: 195004.087000
+total iterations: 362
+time per iteration in us: 538.69
+7
+running skeletonize parallel with 2 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 195098
+omp Time in microseconds: 195102.074000
+total iterations: 362
+time per iteration in us: 538.96
+8
+running skeletonize parallel with 2 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 194453
+omp Time in microseconds: 194457.049000
+total iterations: 362
+time per iteration in us: 537.17
+
+
+./skeletonize ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 3
+1
+running skeletonize parallel with 3 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 134713
+omp Time in microseconds: 134717.274000
+total iterations: 362
+time per iteration in us: 372.15
+2
+running skeletonize parallel with 3 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 133908
+omp Time in microseconds: 133913.084000
+total iterations: 362
+time per iteration in us: 369.93
+3
+running skeletonize parallel with 3 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 135816
+omp Time in microseconds: 135823.981000
+total iterations: 362
+time per iteration in us: 375.20
+4
+running skeletonize parallel with 3 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 133806
+omp Time in microseconds: 133808.700000
+total iterations: 362
+time per iteration in us: 369.64
+9
+running skeletonize parallel with 3 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 135379
+omp Time in microseconds: 135383.015000
+total iterations: 362
+time per iteration in us: 373.99
+
+
+./skeletonize ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 4
+1
+running skeletonize parallel with 4 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 111622
+omp Time in microseconds: 111627.090000
+total iterations: 362
+time per iteration in us: 308.36
+3
+running skeletonize parallel with 4 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 107727
+omp Time in microseconds: 107732.135000
+total iterations: 362
+time per iteration in us: 297.60
+5
+running skeletonize parallel with 4 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 112160
+omp Time in microseconds: 112164.196000
+total iterations: 362
+time per iteration in us: 309.85
+8
+running skeletonize parallel with 4 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 134246
+omp Time in microseconds: 134249.883000
+total iterations: 362
+time per iteration in us: 370.86
+9
+running skeletonize parallel with 4 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 132452
+omp Time in microseconds: 132456.037000
+total iterations: 362
+time per iteration in us: 365.90
+
+
+./skeletonize ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 5
+1
+running skeletonize parallel with 5 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 106331
+omp Time in microseconds: 106334.842000
+total iterations: 362
+time per iteration in us: 293.74
+3
+running skeletonize parallel with 5 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 105179
+omp Time in microseconds: 105183.141000
+total iterations: 362
+time per iteration in us: 290.56
+5
+running skeletonize parallel with 5 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 106970
+omp Time in microseconds: 106980.544000
+total iterations: 362
+time per iteration in us: 295.53
+6
+running skeletonize parallel with 5 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 105209
+omp Time in microseconds: 105210.941000
+total iterations: 362
+time per iteration in us: 290.64
+9
+running skeletonize parallel with 5 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 104567
+omp Time in microseconds: 104571.689000
+total iterations: 362
+time per iteration in us: 288.87
+
+
+./skeletonize ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 6
+3
+running skeletonize parallel with 6 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 104350
+omp Time in microseconds: 104354.127000
+total iterations: 362
+time per iteration in us: 288.27
+5
+running skeletonize parallel with 6 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 104845
+omp Time in microseconds: 104849.895000
+total iterations: 362
+time per iteration in us: 289.64
+6
+running skeletonize parallel with 6 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 103586
+omp Time in microseconds: 103590.905000
+total iterations: 362
+time per iteration in us: 286.16
+8
+running skeletonize parallel with 6 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 105727
+omp Time in microseconds: 105731.105000
+total iterations: 362
+time per iteration in us: 292.07
+10
+running skeletonize parallel with 6 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 107178
+omp Time in microseconds: 107182.198000
+total iterations: 362
+time per iteration in us: 296.08
+
+
+./skeletonize ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 7
+1
+running skeletonize parallel with 7 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 112797
+omp Time in microseconds: 112799.280000
+total iterations: 362
+time per iteration in us: 311.60
+2
+running skeletonize parallel with 7 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 112483
+omp Time in microseconds: 112486.730000
+total iterations: 362
+time per iteration in us: 310.74
+8
+running skeletonize parallel with 7 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 111936
+omp Time in microseconds: 111941.415000
+total iterations: 362
+time per iteration in us: 309.23
+9
+running skeletonize parallel with 7 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 115047
+omp Time in microseconds: 115049.598000
+total iterations: 362
+time per iteration in us: 317.82
+10
+running skeletonize parallel with 7 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 112987
+omp Time in microseconds: 112990.924000
+total iterations: 362
+time per iteration in us: 312.13
+
+
+./skeletonize ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 8
+2
+running skeletonize parallel with 8 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 123363
+omp Time in microseconds: 123367.991000
+total iterations: 362
+time per iteration in us: 340.80
+3
+running skeletonize parallel with 8 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 114496
+omp Time in microseconds: 114499.285000
+total iterations: 362
+time per iteration in us: 316.30
+4
+running skeletonize parallel with 8 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 116401
+omp Time in microseconds: 116415.457000
+total iterations: 362
+time per iteration in us: 321.59
+8
+running skeletonize parallel with 8 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 114025
+omp Time in microseconds: 114029.431000
+total iterations: 362
+time per iteration in us: 315.00
+10
+running skeletonize parallel with 8 threads
+Image size 512 x 512 
+changing matrix allocated of size: 1024 Kbytes
+papi Time in microseconds: 120121
+omp Time in microseconds: 120125.047000
+total iterations: 362
+time per iteration in us: 331.84
+
+
+IMAGEM :  1MCIRCLE
+
+./skeletonize ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 1
+1
+running skeletonize parallel with 1 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 2846003
+omp Time in microseconds: 2846025.247000
+total iterations: 724
+time per iteration in us: 3930.97
+3
+running skeletonize parallel with 1 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 2846172
+omp Time in microseconds: 2846177.211000
+total iterations: 724
+time per iteration in us: 3931.18
+4
+running skeletonize parallel with 1 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 2846475
+omp Time in microseconds: 2846479.413000
+total iterations: 724
+time per iteration in us: 3931.60
+7
+running skeletonize parallel with 1 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 2846475
+omp Time in microseconds: 2846486.794000
+total iterations: 724
+time per iteration in us: 3931.61
+10
+running skeletonize parallel with 1 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 2846566
+omp Time in microseconds: 2846571.811000
+total iterations: 724
+time per iteration in us: 3931.73
+
+
+./skeletonize ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 2
+3
+running skeletonize parallel with 2 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 1552457
+omp Time in microseconds: 1552460.480000
+total iterations: 724
+time per iteration in us: 2144.28
+4
+running skeletonize parallel with 2 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 1555821
+omp Time in microseconds: 1555824.956000
+total iterations: 724
+time per iteration in us: 2148.93
+5
+running skeletonize parallel with 2 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 1553629
+omp Time in microseconds: 1553634.078000
+total iterations: 724
+time per iteration in us: 2145.90
+7
+running skeletonize parallel with 2 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 1554908
+omp Time in microseconds: 1554911.481000
+total iterations: 724
+time per iteration in us: 2147.67
+9
+running skeletonize parallel with 2 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 1552980
+omp Time in microseconds: 1552984.330000
+total iterations: 724
+time per iteration in us: 2145.01
+
+
+./skeletonize ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 3
+1
+running skeletonize parallel with 3 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 1090595
+omp Time in microseconds: 1090599.712000
+total iterations: 724
+time per iteration in us: 1506.35
+4
+running skeletonize parallel with 3 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 1084481
+omp Time in microseconds: 1084485.931000
+total iterations: 724
+time per iteration in us: 1497.91
+6
+running skeletonize parallel with 3 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 1085120
+omp Time in microseconds: 1085125.209000
+total iterations: 724
+time per iteration in us: 1498.79
+7
+running skeletonize parallel with 3 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 1080240
+omp Time in microseconds: 1080243.166000
+total iterations: 724
+time per iteration in us: 1492.05
+8
+running skeletonize parallel with 3 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 1082241
+omp Time in microseconds: 1082244.947000
+total iterations: 724
+time per iteration in us: 1494.81
+
+
+./skeletonize ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 4
+1
+running skeletonize parallel with 4 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 932188
+omp Time in microseconds: 932199.102000
+total iterations: 724
+time per iteration in us: 1287.57
+3
+running skeletonize parallel with 4 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 898300
+omp Time in microseconds: 898305.740000
+total iterations: 724
+time per iteration in us: 1240.75
+8
+running skeletonize parallel with 4 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 879489
+omp Time in microseconds: 879492.526000
+total iterations: 724
+time per iteration in us: 1214.77
+9
+running skeletonize parallel with 4 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 878540
+omp Time in microseconds: 878543.900000
+total iterations: 724
+time per iteration in us: 1213.46
+10
+running skeletonize parallel with 4 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 1068267
+omp Time in microseconds: 1068270.264000
+total iterations: 724
+time per iteration in us: 1475.51
+
+
+./skeletonize ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 5
+1
+running skeletonize parallel with 5 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 858422
+omp Time in microseconds: 858423.801000
+total iterations: 724
+time per iteration in us: 1185.67
+2
+running skeletonize parallel with 5 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 865067
+omp Time in microseconds: 865071.543000
+total iterations: 724
+time per iteration in us: 1194.85
+6
+running skeletonize parallel with 5 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 860908
+omp Time in microseconds: 860912.402000
+total iterations: 724
+time per iteration in us: 1189.11
+8
+running skeletonize parallel with 5 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 865426
+omp Time in microseconds: 865428.143000
+total iterations: 724
+time per iteration in us: 1195.34
+9
+running skeletonize parallel with 5 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 863002
+omp Time in microseconds: 863006.484000
+total iterations: 724
+time per iteration in us: 1192.00
+
+
+./skeletonize ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 6
+2
+running skeletonize parallel with 6 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 862645
+omp Time in microseconds: 862648.817000
+total iterations: 724
+time per iteration in us: 1191.50
+5
+running skeletonize parallel with 6 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 858858
+omp Time in microseconds: 858862.704000
+total iterations: 724
+time per iteration in us: 1186.27
+6
+running skeletonize parallel with 6 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 862646
+omp Time in microseconds: 862650.507000
+total iterations: 724
+time per iteration in us: 1191.51
+7
+running skeletonize parallel with 6 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 862755
+omp Time in microseconds: 862759.664000
+total iterations: 724
+time per iteration in us: 1191.66
+8
+running skeletonize parallel with 6 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 856236
+omp Time in microseconds: 856239.324000
+total iterations: 724
+time per iteration in us: 1182.65
+
+
+
+./skeletonize ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 7
+1
+running skeletonize parallel with 7 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 854908
+omp Time in microseconds: 854916.346000
+total iterations: 724
+time per iteration in us: 1180.82
+5
+running skeletonize parallel with 7 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 852520
+omp Time in microseconds: 852524.641000
+total iterations: 724
+time per iteration in us: 1177.52
+7
+running skeletonize parallel with 7 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 853174
+omp Time in microseconds: 853177.976000
+total iterations: 724
+time per iteration in us: 1178.42
+8
+running skeletonize parallel with 7 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 854570
+omp Time in microseconds: 854574.368000
+total iterations: 724
+time per iteration in us: 1180.35
+9
+running skeletonize parallel with 7 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 849346
+omp Time in microseconds: 849348.471000
+total iterations: 724
+time per iteration in us: 1173.13
+
+
+./skeletonize ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 8
+1
+running skeletonize parallel with 8 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 862532
+omp Time in microseconds: 862533.755000
+total iterations: 724
+time per iteration in us: 1191.34
+2
+running skeletonize parallel with 8 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 861842
+omp Time in microseconds: 861844.113000
+total iterations: 724
+time per iteration in us: 1190.39
+4
+running skeletonize parallel with 8 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 858488
+omp Time in microseconds: 858490.111000
+total iterations: 724
+time per iteration in us: 1185.76
+5
+running skeletonize parallel with 8 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 845124
+omp Time in microseconds: 845126.843000
+total iterations: 724
+time per iteration in us: 1167.30
+9
+running skeletonize parallel with 8 threads
+Image size 1024 x 1024 
+changing matrix allocated of size: 4096 Kbytes
+papi Time in microseconds: 854524
+omp Time in microseconds: 854528.266000
+total iterations: 724
+time per iteration in us: 1180.29
+
+
+IMAGEM :  4MCIRCLE
+
+./skeletonize ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 1
+2
+running skeletonize parallel with 1 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 23748049
+omp Time in microseconds: 23748057.684000
+total iterations: 1448
+time per iteration in us: 16400.59
+3
+running skeletonize parallel with 1 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 23935836
+omp Time in microseconds: 23935842.169000
+total iterations: 1448
+time per iteration in us: 16530.28
+5
+running skeletonize parallel with 1 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 23354165
+omp Time in microseconds: 23354170.435000
+total iterations: 1448
+time per iteration in us: 16128.57
+8
+running skeletonize parallel with 1 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 23244715
+omp Time in microseconds: 23244721.898000
+total iterations: 1448
+time per iteration in us: 16052.98
+10
+running skeletonize parallel with 1 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 23406311
+omp Time in microseconds: 23406318.721000
+total iterations: 1448
+time per iteration in us: 16164.58
+
+
+./skeletonize ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 2
+1
+running skeletonize parallel with 2 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 12838248
+omp Time in microseconds: 12838255.197000
+total iterations: 1448
+time per iteration in us: 8866.20
+2
+running skeletonize parallel with 2 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 13085056
+omp Time in microseconds: 13085062.958000
+total iterations: 1448
+time per iteration in us: 9036.65
+4
+running skeletonize parallel with 2 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 13084873
+omp Time in microseconds: 13084880.659000
+total iterations: 1448
+time per iteration in us: 9036.52
+5
+running skeletonize parallel with 2 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 13051760
+omp Time in microseconds: 13051764.923000
+total iterations: 1448
+time per iteration in us: 9013.65
+9
+Running skeletonize parallel with 2 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 13113933
+omp Time in microseconds: 13113938.929000
+total iterations: 1448
+time per iteration in us: 9056.59
+
+
+./skeletonize ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 3
+1
+running skeletonize parallel with 3 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 9498881
+omp Time in microseconds: 9498887.537000
+total iterations: 1448
+time per iteration in us: 6560.0
+4
+running skeletonize parallel with 3 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 9669859
+omp Time in microseconds: 9669864.819000
+total iterations: 1448
+time per iteration in us: 6678.08
+7
+running skeletonize parallel with 3 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 9611078
+omp Time in microseconds: 9611081.656000
+total iterations: 1448
+time per iteration in us: 6637.49
+9
+running skeletonize parallel with 3 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 9692448
+omp Time in microseconds: 9692453.220000
+total iterations: 1448
+time per iteration in us: 6693.68
+10
+running skeletonize parallel with 3 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 9682100
+omp Time in microseconds: 9682105.826000
+total iterations: 1448
+time per iteration in us: 6686.54
+
+
+./skeletonize ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 4
+2
+running skeletonize parallel with 4 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7923615
+omp Time in microseconds: 7923621.222000
+total iterations: 1448
+time per iteration in us: 5472.11
+3
+running skeletonize parallel with 4 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7921128
+omp Time in microseconds: 7921132.859000
+total iterations: 1448
+time per iteration in us: 5470.40
+7
+running skeletonize parallel with 4 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7896689
+omp Time in microseconds: 7896694.703000
+total iterations: 1448
+time per iteration in us: 5453.52
+8
+running skeletonize parallel with 4 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7975762
+omp Time in microseconds: 7975786.225000
+total iterations: 1448
+time per iteration in us: 5508.14
+9
+running skeletonize parallel with 4 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7912598
+omp Time in microseconds: 7912603.702000
+total iterations: 1448
+time per iteration in us: 5464.51
+
+
+./skeletonize ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 5
+1
+running skeletonize parallel with 5 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7779584
+omp Time in microseconds: 7779588.669000
+total iterations: 1448
+time per iteration in us: 5372.64
+2
+running skeletonize parallel with 5 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7795628
+omp Time in microseconds: 7795635.589000
+total iterations: 1448
+time per iteration in us: 5383.73
+4
+running skeletonize parallel with 5 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7767258
+omp Time in microseconds: 7767263.196000
+total iterations: 1448
+time per iteration in us: 5364.13
+5
+running skeletonize parallel with 5 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7813405
+omp Time in microseconds: 7813410.721000
+total iterations: 1448
+time per iteration in us: 5396.00
+6
+running skeletonize parallel with 5 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7781699
+omp Time in microseconds: 7781703.877000
+total iterations: 1448
+time per iteration in us: 5374.10
+
+
+./skeletonize ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 6
+1
+running skeletonize parallel with 6 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7728078
+omp Time in microseconds: 7728082.203000
+total iterations: 1448
+time per iteration in us: 5337.07
+4
+running skeletonize parallel with 6 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7727673
+omp Time in microseconds: 7727677.195000
+total iterations: 1448
+time per iteration in us: 5336.79
+6
+running skeletonize parallel with 6 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7729123
+omp Time in microseconds: 7729126.645000
+total iterations: 1448
+time per iteration in us: 5337.79
+8
+running skeletonize parallel with 6 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7711270
+omp Time in microseconds: 7711274.828001
+total iterations: 1448
+time per iteration in us: 5325.47
+10
+running skeletonize parallel with 6 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7704149
+omp Time in microseconds: 7704168.071000
+total iterations: 1448
+time per iteration in us: 5320.56
+
+
+./skeletonize ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 7
+1
+running skeletonize parallel with 7 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7654372
+omp Time in microseconds: 7654376.870000
+total iterations: 1448
+time per iteration in us: 5286.17
+2
+running skeletonize parallel with 7 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7663515
+omp Time in microseconds: 7663519.365000
+total iterations: 1448
+time per iteration in us: 5292.49
+6
+running skeletonize parallel with 7 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7644810
+omp Time in microseconds: 7644815.954000
+total iterations: 1448
+time per iteration in us: 5279.57
+8
+running skeletonize parallel with 7 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7611211
+omp Time in microseconds: 7611214.991000
+total iterations: 1448
+time per iteration in us: 5256.36
+10
+running skeletonize parallel with 7 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7641904
+omp Time in microseconds: 7641908.348000
+total iterations: 1448
+time per iteration in us: 5277.56
+
+
+./skeletonize ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 8
+1
+running skeletonize parallel with 8 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7574145
+omp Time in microseconds: 7574150.620000
+total iterations: 1448
+time per iteration in us: 5230.77
+3
+running skeletonize parallel with 8 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7564007
+omp Time in microseconds: 7564012.628000
+total iterations: 1448
+time per iteration in us: 5223.77
+5
+running skeletonize parallel with 8 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7588626
+omp Time in microseconds: 7588630.409000
+total iterations: 1448
+time per iteration in us: 5240.77
+6
+running skeletonize parallel with 8 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7586121
+omp Time in microseconds: 7586124.685000
+total iterations: 1448
+time per iteration in us: 5239.04
+9
+running skeletonize parallel with 8 threads
+Image size 2048 x 2048 
+changing matrix allocated of size: 16384 Kbytes
+papi Time in microseconds: 7591974
+omp Time in microseconds: 7591979.487000
+total iterations: 1448
+time per iteration in us: 5243.08

@@ -7,19 +7,18 @@
 #define BLACKPIXEL 0
 #define WHITEPIXEL 1
 
+#define getNeighbor(i,j,k) I[(i+X_index[k])*W + (j+Y_index[k])]
+
 /*
 
 Call:
 void skeletonize(img->buf, img->width, img->height) 
 
-The strategy is to aglomerate data and therefore, computations. Ideally we should have each data chunck fitting L2 cache. Each chunck should be given to a thread/core.
-We can check if memory calls are flooding to L3 with papi counters.
-
-Each pixel = 4 bytes
+Each pixel = one int (4 bytes)
 
 */
 
-int skeletonize_serial (int *I, int W, int H) {
+int skeletonize_serial_naive (int *I, int W, int H) {
 	int *neighbors = (int*) malloc(9*sizeof(int)); // each pixel will have 8 neighbors
 	int *chan1to0 = (int*) memalign (0x20, W*H*sizeof(int)); // which pixels we are going to change
 	int *cont = (int*) malloc(2*sizeof(int)); // for checking if we already finished
@@ -47,7 +46,7 @@ int skeletonize_serial (int *I, int W, int H) {
 				chan1to0[i*W+j] = 0;
 
 				for(k=0; k < 8; k++) { // get all neighbors
-					neighbors[k] = I[(i+X_index[k])*W + (j+Y_index[k])];
+					neighbors[k] = getNeighbor(i,j,k);
 					total += neighbors[k];
 				}
 				neighbors[8] = total;
@@ -91,10 +90,14 @@ int skeletonize_serial (int *I, int W, int H) {
 }
 
 
-int skeletonize (int *I, int W, int H) { 
-	int *neighbors = (int*) malloc(9*sizeof(int)); // each pixel will have 8 neighbors
-	int *chan1to0 = (int*) memalign (0x20, W*H*sizeof(int)); // which pixels we are going to change
-	int *cont = (int*) malloc(2*sizeof(int)); // for checking if we already finished
+/* 
+	Skeletonize,
+	Double Pass version: For each iteration, we do a FIRST PASS to mark pixels and a SECOND PASS to delete them
+	An aditional matrix int* chan1to0 is created to mark the pixels
+*/
+int skeletonize_doublepass (int *I, int W, int H) { 
+	int t = omp_get_max_threads();
+	int *chan1to0 = (int*) calloc (W*H,sizeof(int)); // which pixels we are going to change
 
 	int X_index[8] = {-1,-1,0,1,1,1,0,-1}; // neighbors relative coordinates
 	int Y_index[8] = {0,1,1,1,0,-1,-1,-1};
@@ -104,77 +107,90 @@ int skeletonize (int *I, int W, int H) {
 	int total; // total of neighbors
 	int ans; // total transitions from 0 to 1
 
-	cont[0] = 1;
+	int cont0;
+	int cont1;
 
-	while(cont[0] > 0 || cont[1] > 0) {
-		cont[0] = 0;
-		cont[1] = 0;
-		it = it + 1;
+	//a pool of threads is created here
+	#pragma omp parallel shared(cont0, cont1) reduction(+:it) 
+	{
 
-		#pragma omp target map (to : neighbors[:9], X_index[:8], Y_index[:8]) map (tofrom : I[:W*H], chan1to0[:W*H], cont[:2])
-		{
-			#pragma omp parallel for private(i, j, k, ans, total) schedule(static) collapse(1)
-			for(i=1; i < H-1; i++) {
-				for(j=1; j < W-1; j++) {
-					total = 0;
-					ans = 0;
-					chan1to0[i*W+j] = 0;
+	cont0 = 1;
+	cont1 = 1;
 
-					for(k=0; k < 8; k++) { // get all neighbors
-						neighbors[k] = I[(i+X_index[k])*W + (j+Y_index[k])];
-						total += neighbors[k];
-					}
-					neighbors[8] = total;
+	// every thread will test this condition
+	while(cont0 > 0 || cont1 > 0) {
 
-					for(k=0; k < 7; k++) { // count nr transitions from 0 to 1
-						if(neighbors[k] == 0 && neighbors[k+1] == 1)
-							ans += 1;
-					}
+		#pragma omp barrier // mandatory until all threads are here before we set cont0 and cont1
 
-					if(neighbors[7] == 0 && neighbors[0] == 1) ans += 1;
+		cont0 = 0;
+		cont1 = 0;
+		int flag0 = 0;
+		int flag1 = 0;
+		it = it + 1; //every thread will initialize it = 0, and will increment its own private it var, after we exit we broadcast everyones it value
 
-					if(it % 2 != 0 && I[i*W+j] == 1 && neighbors[8] >= 2 && neighbors[8] <= 6 && ans == 1 
-						&& neighbors[0] * neighbors[4] * neighbors[6] == 0 
-						&& neighbors[2] * neighbors[4] * neighbors[6] == 0) {
-						
-						chan1to0[i*W+j] = 1; // we mark pixel for deletion
-						cont[0] = 1;
+		#pragma omp for private(i, j, k, ans, total) schedule(static)
+		for(i=0; i < H-1; i++) {
+			for(j=1; j < W-1; j++) {
 
-					}
+				if(I[i*W+j] == 0){ chan1to0[i*W+j] = 0; continue; }
 
-					if(it % 2 == 0 && I[i*W+j] == 1 && neighbors[8] >= 2 && neighbors[8] <= 6 && ans == 1 
-						&& neighbors[0] * neighbors[2] * neighbors[4] == 0 
-						&& neighbors[0] * neighbors[2] * neighbors[6] == 0) {
-						
-						chan1to0[i*W+j] = 1; // we mark pixel for deletion
-						cont[1] = 1;
+				total = 0;
+				ans = 0;
+				chan1to0[i*W+j] = 0;
 
-					}
+				for(k=0; k < 8; k++) { // get all neighbors
+					total += getNeighbor(i,j,k);
 				}
-			}
 
-			// ** implicit barrier **
+				for(k=0; k < 7; k++) { // count nr transitions from 0 to 1
+					if(getNeighbor(i,j,k) == 0 && getNeighbor(i,j,k+1) == 1)
+						ans += 1;
+				}
 
-			// we delete pixels
-			#pragma omp parallel for private(i, j) schedule(static) collapse(1)
-			for(i=1; i < H-1; i++) {
-				for(j=1; j < W-1; j++) {
-					if(chan1to0[i*W+j] == 1) I[i*W+j] = 0;
+				if(getNeighbor(i,j,7) == 0 && getNeighbor(i,j,0) == 1) ans += 1;
+
+				if(it % 2 != 0 && I[i*W+j] == 1 && total >= 2 && total <= 6 && ans == 1 
+					&& getNeighbor(i,j,0) * getNeighbor(i,j,4) * getNeighbor(i,j,6) == 0 
+					&& getNeighbor(i,j,2) * getNeighbor(i,j,4) * getNeighbor(i,j,6) == 0) {
+					
+					chan1to0[i*W+j] = 1; // we mark pixel for deletion
+					flag0 = 1;
+				}
+
+				if(it % 2 == 0 && I[i*W+j] == 1 && total >= 2 && total <= 6 && ans == 1 
+					&& getNeighbor(i,j,0) * getNeighbor(i,j,2) * getNeighbor(i,j,4) == 0 
+					&& getNeighbor(i,j,0) * getNeighbor(i,j,2) * getNeighbor(i,j,6) == 0) {
+					
+					chan1to0[i*W+j] = 1; // we mark pixel for deletion
+					flag1 = 1;
+
 				}
 			}
 		}
-	}
 
-	return it;
+			if(flag0 == 1) cont0 = 1;
+			if(flag1 == 1) cont1 = 1;
+
+			// we delete pixels
+			#pragma omp for private(i,j) schedule(static) 
+			for(i=1; i < H-1; i++) {
+				#pragma omp simd
+				for(j=1; j < W-1; j++) {
+					I[i*W+j] = I[i*W+j] - chan1to0[i*W+j];
+					//if(chan1to0[i*W+j] == 1) I[i*W+j] = 0; 
+				}
+			}
+
+	}//while
+	}//parallel block
+
+
+	return it/t;
 }
 
 
-int skeletonize_shared_neighbors (int *I, int W, int H) { 
-	//int *neighbors = (int*) malloc(9*sizeof(int)); // each pixel will have 8 neighbors
-	int t = omp_get_num_threads();
-	int *neighbors = (int*) malloc(t*9*sizeof(int)); // each pixel will have 8 neighbors
-	int *chan1to0 = (int*) memalign (0x20, W*H*sizeof(int)); // which pixels we are going to change
-	int *cont = (int*) malloc(2*sizeof(int)); // for checking if we already finished
+int skeletonize_doublepass_serial (int *I, int W, int H) { 
+	int *chan1to0 = (int*) calloc (W*H,sizeof(int)); // which pixels we are going to change
 
 	int X_index[8] = {-1,-1,0,1,1,1,0,-1}; // neighbors relative coordinates
 	int Y_index[8] = {0,1,1,1,0,-1,-1,-1};
@@ -184,67 +200,66 @@ int skeletonize_shared_neighbors (int *I, int W, int H) {
 	int total; // total of neighbors
 	int ans; // total transitions from 0 to 1
 
-	cont[0] = 1;
+	int cont0 = 1;
+	int cont1;
 
-	while(cont[0] > 0 || cont[1] > 0) {
-		cont[0] = 0;
-		cont[1] = 0;
-		it = it + 1;
+	while(cont0 > 0 || cont1 > 0) {
 
-		#pragma omp target map (tofrom : cont[:2])
-		{
-			#pragma omp parallel for private(i, j, k, ans, total) schedule(static) collapse(1)
-			for(i=1; i < H-1; i++) {
-				int t_num = omp_get_thread_num();
-				for(j=1; j < W-1; j++) {
-					total = 0;
-					ans = 0;
-					chan1to0[i*W+j] = 0;
+		cont0 = 0;
+		cont1 = 0;
+		it = it + 1; 
 
-					for(k=0; k < 8; k++) { // get all neighbors
-						neighbors[t*t_num+k] = I[(i+X_index[k])*W + (j+Y_index[k])];
-						total += neighbors[t*t_num+k];
-					}
-					neighbors[8] = total;
+		for(i=0; i < H-1; i++) {
+			for(j=1; j < W-1; j++) {
 
-					for(k=0; k < 7; k++) { // count nr transitions from 0 to 1
-						if(neighbors[t*t_num+k] == 0 && neighbors[t*t_num+k+1] == 1)
-							ans += 1;
-					}
+				if(I[i*W+j] == 0){ chan1to0[i*W+j] = 0; continue; }
 
-					if(neighbors[t*t_num+7] == 0 && neighbors[t*t_num+0] == 1) ans += 1;
+				total = 0;
+				ans = 0;
+				chan1to0[i*W+j] = 0;
 
-					if(it % 2 != 0 && I[i*W+j] == 1 && neighbors[t*t_num+8] >= 2 && neighbors[t*t_num+8] <= 6 && ans == 1 
-						&& neighbors[t*t_num+0] * neighbors[t*t_num+4] * neighbors[t*t_num+6] == 0 
-						&& neighbors[t*t_num+2] * neighbors[t*t_num+4] * neighbors[t*t_num+6] == 0) {
-						
-						chan1to0[i*W+j] = 1; // we mark pixel for deletion
-						cont[0] = 1;
-
-					}
-
-					if(it % 2 == 0 && I[i*W+j] == 1 && neighbors[t*t_num+8] >= 2 && neighbors[t*t_num+8] <= 6 && ans == 1 
-						&& neighbors[t*t_num+0] * neighbors[t*t_num+2] * neighbors[t*t_num+4] == 0 
-						&& neighbors[t*t_num+0] * neighbors[t*t_num+2] * neighbors[t*t_num+6] == 0) {
-						
-						chan1to0[i*W+j] = 1; // we mark pixel for deletion
-						cont[1] = 1;
-
-					}
+				for(k=0; k < 8; k++) { // get all neighbors
+					total += getNeighbor(i,j,k);
 				}
-			}
 
-			// ** implicit barrier **
+				for(k=0; k < 7; k++) { // count nr transitions from 0 to 1
+					if(getNeighbor(i,j,k) == 0 && getNeighbor(i,j,k+1) == 1)
+						ans += 1;
+				}
 
-			// we delete pixels
-			#pragma omp parallel for private(i, j) schedule(static) collapse(1)
-			for(i=1; i < H-1; i++) {
-				for(j=1; j < W-1; j++) {
-					if(chan1to0[i*W+j] == 1) I[i*W+j] = 0;
+				if(getNeighbor(i,j,7) == 0 && getNeighbor(i,j,0) == 1) ans += 1;
+
+				if(it % 2 != 0 && I[i*W+j] == 1 && total >= 2 && total <= 6 && ans == 1 
+					&& getNeighbor(i,j,0) * getNeighbor(i,j,4) * getNeighbor(i,j,6) == 0 
+					&& getNeighbor(i,j,2) * getNeighbor(i,j,4) * getNeighbor(i,j,6) == 0) {
+					
+					chan1to0[i*W+j] = 1; // we mark pixel for deletion
+					cont0 = 1;
+				}
+
+				if(it % 2 == 0 && I[i*W+j] == 1 && total >= 2 && total <= 6 && ans == 1 
+					&& getNeighbor(i,j,0) * getNeighbor(i,j,2) * getNeighbor(i,j,4) == 0 
+					&& getNeighbor(i,j,0) * getNeighbor(i,j,2) * getNeighbor(i,j,6) == 0) {
+					
+					chan1to0[i*W+j] = 1; // we mark pixel for deletion
+					cont1 = 1;
+
 				}
 			}
 		}
-	}
+
+
+			// we delete pixels
+			for(i=1; i < H-1; i++) {
+				#pragma omp simd
+				for(j=1; j < W-1; j++) {
+					I[i*W+j] = I[i*W+j] - chan1to0[i*W+j];
+					//if(chan1to0[i*W+j] == 1) I[i*W+j] = 0; 
+				}
+			}
+
+	}//while
 
 	return it;
 }
+

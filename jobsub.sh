@@ -13,7 +13,7 @@ export OMP_WAIT_POLICY=active
 export OMP_DYNAMIC=false
 export OMP_PROC_BIND=true
 
-MYWORKPLACE="/home/a57812/PCP/esqueletizacao_openmp/esqueleto_pirata/esqueletizacao_openmp/"
+MYWORKPLACE="/home/a57812/PCP/esqueletizacao_openmp/"
 
 job="jobscript.sh"
 

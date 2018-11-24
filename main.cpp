@@ -55,14 +55,14 @@ int main (int argc, char *argv[]) {
      switch (fcode) {
        case 0:
 	  omp_set_num_threads(num_threads);
-	  it = skeletonize_doublepass(img->buf, img->width, img->height);
+	  it = skeletonize_doublepass_par(img->buf, img->width, img->height);
 	  break;
        case 1:
 	  it = skeletonize_doublepass_serial(img->buf, img->width, img->height);
 	  break;
        case 2:
 	  omp_set_num_threads(num_threads);
-	  it = skeletonize_doublepass(img->buf, img->width, img->height);
+	  it = skeletonize_doublepass_par(img->buf, img->width, img->height);
 	  break;
        default:
 	    print_usage ((char *)"Unknown function code!");

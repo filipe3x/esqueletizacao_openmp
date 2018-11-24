@@ -1,5 +1,5 @@
 # source files.
-SRC = img.cpp skeletonize_v3.cpp ppm.cpp utils.cpp papi_inst.cpp main.cpp
+SRC = img.cpp skeletonize.cpp ppm.cpp utils.cpp papi_inst.cpp main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -8,25 +8,26 @@ OUT = skeletonize
 PAPI = 5.4.1
 
 # include directories
-INCLUDES = -I. -I/share/apps/papi/$(PAPI)/include
+#INCLUDES = -I. -I/share/apps/papi/$(PAPI)/include
 #INCLUDES = -I. -I/usr/local/papi/include
-#INCLUDES = -I. -I/usr/local/include/
+INCLUDES = -I. -I/usr/local/include/
 #INCLUDES = -I. -I/usr/include
  
-# C++ compiler flags (-g -O2 -Wall )
+# C++ compiler flags (-g -O2 -Wall)
 #CCFLAGS = -O2 -Wall -static
 #CCFLAGS = -O3 -fopenmp -mavx -march=native
 #CCFLAGS = -O0
-CCFLAGS = -O3 -Wall -march=native -fopenmp
+#CCFLAGS = -g -pthread -Wall -march=native -fopenmp
+CCFLAGS = -Wall -march=native --std=c++11 -ftree-vectorizer-verbose=3 -ftree-vectorize -ftree-slp-vectorize -fopenmp -fopenmp-simd
 #CCFLAGS = -O3
 
 # compiler
-CCC = g++
+CCC = g++-6
 #CCC = /opt/intel/Compiler/11.1/073/bin/ia32/icpc 
 #CCC = g++-4.5
 # library paths
-LIBS = -L/share/apps/papi/$(PAPI)/lib -lm -lpapi
-#LIBS = -L/usr/local/lib/ -lm -lpapi -static
+#LIBS = -L/share/apps/papi/$(PAPI)/lib -lm -lpapi
+LIBS = -L/usr/local/lib/ -lm -lpapi
 #LIBS = -L/usr/local/papi/lib -lm -lpapi
 #LIBS = -L/usr/lib/x86_64-linux-gnu -lm -lpapi
 

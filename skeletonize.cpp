@@ -18,7 +18,7 @@ Each pixel = one int (4 bytes)
 
 */
 
-int skeletonize_serial_naive (int *I, int W, int H) {
+int skeletonize_naive_serial (int *I, int W, int H) {
 	int *neighbors = (int*) malloc(9*sizeof(int)); // each pixel will have 8 neighbors
 	int *chan1to0 = (int*) memalign (0x20, W*H*sizeof(int)); // which pixels we are going to change
 	int *cont = (int*) malloc(2*sizeof(int)); // for checking if we already finished
@@ -95,7 +95,7 @@ int skeletonize_serial_naive (int *I, int W, int H) {
 	Double Pass version: For each iteration, we do a FIRST PASS to mark pixels and a SECOND PASS to delete them
 	An aditional matrix int* chan1to0 is created to mark the pixels
 */
-int skeletonize_doublepass (int *I, int W, int H) { 
+int skeletonize_doublepass_par (int *I, int W, int H) { 
 	int t = omp_get_max_threads();
 	int *chan1to0 = (int*) calloc (W*H,sizeof(int)); // which pixels we are going to change
 

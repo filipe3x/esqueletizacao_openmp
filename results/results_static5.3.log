@@ -1,0 +1,4335 @@
+** ske5.30static kernel **
+input -> ppmimages/horse.pgm
+threads = 1
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 1
+- 34343 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 1
+- 30848 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 1
+- 31136 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 1
+- 30933 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 1
+- 31285 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 1
+- 31374 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 1
+- 31794 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 1
+- 31605 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 1
+- 31547 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 1
+- 30823 -
+34343 30848 31136 30933 31285 31374 31794 31605 31547 30823
+k-best score = 30868
+threads = 2
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 2
+- 34201 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 2
+- 31570 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 2
+- 31999 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 2
+- 29634 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 2
+- 29875 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 2
+- 32911 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 2
+- 30077 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 2
+- 30424 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 2
+- 30351 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 2
+- 30501 -
+k-best score = 29862
+threads = 3
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 3
+- 29838 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 3
+- 28046 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 3
+- 32131 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 3
+- 30394 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 3
+- 30206 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 3
+- 29941 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 3
+- 29974 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 3
+- 30431 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 3
+- 30330 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 3
+- 30419 -
+k-best score = 29275
+threads = 4
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 4
+- 25832 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 4
+- 23078 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 4
+- 22118 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 4
+- 21282 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 4
+- 26289 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 4
+- 22993 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 4
+- 26083 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 4
+- 25729 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 4
+- 21354 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 4
+- 26296 -
+k-best score = 21584
+threads = 5
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 5
+- 19330 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 5
+- 19397 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 5
+- 19808 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 5
+- 17118 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 5
+- 18775 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 5
+- 18231 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 5
+- 19157 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 5
+- 19535 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 5
+- 18193 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 5
+- 19534 -
+k-best score = 17847
+threads = 6
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 6
+- 18776 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 6
+- 19711 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 6
+- 20141 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 6
+- 20249 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 6
+- 20328 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 6
+- 20268 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 6
+- 19952 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 6
+- 19839 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 6
+- 17195 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 6
+- 19103 -
+k-best score = 18358
+threads = 7
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 7
+- 18772 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 7
+- 18252 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 7
+- 17329 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 7
+- 18018 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 7
+- 14006 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 7
+- 17042 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 7
+- 17195 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 7
+- 18915 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 7
+- 14702 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 7
+- 17333 -
+k-best score = 15250
+threads = 8
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 8
+- 15997 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 8
+- 15943 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 8
+- 18384 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 8
+- 13843 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 8
+- 17741 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 8
+- 17913 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 8
+- 13841 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 8
+- 15019 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 8
+- 18352 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 8
+- 14603 -
+k-best score = 14095
+threads = 9
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 9
+- 13916 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 9
+- 17402 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 9
+- 13662 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 9
+- 15695 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 9
+- 13014 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 9
+- 16894 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 9
+- 13279 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 9
+- 16647 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 9
+- 13322 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 9
+- 16852 -
+k-best score = 13205
+threads = 10
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 10
+- 14409 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 10
+- 12597 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 10
+- 11846 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 10
+- 11150 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 10
+- 10802 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 10
+- 15707 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 10
+- 13040 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 10
+- 11846 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 10
+- 11465 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 10
+- 11039 -
+k-best score = 10997
+threads = 11
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 11
+- 13963 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 11
+- 12319 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 11
+- 11244 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 11
+- 16039 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 11
+- 13019 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 11
+- 15242 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 11
+- 12768 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 11
+- 11386 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 11
+- 15322 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 11
+- 12994 -
+k-best score = 11649
+threads = 12
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 12
+- 11950 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 12
+- 10577 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 12
+- 10145 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 12
+- 14457 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 12
+- 11866 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 12
+- 10828 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 12
+- 10209 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 12
+- 12543 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 12
+- 11611 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 12
+- 10915 -
+k-best score = 10310
+threads = 13
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 13
+- 12662 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 13
+- 12808 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 13
+- 11786 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 13
+- 11220 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 13
+- 10989 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 13
+- 10492 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 13
+- 14737 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 13
+- 12125 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 13
+- 11545 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 13
+- 11064 -
+k-best score = 10848
+threads = 14
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 14
+- 14234 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 14
+- 11698 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 14
+- 13467 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 14
+- 12221 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 14
+- 11606 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 14
+- 14730 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 14
+- 12469 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 14
+- 11286 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 14
+- 11064 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 14
+- 10613 -
+k-best score = 10987
+threads = 15
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 15
+- 11640 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 15
+- 13307 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 15
+- 10614 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 15
+- 11024 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 15
+- 10672 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 15
+- 10723 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 15
+- 10779 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 15
+- 9893 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 15
+- 9286 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 15
+- 9880 -
+k-best score = 9686
+threads = 16
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 16
+- 12728 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 16
+- 11226 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 16
+- 10934 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 16
+- 10772 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 16
+- 10703 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 16
+- 10153 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 16
+- 10880 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 16
+- 10330 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 16
+- 10214 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 16
+- 10369 -
+k-best score = 10232
+threads = 17
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 17
+- 12687 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 17
+- 11425 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 17
+- 10385 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 17
+- 10408 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 17
+- 10059 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 17
+- 13505 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 17
+- 11387 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 17
+- 10784 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 17
+- 10083 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 17
+- 9689 -
+k-best score = 9943
+threads = 18
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 18
+- 12506 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 18
+- 10346 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 18
+- 9581 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 18
+- 10016 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 18
+- 10123 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 18
+- 9984 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 18
+- 10025 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 18
+- 10322 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 18
+- 9966 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 18
+- 9312 -
+k-best score = 9619
+threads = 19
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 19
+- 9613 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 19
+- 9703 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 19
+- 9909 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 19
+- 9999 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 19
+- 10205 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 19
+- 10413 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 19
+- 10925 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 19
+- 10325 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 19
+- 9984 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 19
+- 10234 -
+k-best score = 9741
+threads = 20
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 20
+- 12703 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 20
+- 11492 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 20
+- 10956 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 20
+- 12092 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 20
+- 9952 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 20
+- 8722 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 20
+- 9805 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 20
+- 9850 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 20
+- 11260 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 20
+- 11495 -
+k-best score = 9459
+threads = 21
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 21
+- 10532 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 21
+- 9983 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 21
+- 9867 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 21
+- 9918 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 21
+- 10538 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 21
+- 10309 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 21
+- 9409 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 21
+- 10074 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 21
+- 10310 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 21
+- 10063 -
+k-best score = 9731
+threads = 22
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 22
+- 12743 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 22
+- 12728 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 22
+- 9231 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 22
+- 9381 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 22
+- 11247 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 22
+- 9344 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 22
+- 9811 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 22
+- 11863 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 22
+- 8986 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 22
+- 9587 -
+k-best score = 9187
+threads = 23
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 23
+- 7001 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 23
+- 7754 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 23
+- 10783 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 23
+- 13076 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 23
+- 9649 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 23
+- 8054 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 23
+- 8634 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 23
+- 9655 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 23
+- 9634 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 23
+- 11460 -
+k-best score = 7603
+threads = 24
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 24
+- 12496 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 24
+- 10010 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 24
+- 10930 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 24
+- 10278 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 24
+- 13841 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 24
+- 9861 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 24
+- 9240 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 24
+- 9180 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 24
+- 9296 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 24
+- 12448 -
+k-best score = 9238
+threads = 25
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 25
+- 9971 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 25
+- 11596 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 25
+- 10418 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 25
+- 9869 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 25
+- 10532 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 25
+- 9868 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 25
+- 10973 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 25
+- 9602 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 25
+- 10290 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 25
+- 9906 -
+k-best score = 9779
+threads = 26
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 26
+- 12557 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 26
+- 9650 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 26
+- 8612 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 26
+- 10842 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 26
+- 11328 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 26
+- 13610 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 26
+- 11537 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 26
+- 9748 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 26
+- 10500 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 26
+- 10078 -
+k-best score = 9336
+threads = 27
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 27
+- 11848 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 27
+- 10669 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 27
+- 10306 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 27
+- 10460 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 27
+- 9842 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 27
+- 8850 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 27
+- 13050 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 27
+- 9976 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 27
+- 9868 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 27
+- 10092 -
+k-best score = 9520
+threads = 28
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 28
+- 12560 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 28
+- 10410 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 28
+- 10916 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 28
+- 12198 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 28
+- 9536 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 28
+- 9946 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 28
+- 10358 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 28
+- 10397 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 28
+- 9855 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 28
+- 10578 -
+k-best score = 9779
+threads = 29
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 29
+- 12393 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 29
+- 11612 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 29
+- 10987 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 29
+- 10301 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 29
+- 10350 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 29
+- 13489 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 29
+- 11253 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 29
+- 9675 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 29
+- 10208 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 29
+- 10013 -
+k-best score = 9965
+threads = 30
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 30
+- 12282 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 30
+- 10884 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 30
+- 10561 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 30
+- 10612 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 30
+- 9592 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 30
+- 49397 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 30
+- 9122 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 30
+- 8681 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 30
+- 9163 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 30
+- 9232 -
+k-best score = 8988
+threads = 31
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 31
+- 12786 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 31
+- 27339 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 31
+- 204573 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 31
+- 415432 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 31
+- 9332 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 31
+- 371461 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 31
+- 237634 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 31
+- 143073 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 31
+- 182185 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 31
+- 10639 -
+k-best score = 10919
+threads = 32
+try= 1 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 32
+- 403958 -
+try= 2 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 32
+- 416072 -
+try= 3 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 32
+- 410337 -
+try= 4 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 32
+- 413516 -
+try= 5 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 32
+- 406407 -
+try= 6 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 32
+- 402847 -
+try= 7 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 32
+- 412244 -
+try= 8 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 32
+- 412359 -
+try= 9 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 32
+- 188307 -
+try= 10 comm= ./ske5.30static ppmimages/horse.pgm ppmimages/skeleton.pgm 0 32
+- 411213 -
+k-best score = 331704
+input -> ppmimages/256Kcircle.pgm
+threads = 1
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 1
+- 341493 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 1
+- 338787 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 1
+- 347475 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 1
+- 340324 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 1
+- 339206 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 1
+- 343146 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 1
+- 343634 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 1
+- 338670 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 1
+- 342778 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 1
+- 338836 -
+341493 338787 347475 340324 339206 343146 343634 338670 342778 338836
+k-best score = 338764
+threads = 2
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 297259 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 301410 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 302076 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 301816 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 296267 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 300105 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 300016 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 310510 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 301363 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 301541 -
+k-best score = 297847
+threads = 3
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 305245 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 301330 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 304447 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 303644 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 308334 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 305419 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 305172 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 303557 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 304768 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 303568 -
+k-best score = 302818
+threads = 4
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 208089 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 210363 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 206752 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 209938 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 211691 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 207344 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 210627 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 211858 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 211636 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 212559 -
+k-best score = 207395
+threads = 5
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 193701 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 193547 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 192563 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 192857 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 193709 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 197165 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 192597 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 191732 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 192399 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 193189 -
+k-best score = 192231
+threads = 6
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 156067 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 153685 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 153719 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 152473 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 153362 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 155733 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 153806 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 156097 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 151729 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 152948 -
+k-best score = 152383
+threads = 7
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 145488 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 143809 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 143780 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 142570 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 142833 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 141487 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 142643 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 142336 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 142497 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 142495 -
+k-best score = 142106
+threads = 8
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 124269 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 123536 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 123428 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 122864 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 121795 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 121568 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 122412 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 122195 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 122572 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 121659 -
+k-best score = 121674
+threads = 9
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 117976 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 115517 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 113796 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 113495 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 113149 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 112691 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 113395 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 116830 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 112520 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 112517 -
+k-best score = 112576
+threads = 10
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 98906 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 99960 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 100782 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 100985 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 101548 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 102001 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 102722 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 103286 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 103338 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 102735 -
+k-best score = 99882
+threads = 11
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 94536 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 92506 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 96879 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 95715 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 98115 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 96132 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 93876 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 95491 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 96803 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 94203 -
+k-best score = 93528
+threads = 12
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 88819 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 90494 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 86619 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 89792 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 86366 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 89573 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 85324 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 90258 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 85874 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 87233 -
+k-best score = 85854
+threads = 13
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 81089 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 81419 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 81825 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 81996 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 82460 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 81715 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 83311 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 83058 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 83228 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 82377 -
+k-best score = 81407
+threads = 14
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 73438 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 78014 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 77900 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 74575 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 73605 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 73563 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 77222 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 74394 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 73204 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 73595 -
+k-best score = 73401
+threads = 15
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 89540 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 76041 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 74228 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 74212 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 73359 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 84342 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 73119 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 73089 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 73147 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 72629 -
+k-best score = 72945
+threads = 16
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 68278 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 70565 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 74574 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 70722 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 70753 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 70905 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 70480 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 67344 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 69849 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 70920 -
+k-best score = 68490
+threads = 17
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 65503 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 69888 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 64331 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 68043 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 64940 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 68368 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 64406 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 68339 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 65717 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 69254 -
+k-best score = 64559
+threads = 18
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 65333 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 64097 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 63435 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 63222 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 63059 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 62155 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 62652 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 69192 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 64766 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 62954 -
+k-best score = 62587
+threads = 19
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 65357 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 63508 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 63198 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 62909 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 63445 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 63145 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 62796 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 62649 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 62851 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 63255 -
+k-best score = 62765
+threads = 20
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 70146 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 67813 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 62682 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 68953 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 65169 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 62201 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 63090 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 78073 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 67049 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 86747 -
+k-best score = 62657
+threads = 21
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 75583 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 64132 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 62233 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 64927 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 62493 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 73290 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 65234 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 63960 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 63404 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 62671 -
+k-best score = 62465
+threads = 22
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 65459 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 78633 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 71223 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 68418 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 68602 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 74582 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 81693 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 76736 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 62535 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 63462 -
+k-best score = 63818
+threads = 23
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 65106 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 76447 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 83450 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 83461 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 65902 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 65282 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 69557 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 68437 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 62812 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 62931 -
+k-best score = 63616
+threads = 24
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 66441 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 70729 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 65302 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 64867 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 73499 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 73096 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 67525 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 63478 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 66392 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 66483 -
+k-best score = 64549
+threads = 25
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 67621 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 65720 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 65510 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 66200 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 66584 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 67358 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 67102 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 65694 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 69422 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 64003 -
+k-best score = 65069
+threads = 26
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 67778 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 74492 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 66148 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 65270 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 69135 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 65588 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 69169 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 64864 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 69414 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 67039 -
+k-best score = 65240
+threads = 27
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 70988 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 71194 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 71149 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 67781 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 68832 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 70453 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 78911 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 72945 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 68561 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 74322 -
+k-best score = 68391
+threads = 28
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 74233 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 68320 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 71292 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 70779 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 64809 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 70172 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 73003 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 70705 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 69782 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 66692 -
+k-best score = 66607
+threads = 29
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 67226 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 72047 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 72382 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 70710 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 72426 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 74007 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 71447 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 72487 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 71826 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 73125 -
+k-best score = 69794
+threads = 30
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 69249 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 70644 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 71751 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 67385 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 72855 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 71512 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 69796 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 67110 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 71996 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 69364 -
+k-best score = 67914
+threads = 31
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 441460 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 913153 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 120710 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 950749 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 77165 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 64779 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 69540 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 1247153 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 69127 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 1163806 -
+k-best score = 67815
+threads = 32
+try= 1 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 1116308 -
+try= 2 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 65463 -
+try= 3 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 165074 -
+try= 4 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 182496 -
+try= 5 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 782872 -
+try= 6 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 1202157 -
+try= 7 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 484170 -
+try= 8 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 574787 -
+try= 9 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 1291476 -
+try= 10 comm= ./ske5.30static ppmimages/256Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 185288 -
+k-best score = 137677
+input -> ppmimages/512Kcircle.pgm
+threads = 1
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 1
+- 7150068 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 1
+- 7115285 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 1
+- 7740499 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 1
+- 7116177 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 1
+- 7353940 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 1
+- 7219168 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 1
+- 7176591 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 1
+- 7165445 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 1
+- 7115707 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 1
+- 7050696 -
+7150068 7115285 7740499 7116177 7353940 7219168 7176591 7165445 7115707 7050696
+k-best score = 7093896
+threads = 2
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 6677114 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 7835694 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 7553871 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 7285963 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 7634543 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 6642062 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 7843074 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 6260045 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 6896211 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 2
+- 6788184 -
+k-best score = 6526407
+threads = 3
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 6357019 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 6357786 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 6334673 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 8032590 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 6209114 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 6341739 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 8040553 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 8034186 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 8036480 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 3
+- 8038985 -
+k-best score = 6295175
+threads = 4
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 5545949 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 5536198 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 5535742 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 5535576 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 5534587 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 5534038 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 5539230 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 5535970 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 5533223 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 4
+- 5533835 -
+k-best score = 5533698
+threads = 5
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 5122979 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 5122704 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 5133077 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 5132958 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 5123180 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 5121109 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 5123719 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 5123517 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 5123009 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 5
+- 5124203 -
+k-best score = 5122264
+threads = 6
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 4027800 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 4029638 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 4039678 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 4031405 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 4029329 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 4032061 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 4029918 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 4037318 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 4029118 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 6
+- 4031366 -
+k-best score = 4028749
+threads = 7
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 3338817 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 3291407 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 3746846 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 3334758 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 3328845 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 3745340 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 3746485 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 3331259 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 3292861 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 7
+- 3329271 -
+k-best score = 3304371
+threads = 8
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 3149191 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 3147929 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 3149498 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 3153575 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 3147325 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 3147360 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 3146487 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 3155400 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 3147957 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 8
+- 3145720 -
+k-best score = 3146510
+threads = 9
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 2948662 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 2955498 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 2950998 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 2954055 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 2957705 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 2907653 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 2951436 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 2953535 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 2953029 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 9
+- 2955866 -
+k-best score = 2935771
+threads = 10
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 2568568 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 2571736 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 2572011 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 2571378 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 2566336 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 2568835 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 2569693 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 2572576 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 2573775 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 10
+- 2566486 -
+k-best score = 2567130
+threads = 11
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 2273329 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 2275118 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 2273734 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 2362196 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 2269590 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 2269465 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 2420780 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 2269043 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 2396154 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 11
+- 2270208 -
+k-best score = 2269366
+threads = 12
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 2156357 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 2179449 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 2144245 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 2170332 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 2171801 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 2178876 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 2169645 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 2179175 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 2170421 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 12
+- 2157771 -
+k-best score = 2152791
+threads = 13
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 2033413 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 2038831 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 2002921 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 2029725 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 2027878 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 2000905 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 2010419 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 2003886 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 2008202 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 13
+- 2011355 -
+k-best score = 2002570
+threads = 14
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 1804789 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 1787508 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 1802045 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 1794457 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 1796382 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 1811123 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 1825475 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 1807040 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 1780606 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 14
+- 1804727 -
+k-best score = 1787523
+threads = 15
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 1678804 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 2049480 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 1580293 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 2090424 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 2011321 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 1577894 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 1583611 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 1581079 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 1746173 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 15
+- 1842006 -
+k-best score = 1579755
+threads = 16
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 1502110 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 1709294 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 1639994 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 1506664 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 1792193 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 1504283 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 1734454 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 1623848 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 1888414 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 16
+- 1549531 -
+k-best score = 1504352
+threads = 17
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 1760367 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 1780439 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 1757424 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 1455675 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 1410795 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 1573580 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 1797070 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 2372694 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 1744524 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 17
+- 1415025 -
+k-best score = 1427165
+threads = 18
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 2512581 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 2222084 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 2407011 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 1627004 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 2093124 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 1369352 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 1763013 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 2035743 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 1944511 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 18
+- 1709949 -
+k-best score = 1568768
+threads = 19
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 2303319 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 1365382 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 1473114 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 2295366 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 1401148 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 1553614 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 1822142 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 1725597 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 1579112 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 19
+- 2402416 -
+k-best score = 1413214
+threads = 20
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 2066708 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 1945705 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 1864177 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 2319561 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 1757503 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 1368832 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 1913554 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 1371494 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 2003435 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 20
+- 1897350 -
+k-best score = 1499276
+threads = 21
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 1938399 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 1349560 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 1601756 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 1789663 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 1918545 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 1966722 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 1783022 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 2019410 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 1903584 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 21
+- 1889371 -
+k-best score = 1578112
+threads = 22
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 1893631 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 1725526 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 1399916 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 1841520 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 1650691 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 1799273 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 1574709 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 1536201 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 1856285 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 22
+- 1849670 -
+k-best score = 1503608
+threads = 23
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 1378667 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 1900402 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 1666459 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 2071048 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 1493900 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 1770181 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 1735546 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 1540485 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 1838303 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 23
+- 1797452 -
+k-best score = 1471017
+threads = 24
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 1797676 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 1801669 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 1875406 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 1346518 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 1469649 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 1845792 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 1654718 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 1676432 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 2003539 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 24
+- 1762927 -
+k-best score = 1490295
+threads = 25
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 1669908 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 1571535 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 1766250 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 1697054 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 1704995 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 1617602 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 1578693 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 1553396 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 1711254 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 25
+- 1684885 -
+k-best score = 1567874
+threads = 26
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 1639500 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 1643230 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 1535542 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 1458563 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 1523699 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 1521978 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 1564194 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 1532917 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 1470827 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 26
+- 1510176 -
+k-best score = 1479855
+threads = 27
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 1627734 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 1585603 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 1472438 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 1549726 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 1544971 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 1609855 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 1581935 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 1585451 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 1562007 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 27
+- 1568664 -
+k-best score = 1522378
+threads = 28
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 1519114 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 1502010 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 1504694 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 1473279 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 1554793 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 1565746 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 1530552 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 1553289 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 1491143 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 28
+- 1471924 -
+k-best score = 1478782
+threads = 29
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 1499019 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 1549692 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 1506312 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 1510524 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 1527609 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 1445740 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 1477749 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 1520254 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 1468044 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 29
+- 1483003 -
+k-best score = 1463844
+threads = 30
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 1443633 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 1456378 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 4004841 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 1454139 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 1470140 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 1465099 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 5767579 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 1496312 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 1421428 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 30
+- 1453441 -
+k-best score = 1439500
+threads = 31
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 1463871 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 1457220 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 4072302 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 1448383 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 5786275 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 2218148 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 2941163 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 1780001 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 1503102 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 31
+- 1434418 -
+k-best score = 1446673
+threads = 32
+try= 1 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 2666551 -
+try= 2 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 2505039 -
+try= 3 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 3736882 -
+try= 4 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 3558631 -
+try= 5 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 2674252 -
+try= 6 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 3490954 -
+try= 7 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 1722426 -
+try= 8 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 3419890 -
+try= 9 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 3004885 -
+try= 10 comm= ./ske5.30static ppmimages/512Kcircle.pgm ppmimages/skeleton.pgm 0 32
+- 2079150 -
+k-best score = 2102205
+input -> ppmimages/1Mcircle.pgm
+threads = 1
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 1
+- 2970807 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 1
+- 2978256 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 1
+- 2996466 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 1
+- 3000090 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 1
+- 2982853 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 1
+- 2997907 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 1
+- 2745478 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 1
+- 2352193 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 1
+- 2448119 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 1
+- 2366223 -
+2970807 2978256 2996466 3000090 2982853 2997907 2745478 2352193 2448119 2366223
+k-best score = 2388845
+threads = 2
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 1909586 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 2319901 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 2323682 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 2163336 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 2078869 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 1955824 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 2170319 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 2337036 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 2224717 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 1884938 -
+k-best score = 1916782
+threads = 3
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 1929028 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 1890761 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 1919237 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 1869777 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 1920625 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 1922325 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 1915880 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 1925783 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 2098402 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 1930059 -
+k-best score = 1892139
+threads = 4
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 1636487 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 1645511 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 1640831 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 1642301 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 1641803 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 1640757 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 1638406 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 1638659 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 1641722 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 1642175 -
+k-best score = 1637850
+threads = 5
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 1513435 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 1516082 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 1513495 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 1282793 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 1518860 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 1515555 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 1522091 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 1519911 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 1512315 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 1523106 -
+k-best score = 1436181
+threads = 6
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 1191823 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 1193016 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 1192473 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 1190103 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 1193111 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 1197998 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 1192045 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 1194653 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 1198003 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 1194721 -
+k-best score = 1191323
+threads = 7
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 994492 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 983459 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 983428 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 984729 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 976583 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 992730 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 990574 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 980397 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 993260 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 977342 -
+k-best score = 978107
+threads = 8
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 927495 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 927538 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 876761 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 927932 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 930412 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 928288 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 821335 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 931285 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 934467 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 930966 -
+k-best score = 875197
+threads = 9
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 877340 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 832814 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 877293 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 862978 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 853079 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 874195 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 876522 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 878544 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 790515 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 872387 -
+k-best score = 825469
+threads = 10
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 760356 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 735283 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 754715 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 712582 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 762241 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 724091 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 761668 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 731701 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 762146 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 737191 -
+k-best score = 722791
+threads = 11
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 673987 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 670368 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 663582 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 675566 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 669141 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 671928 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 670975 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 666095 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 674091 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 672846 -
+k-best score = 666272
+threads = 12
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 611492 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 610111 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 606431 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 603920 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 629510 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 624586 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 607401 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 632492 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 612307 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 610772 -
+k-best score = 605917
+threads = 13
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 602595 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 570915 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 576604 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 569693 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 572714 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 576419 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 564690 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 576006 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 562621 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 587887 -
+k-best score = 565668
+threads = 14
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 526531 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 507086 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 520841 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 518753 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 517211 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 520084 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 521005 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 505570 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 516771 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 521848 -
+k-best score = 509809
+threads = 15
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 494126 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 498793 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 501021 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 548823 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 490429 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 494064 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 491127 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 498314 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 488950 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 489714 -
+k-best score = 489697
+threads = 16
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 456387 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 456683 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 601741 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 456282 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 454249 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 465264 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 456938 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 452464 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 584917 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 451791 -
+k-best score = 452834
+threads = 17
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 598986 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 455486 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 460667 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 439283 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 442043 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 636302 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 686586 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 704899 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 514060 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 442708 -
+k-best score = 441344
+threads = 18
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 657770 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 433834 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 431836 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 424877 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 586526 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 479084 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 575662 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 536029 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 603731 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 592346 -
+k-best score = 430182
+threads = 19
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 573756 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 434431 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 415148 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 462094 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 570776 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 579157 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 417084 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 617076 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 443066 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 602555 -
+k-best score = 422221
+threads = 20
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 622556 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 571383 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 644717 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 600618 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 558203 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 583033 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 424779 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 421709 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 611310 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 523590 -
+k-best score = 456692
+threads = 21
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 558966 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 588508 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 528300 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 503737 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 579556 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 593270 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 455657 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 559813 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 556114 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 498398 -
+k-best score = 485930
+threads = 22
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 552467 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 560852 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 565417 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 570012 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 552160 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 581517 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 582064 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 578787 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 564361 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 599836 -
+k-best score = 555159
+threads = 23
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 558512 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 452273 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 461603 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 529708 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 561004 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 506243 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 581218 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 561215 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 522907 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 438696 -
+k-best score = 450857
+threads = 24
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 561930 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 556964 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 513613 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 512928 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 519239 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 452821 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 497278 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 529703 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 477331 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 517020 -
+k-best score = 475810
+threads = 25
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 492607 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 535493 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 492714 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 518922 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 523414 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 505945 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 516141 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 517732 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 499868 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 509572 -
+k-best score = 495063
+threads = 26
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 492972 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 482097 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 490963 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 509744 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 466767 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 492734 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 498116 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 464979 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 483058 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 429213 -
+k-best score = 453653
+threads = 27
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 468283 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 458043 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 484500 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 441488 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 445575 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 443980 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 471429 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 450101 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 490787 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 447046 -
+k-best score = 443681
+threads = 28
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 470817 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 456701 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 461260 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 448591 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 458234 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 451669 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 474791 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 455288 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 462473 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 480738 -
+k-best score = 451849
+threads = 29
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 457451 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 455626 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 446440 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 454686 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 453983 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 459369 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 453273 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 442391 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 444157 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 442613 -
+k-best score = 443053
+threads = 30
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 444249 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 442119 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 434167 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 464129 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 441402 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 435464 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 457331 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 453389 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 449165 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 450823 -
+k-best score = 437011
+threads = 31
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 1100875 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 1752311 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 1639669 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 2685368 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 2333582 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 1997800 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 488497 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 433866 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 444095 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 2223740 -
+k-best score = 455486
+threads = 32
+try= 1 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 2458166 -
+try= 2 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 636908 -
+try= 3 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 924355 -
+try= 4 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 1730643 -
+try= 5 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 1690240 -
+try= 6 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 1764414 -
+try= 7 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 432962 -
+try= 8 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 1454324 -
+try= 9 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 1730196 -
+try= 10 comm= ./ske5.30static ppmimages/1Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 2477343 -
+k-best score = 664741
+input -> ppmimages/4Mcircle.pgm
+threads = 1
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 1
+- 19985509 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 1
+- 19507362 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 1
+- 19517032 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 1
+- 19709046 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 1
+- 19989873 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 1
+- 19954272 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 1
+- 19520504 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 1
+- 19728139 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 1
+- 23720423 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 1
+- 20204695 -
+19985509 19507362 19517032 19709046 19989873 19954272 19520504 19728139 23720423 20204695
+k-best score = 19514966
+threads = 2
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 17475140 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 17474413 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 16589992 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 16257128 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 18556064 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 18512777 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 18536926 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 18536554 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 18511774 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 18513736 -
+k-best score = 16773844
+threads = 3
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 19168961 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 19224300 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 15302145 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 18997161 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 19003609 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 19000833 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 19027553 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 19030314 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 18997576 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 19156287 -
+k-best score = 17765627
+threads = 4
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 13118641 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 13061446 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 13057638 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 13056023 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 13055675 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 13119537 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 13518190 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 13102078 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 13119093 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 13060728 -
+k-best score = 13056445
+threads = 5
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 12115348 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 12143528 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 12113073 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 12132903 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 12138044 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 12124559 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 10877299 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 10160193 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 12115504 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 12101511 -
+k-best score = 11046334
+threads = 6
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 9503391 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 9503678 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 9507263 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 9507789 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 9520685 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 9504000 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 9508826 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 9506394 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 9506340 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 9531864 -
+k-best score = 9503689
+threads = 7
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 8234720 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 8258241 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 8247006 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 8240234 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 7831203 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 7780389 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 7816986 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 8906861 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 8859056 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 7762829 -
+k-best score = 7786734
+threads = 8
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 7446150 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 7424628 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 7422192 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 7438722 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 7424277 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 7422470 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 7451290 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 7422911 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 7421771 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 7422770 -
+k-best score = 7422144
+threads = 9
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 7021159 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 7022786 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 6998698 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 7032698 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 6381218 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 7002174 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 7004646 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 7035520 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 6404659 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 6968932 -
+k-best score = 6584936
+threads = 10
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 6099165 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 6084214 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 6090714 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 6103442 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 6087961 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 6106815 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 6084915 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 6088325 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 6090130 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 6087118 -
+k-best score = 6085415
+threads = 11
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 5360111 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 5357628 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 5757657 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 5376549 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 5359652 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 5365717 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 5355940 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 5554307 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 5383679 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 5374996 -
+k-best score = 5357740
+threads = 12
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 5157705 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 5132640 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 5156085 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 5114309 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 5131371 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 5120783 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 5115590 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 5129950 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 5122027 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 5130054 -
+k-best score = 5116894
+threads = 13
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 4895276 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 4904075 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 4910604 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 4914563 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 4913410 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 4893994 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 4915006 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 4897782 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 4595005 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 4901993 -
+k-best score = 4794758
+threads = 14
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 4453432 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 4435202 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 4455331 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 4441804 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 4434277 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 4592915 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 4425086 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 4441832 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 4441983 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 4444159 -
+k-best score = 4431521
+threads = 15
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 4051545 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 5618663 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 4593355 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 4350764 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 4023746 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 4022112 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 4027263 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 4348281 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 4022413 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 4058511 -
+k-best score = 4022757
+threads = 16
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 3924953 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 4016884 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 4132554 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 3575248 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 3898762 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 4060068 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 4691399 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 3736752 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 3897911 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 3426109 -
+k-best score = 3579369
+threads = 17
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 3747491 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 3516533 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 4303009 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 3953976 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 5269306 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 3820110 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 3700744 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 3766536 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 3375659 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 3721170 -
+k-best score = 3530978
+threads = 18
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 4861589 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 4514454 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 3575957 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 4097635 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 4874045 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 5176024 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 3549367 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 5110923 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 4840708 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 4051798 -
+k-best score = 3725707
+threads = 19
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 4368781 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 5031618 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 4347598 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 4209537 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 4964526 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 4364072 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 5195651 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 4231946 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 4360326 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 4292268 -
+k-best score = 4244583
+threads = 20
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 5155481 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 4715730 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 4195679 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 4045013 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 5261600 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 3986151 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 4911548 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 5374376 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 4625534 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 4887750 -
+k-best score = 4075614
+threads = 21
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 4165046 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 4658519 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 5337043 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 5240752 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 4597136 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 4425809 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 5211945 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 4709453 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 4027501 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 4765218 -
+k-best score = 4206118
+threads = 22
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 4340290 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 4635695 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 4900340 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 4653843 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 4408536 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 4520452 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 4661372 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 4760534 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 4590880 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 4896891 -
+k-best score = 4423092
+threads = 23
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 4987839 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 4703571 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 4893307 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 4892696 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 4926255 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 4793277 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 4774738 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 4818018 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 4523450 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 4984319 -
+k-best score = 4667253
+threads = 24
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 4586989 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 4712544 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 4684970 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 4640710 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 4686705 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 4191448 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 4579263 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 4735561 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 4652354 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 4625295 -
+k-best score = 4452566
+threads = 25
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 4585443 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 4613344 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 4442788 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 4471321 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 4557812 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 4666264 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 4547197 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 4093092 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 4502405 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 4087374 -
+k-best score = 4207751
+threads = 26
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 4440160 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 4309746 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 4464067 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 4144748 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 4231772 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 4115025 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 4516488 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 4298726 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 4236954 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 4161216 -
+k-best score = 4140329
+threads = 27
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 4172516 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 4089921 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 4352766 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 3973981 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 3995699 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 4172231 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 4439616 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 4299068 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 3829430 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 4328694 -
+k-best score = 3933036
+threads = 28
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 4212565 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 3578123 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 4202293 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 3818692 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 3856805 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 4107831 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 3533950 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 4004574 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 3823421 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 3833326 -
+k-best score = 3643588
+threads = 29
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 3729035 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 3662092 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 3778191 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 3577842 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 3461048 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 3359982 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 3525634 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 3654620 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 3281227 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 3653421 -
+k-best score = 3367419
+threads = 30
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 3569449 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 3790180 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 3870763 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 3341443 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 3497270 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 4705911 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 3698278 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 3715578 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 3836521 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 3761909 -
+k-best score = 3469387
+threads = 31
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 3745918 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 4025054 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 7519160 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 3671411 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 4709475 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 4778893 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 3673375 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 4243632 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 3420476 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 4072787 -
+k-best score = 3588420
+threads = 32
+try= 1 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 5940924 -
+try= 2 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 3310752 -
+try= 3 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 3543329 -
+try= 4 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 3839450 -
+try= 5 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 3354336 -
+try= 6 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 3617852 -
+try= 7 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 4085946 -
+try= 8 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 3748716 -
+try= 9 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 3693171 -
+try= 10 comm= ./ske5.30static ppmimages/4Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 4457477 -
+k-best score = 3402805
+input -> ppmimages/16Mcircle.pgm
+threads = 1
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 1
+- 153250267 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 1
+- 153012564 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 1
+- 152701710 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 1
+- 152934096 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 1
+- 153243961 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 1
+- 152882320 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 1
+- 153928026 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 1
+- 152811661 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 1
+- 153483623 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 1
+- 152957367 -
+153250267 153012564 152701710 152934096 153243961 152882320 153928026 152811661 153483623 152957367
+k-best score = 152798563
+threads = 2
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 134383615 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 136230236 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 125889605 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 148106644 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 149864572 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 148395318 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 126691276 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 137910107 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 143525364 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 137519731 -
+k-best score = 128988165
+threads = 3
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 119958087 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 120379361 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 120401370 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 120045606 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 124086913 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 120526208 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 120239572 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 120139946 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 121615172 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 120339611 -
+k-best score = 120047879
+threads = 4
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 105426535 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 105194824 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 104611629 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 108362749 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 105191440 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 101728380 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 94566795 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 105256540 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 104861449 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 105142885 -
+k-best score = 100302268
+threads = 5
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 97512279 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 97624101 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 97796632 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 97596834 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 97808162 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 97685933 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 97662072 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 97871211 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 88130556 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 97786117 -
+k-best score = 94413223
+threads = 6
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 76917056 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 76877422 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 76851686 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 78189158 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 76917671 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 76778346 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 76892770 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 76927535 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 76942276 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 6
+- 76946205 -
+k-best score = 76835818
+threads = 7
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 64092995 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 71885725 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 71900329 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 71918887 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 71938599 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 66701624 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 63127778 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 63916523 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 63246111 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 7
+- 64097583 -
+k-best score = 63430137
+threads = 8
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 63195124 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 60718990 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 60501305 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 60352406 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 60360588 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 60577520 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 60460692 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 60452254 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 60554866 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 8
+- 60449131 -
+k-best score = 60387375
+threads = 9
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 56884575 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 56909105 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 58709803 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 56979871 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 56908518 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 57146389 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 56904726 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 56902041 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 57076396 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 9
+- 56925499 -
+k-best score = 56897114
+threads = 10
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 49724269 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 49696697 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 49709481 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 49715422 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 49723125 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 49941920 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 49838916 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 49805544 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 49720678 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 10
+- 49837832 -
+k-best score = 49707200
+threads = 11
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 47299607 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 47425865 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 47243669 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 47366562 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 47195107 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 47205440 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 47101206 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 47184207 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 47173219 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 11
+- 47343970 -
+k-best score = 47152877
+threads = 12
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 42419922 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 42369774 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 42419717 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 42376903 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 42375199 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 42386811 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 42365208 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 42396094 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 42343446 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 12
+- 42337165 -
+k-best score = 42348606
+threads = 13
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 40999364 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 40947553 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 40640436 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 40449606 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 41453199 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 40405846 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 40924234 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 41104753 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 41282751 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 13
+- 40714006 -
+k-best score = 40498629
+threads = 14
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 37147702 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 37166517 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 37182095 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 37230567 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 37167704 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 37285776 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 37304440 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 37190640 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 37109877 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 14
+- 37212247 -
+k-best score = 37141365
+threads = 15
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 35618711 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 35731083 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 36127134 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 35537100 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 36721731 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 37274629 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 35717392 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 35587244 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 35805034 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 15
+- 39412254 -
+k-best score = 35581018
+threads = 16
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 34011435 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 35616839 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 36505456 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 36006341 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 35145767 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 37837430 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 33812193 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 35932113 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 34366651 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 16
+- 34731486 -
+k-best score = 34063426
+threads = 17
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 35081166 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 34024977 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 32572722 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 35619215 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 38708891 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 33879703 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 32699182 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 34312080 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 33527592 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 17
+- 33542714 -
+k-best score = 32933165
+threads = 18
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 35494734 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 37069978 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 36482648 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 33214756 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 37158569 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 35309537 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 37750311 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 30934390 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 33755396 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 18
+- 34912456 -
+k-best score = 32634847
+threads = 19
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 34272246 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 34477815 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 32715011 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 36572750 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 33173886 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 36217674 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 39583979 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 34002986 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 34425896 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 19
+- 33834227 -
+k-best score = 33241041
+threads = 20
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 37701948 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 36779821 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 33863755 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 33988167 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 32203642 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 33257731 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 35328052 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 35160166 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 34378168 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 20
+- 32902965 -
+k-best score = 32788112
+threads = 21
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 35973977 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 35275727 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 32057265 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 32107391 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 33414287 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 33935035 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 36347765 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 32777508 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 36865748 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 21
+- 31541657 -
+k-best score = 31902104
+threads = 22
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 34539505 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 33822157 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 35995933 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 33322328 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 35908805 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 34043531 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 36104245 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 38451125 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 35685857 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 22
+- 36084675 -
+k-best score = 33729338
+threads = 23
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 35643497 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 33628019 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 33161262 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 38484271 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 39909669 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 34669266 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 34552692 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 35621451 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 34269999 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 23
+- 37003863 -
+k-best score = 33686426
+threads = 24
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 33729188 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 35437168 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 34149109 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 37092268 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 36798423 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 33494488 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 34314199 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 37215475 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 34309480 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 24
+- 33875370 -
+k-best score = 33699682
+threads = 25
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 34165325 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 34741001 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 33761518 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 33977167 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 34374398 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 34038612 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 34840832 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 36053612 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 34475700 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 25
+- 35103051 -
+k-best score = 33925765
+threads = 26
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 33499336 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 33502354 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 33485976 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 33883755 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 34840588 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 35062625 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 33487683 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 33823732 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 32595319 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 26
+- 34608172 -
+k-best score = 33189659
+threads = 27
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 32565839 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 31672440 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 34776833 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 34161420 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 33299975 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 31602371 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 32297130 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 32472584 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 32522711 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 27
+- 33609348 -
+k-best score = 31857313
+threads = 28
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 33620039 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 32192742 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 32249181 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 33161440 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 33810277 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 33517511 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 31411713 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 31681201 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 31621166 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 28
+- 33189390 -
+k-best score = 31571360
+threads = 29
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 31252125 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 33300510 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 32511484 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 33789812 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 33049037 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 32466390 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 32013654 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 31788161 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 31551832 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 29
+- 30434465 -
+k-best score = 31079474
+threads = 30
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 30695813 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 30964391 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 31043609 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 31164484 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 32892776 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 30929582 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 30797691 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 31353829 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 31292218 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 30
+- 31333476 -
+k-best score = 30807695
+threads = 31
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 33361435 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 32730760 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 31348046 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 32360134 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 30901421 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 30261265 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 29675992 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 31534496 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 29924857 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 31
+- 31166108 -
+k-best score = 29954038
+threads = 32
+try= 1 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 34605254 -
+try= 2 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 32953556 -
+try= 3 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 33779471 -
+try= 4 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 32491743 -
+try= 5 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 33300611 -
+try= 6 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 33419445 -
+try= 7 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 34817372 -
+try= 8 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 32872540 -
+try= 9 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 35813604 -
+try= 10 comm= ./ske5.30static ppmimages/16Mcircle.pgm ppmimages/skeleton.pgm 0 32
+- 35199102 -
+k-best score = 32772613
+input -> ppmimages/32Mcircle.pgm
+threads = 1
+try= 1 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 1
+- 513141614 -
+try= 2 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 1
+- 494192444 -
+try= 3 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 1
+- 511825650 -
+try= 4 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 1
+- 489887538 -
+try= 5 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 1
+- 490565899 -
+try= 6 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 1
+- 494631848 -
+try= 7 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 1
+- 523794527 -
+try= 8 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 1
+- 650012246 -
+try= 9 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 1
+- 634372542 -
+try= 10 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 1
+- 603335949 -
+513141614 494192444 511825650 489887538 490565899 494631848 523794527 650012246 634372542 603335949
+k-best score = 491548627
+threads = 2
+try= 1 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 448259034 -
+try= 2 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 476754181 -
+try= 3 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 453312126 -
+try= 4 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 469847464 -
+try= 5 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 462307615 -
+try= 6 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 442814176 -
+try= 7 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 462905393 -
+try= 8 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 463933994 -
+try= 9 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 435097235 -
+try= 10 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 2
+- 461445335 -
+k-best score = 442056815
+threads = 3
+try= 1 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 421280463 -
+try= 2 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 416605948 -
+try= 3 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 403312295 -
+try= 4 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 402773917 -
+try= 5 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 412414357 -
+try= 6 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 417626198 -
+try= 7 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 403261902 -
+try= 8 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 419886626 -
+try= 9 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 407526320 -
+try= 10 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 3
+- 435199165 -
+k-best score = 403116038
+threads = 4
+try= 1 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 312748260 -
+try= 2 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 304445994 -
+try= 3 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 356270732 -
+try= 4 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 298599459 -
+try= 5 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 305929685 -
+try= 6 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 314113983 -
+try= 7 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 329766726 -
+try= 8 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 313388373 -
+try= 9 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 299051338 -
+try= 10 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 4
+- 324350963 -
+k-best score = 300698930
+threads = 5
+try= 1 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 260411378 -
+try= 2 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 328507104 -
+try= 3 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 5
+- 304587902 -
+try= 4 comm= ./ske5.30static ppmimages/32Mcircle.pgm ppmimages/skeleton.pgm 0 5

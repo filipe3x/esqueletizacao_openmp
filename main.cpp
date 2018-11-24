@@ -6,7 +6,7 @@
 
 #include "papi_inst.h"
 
-#include "skeletonize_v3.h"
+#include "skeletonize.h"
 #include "ppm.h"
 #include "utils.h"
 
@@ -55,10 +55,14 @@ int main (int argc, char *argv[]) {
      switch (fcode) {
        case 0:
 	  omp_set_num_threads(num_threads);
-	  it = skeletonize(img->buf, img->width, img->height);
+	  it = skeletonize_doublepass(img->buf, img->width, img->height);
 	  break;
        case 1:
-	  it = skeletonize_serial(img->buf, img->width, img->height);
+	  it = skeletonize_doublepass_serial(img->buf, img->width, img->height);
+	  break;
+       case 2:
+	  omp_set_num_threads(num_threads);
+	  it = skeletonize_doublepass(img->buf, img->width, img->height);
 	  break;
        default:
 	    print_usage ((char *)"Unknown function code!");
@@ -105,10 +109,18 @@ static int verify_command_line (int argc, char *argv[], char *infile, char *outf
 		return 0;
 	    }
 	    *num_threads = atoi (argv[4]);
-	    printf("running skeletonize parallel with %d threads\n", *num_threads);
+	    printf("running skeletonize parallel (double pass) with %d threads\n", *num_threads);
 	    break;
 	  case 1:
 	    printf("running skeletonize serial\n"); 
+	    break;
+	  case 2:
+	    if (argc<5) {
+		print_usage ((char *)"skeletonize parallel requires number of threads!");
+		return 0;
+	    }
+	    *num_threads = atoi (argv[4]);
+	    printf("running skeletonize parallel (matrix swap) with %d threads\n", *num_threads); 
 	    break;
 	  default:
 	    print_usage ((char *)"Unknown function code!");

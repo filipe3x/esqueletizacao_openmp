@@ -6,7 +6,7 @@
 ## Compile with papi counters
 make papi
 ## Compile without debugging output
-make prod
+make prod schedule=<STATIC/DYNAMIC>
 ## Dependencies
 gcc 6.5
 openmp 4.5

@@ -49,8 +49,10 @@ int main (int argc, char *argv[]) {
 
      if(img->width < 55) print_img (img->buf, img->height, img->width); //print original image
 
+     #ifdef TESTING
      printf("Image size %d x %d \n", img->height, img->width); 
      printf("changing matrix allocated of size: %ld Kbytes\n", img->height * img->width * sizeof(int)/1024);
+     #endif
 
      #ifdef PAPI
      papi_start_event (i);
@@ -83,10 +85,11 @@ int main (int argc, char *argv[]) {
 
      if(img->width < 55) print_img (img->buf, img->height, img->width); //print result
 
+     /* we get statistics */
      stop = omp_get_wtime();
      PAPI_stop = PAPI_get_real_usec();
      #ifdef PRODUCTION
-     printf("%f\n",(stop - start)*1000000 );
+     printf("%.0f\n",(stop - start)*1000000 );
      #endif
      #ifdef TESTING
      printf("papi Time in microseconds: %lld\n", PAPI_stop - PAPI_start);
@@ -124,10 +127,14 @@ static int verify_command_line (int argc, char *argv[], char *infile, char *outf
 		return 0;
 	    }
 	    *num_threads = atoi (argv[4]);
+            #ifdef TESTING
 	    printf("running skeletonize parallel (double pass) with %d threads\n", *num_threads);
+            #endif
 	    break;
 	  case 1:
+            #ifdef TESTING
 	    printf("running skeletonize serial (double pass)\n"); 
+            #endif
 	    break;
 	  case 2:
 	    if (argc<5) {
@@ -135,10 +142,14 @@ static int verify_command_line (int argc, char *argv[], char *infile, char *outf
 		return 0;
 	    }
 	    *num_threads = atoi (argv[4]);
+            #ifdef TESTING
 	    printf("running skeletonize parallel (matrix swap) with %d threads\n", *num_threads); 
+            #endif
 	    break;
 	  case 3:
+            #ifdef TESTING
 	    printf("running skeletonize serial (matrix swap)\n");
+            #endif
 	    break;
 	  default:
 	    print_usage ((char *)"Unknown function code!");

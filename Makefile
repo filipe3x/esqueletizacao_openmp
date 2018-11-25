@@ -45,13 +45,13 @@ LDFLAGS = -g
 default: $(OUT)
 
 .cpp.o:
-	$(CCC) $(CCFLAGS) $(INCLUDES)  -c $< -o $@
+	$(CCC) $(DEFINEMACRO) $(CCFLAGS) $(INCLUDES)  -c $< -o $@
 
 .c.o:
-	$(CCC) $(CCFLAGS) $(INCLUDES) -c $< -o $@
+	$(CCC) $(DEFINEMACRO) $(CCFLAGS) $(INCLUDES) -c $< -o $@
 
 $(OUT): $(OBJ)
-	$(CCC) -o $(OUT) $(DEFINEMACRO) $(CCFLAGS) $(OBJ) $(LIBS) 
+	$(CCC) -o $(OUT) $(CCFLAGS) $(OBJ) $(LIBS) 
 
 depend:  dep
 #

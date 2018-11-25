@@ -86,5 +86,7 @@ do
   done
 done
 
+echo "That's all."
+
 exit 0;
 

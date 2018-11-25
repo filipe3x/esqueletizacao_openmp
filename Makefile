@@ -58,5 +58,12 @@ depend:  dep
 #dep:
 #	makedepend -- $(CFLAGS) -- $(INCLUDES) $(SRC)
 
+
+papi: DEFINEMACRO += -D PAPI
+papi: $(OUT)
+
+prod: DEFINEMACRO = -D PRODUCTION
+prod: $(OUT)
+
 clean:
 	rm -f *.o .a *~ Makefile.bak 

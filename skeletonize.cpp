@@ -168,18 +168,20 @@ int skeletonize_doublepass_par (int *I, int W, int H) {
 			}
 		}
 
-			if(flag0 == 1) cont0 = 1;
-			if(flag1 == 1) cont1 = 1;
+		/* implicit barrier */
 
-			// we delete pixels
-			#pragma omp for private(i,j) schedule(static) 
-			for(i=1; i < H-1; i++) {
-				#pragma omp simd
-				for(j=1; j < W-1; j++) {
-					I[i*W+j] = I[i*W+j] - chan1to0[i*W+j];
-					//if(chan1to0[i*W+j] == 1) I[i*W+j] = 0; 
-				}
+		if(flag0 == 1) cont0 = 1;
+		if(flag1 == 1) cont1 = 1;
+	
+		// we delete pixels
+		#pragma omp for private(i,j) schedule(static) 
+		for(i=1; i < H-1; i++) {
+			#pragma omp simd
+			for(j=1; j < W-1; j++) {
+				I[i*W+j] = I[i*W+j] - chan1to0[i*W+j];
+				//if(chan1to0[i*W+j] == 1) I[i*W+j] = 0; 
 			}
+		}
 
 	}//while
 	}//parallel block
@@ -249,14 +251,14 @@ int skeletonize_doublepass_serial (int *I, int W, int H) {
 		}
 
 
-			// we delete pixels
-			for(i=1; i < H-1; i++) {
-				#pragma omp simd
-				for(j=1; j < W-1; j++) {
-					I[i*W+j] = I[i*W+j] - chan1to0[i*W+j];
-					//if(chan1to0[i*W+j] == 1) I[i*W+j] = 0; 
-				}
+		// we delete pixels
+		for(i=1; i < H-1; i++) {
+			#pragma omp simd
+			for(j=1; j < W-1; j++) {
+				I[i*W+j] = I[i*W+j] - chan1to0[i*W+j];
+				//if(chan1to0[i*W+j] == 1) I[i*W+j] = 0; 
 			}
+		}
 
 	}//while
 

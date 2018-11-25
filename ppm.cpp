@@ -42,7 +42,7 @@ image read_ppm(FILE *pf) {
         img = new_img (w,h,type);
 		if (!img) return NULL;
 
-		temp_buf = (unsigned char *) memalign (0x20,w*h*(type == BW ? 1 : 3 ) * sizeof(unsigned char));
+		temp_buf = (unsigned char *) memalign (0x80,w*h*(type == BW ? 1 : 3 ) * sizeof(unsigned char));
 		if (!temp_buf) return NULL;
 
 		size_t rd = fread(temp_buf, (type == BW ? 1 : 3 ) * sizeof(unsigned char), w*h, pf);

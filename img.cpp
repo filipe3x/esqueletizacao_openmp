@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <malloc.h>
 
 #include "img.h"
 
@@ -7,7 +8,7 @@ image new_img (int w, int h, ImageType t) {
 	image img;
 	img = (image) malloc (sizeof(image_t));
     if ( img == NULL ) return NULL;
-	img->buf = (int *) malloc (w * h * sizeof(int));
+	img->buf = (int *) memalign (0x80,w * h * sizeof(int));
     if ( img->buf == NULL ) return NULL;
 	img->height = h;
 	img->width = w;

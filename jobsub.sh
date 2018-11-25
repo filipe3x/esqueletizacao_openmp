@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 #PBS -N skeletonize
-#PBS -l walltime=00:10:00
+#PBS -l walltime=23:59:59
 #PBS -l nodes=1:r641:ppn=32
 
 #PBS -m abe
@@ -17,7 +17,7 @@ MYWORKPLACE="/home/a57812/PCP/esqueletizacao_openmp/"
 
 job="jobscript.sh"
 
-log="results.log"
+log="results$(date +%d-%m-%Y-%H%M%S).log"
 
 cd $MYWORKPLACE
 

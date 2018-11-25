@@ -1,6 +1,7 @@
-#!/bin/bash
+#!/bin/sh
 #
-kernel=(ske5.30static) 
+
+kernel=(skeletonize) 
 #kernel=(ske5.30static ske5.30dynamic ske6.50static ske6.50dynamic)
 
 input=(horse 256Kcircle) 
@@ -11,6 +12,8 @@ output=skeleton.pgm
 folder=ppmimages
 
 errorlog=joberrors.log
+
+OUTPUTGRAPH=resultsgraph$(date +%d-%m-%Y-%H%M%S).log
 
 maxthreads=$1
 
@@ -34,41 +37,51 @@ function calc_3_lower() {
   echo ${array[@]} | tr ' ' '\n' | sort -n | head -n3 | tr '\n' ' '
 }
 
+calc() {
+  awk "BEGIN { print "$*" }"
+}
+
 for k in "${kernel[@]}"
 do
-  echo "** $k kernel **"
+  if [ $k == "skeletonize" ]; then module load gcc/5.3.0 2>>$errorlog; fi ## if we need specific modules for this kernel
+  echo "** $k kernel | $(date)" | tee -a $OUTPUTGRAPH
   for i in "${input[@]}"
   do
     i=$folder/$i.pgm
-    echo "input -> $i"
+    echo "input -> $i" | tee -a $OUTPUTGRAPH
     echo "threads = 1"
     RESULTS=()
-    for r in {1..3} ## number of runs for sequential
+    for r in {1..10} ## number of runs for sequential
     do
-      comm="./$k $i $folder/$output 1"
+      comm="./$k $i $folder/$output 3"
       echo try= $r comm= $comm
       time=$($comm 2>>$errorlog)
       echo - $time -
       RESULTS+=($time)
       sleep 2
     done
-    KBEST=($(calc_3_lower "${RESULTS[@]}"))
-    echo k-best score = $(calc_kbest "${KBEST[@]}")
-    for t in {2..4} ## number of total threads here
+    THREEBEST=($(calc_3_lower "${RESULTS[@]}"))
+    KBESTSEQ=$(calc_kbest "${THREEBEST[@]}")
+    echo k-best score = $KBESTSEQ
+    echo "(1, 1)" >> $OUTPUTGRAPH
+    for t in {2..32} ## number of total threads here
     do
       echo "threads = $t"
       RESULTS=()
-      for r in {1..3} ## number of runs for each parallel configuration
+      for r in {1..10} ## number of runs for each parallel configuration
       do
-        comm="./$k $i $folder/$output 0 $t"
+        comm="./$k $i $folder/$output 2 $t"
         echo try= $r comm= $comm
         time=$($comm 2>>$errorlog)
         echo - $time -
         RESULTS+=($time)
         sleep 2
       done
-      KBEST=($(calc_3_lower "${RESULTS[@]}"))
-      echo k-best score = $(calc_kbest "${KBEST[@]}")
+      THREEBEST=($(calc_3_lower "${RESULTS[@]}"))
+      KBESTPAR=$(calc_kbest "${THREEBEST[@]}")
+      echo k-best score = $KBESTPAR
+      echo speedup = $(calc $KBESTSEQ/$KBESTPAR)
+      echo "($t, $(calc $KBESTSEQ/$KBESTPAR))" >> $OUTPUTGRAPH
     done
   done
 done

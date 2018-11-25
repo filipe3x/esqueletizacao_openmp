@@ -95,12 +95,15 @@ int skeletonize_naive_serial (int *I, int W, int H) {
 	Double Pass version: For each iteration, we do a FIRST PASS to mark pixels and a SECOND PASS to delete them
 	An aditional matrix int* chan1to0 is created to mark the pixels
 */
-int skeletonize_doublepass_par (int *I, int W, int H) { 
+#pragma GCC target("arch=core-avx-i")
+#pragma GCC optimize("tree-vectorize")
+int skeletonize_doublepass_par (int *__restrict__ I, int W, int H) { 
 	int t = omp_get_max_threads();
-	int *chan1to0 = (int*) calloc (W*H,sizeof(int)); // which pixels we are going to change
+	//int *chan1to0 = (int*) calloc (W*H,sizeof(int)); // which pixels we are going to change
+	int *__restrict__ chan1to0 = (int*) memalign (0x80,W*H*sizeof(int)); // which pixels we are going to change
 
-	int X_index[8] = {-1,-1,0,1,1,1,0,-1}; // neighbors relative coordinates
-	int Y_index[8] = {0,1,1,1,0,-1,-1,-1};
+	__attribute__((aligned(128))) int X_index[8] = {-1,-1,0,1,1,1,0,-1}; // neighbors relative coordinates
+	__attribute__((aligned(128))) int Y_index[8] = {0,1,1,1,0,-1,-1,-1};
 
 	int it = 0; // total iterations count
 	int i, j, k; // indexes
@@ -174,7 +177,7 @@ int skeletonize_doublepass_par (int *I, int W, int H) {
 		if(flag1 == 1) cont1 = 1;
 	
 		// we delete pixels
-		#pragma omp for private(i,j) schedule(static) 
+		#pragma omp for private(i,j) schedule(static)
 		for(i=1; i < H-1; i++) {
 			#pragma omp simd
 			for(j=1; j < W-1; j++) {
@@ -189,7 +192,7 @@ int skeletonize_doublepass_par (int *I, int W, int H) {
 
 	return it/t;
 }
-
+#pragma GCC reset_options
 
 int skeletonize_doublepass_serial (int *I, int W, int H) { 
 	int *chan1to0 = (int*) calloc (W*H,sizeof(int)); // which pixels we are going to change

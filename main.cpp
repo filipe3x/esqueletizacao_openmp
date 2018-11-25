@@ -89,7 +89,7 @@ int main (int argc, char *argv[]) {
      stop = omp_get_wtime();
      PAPI_stop = PAPI_get_real_usec();
      #ifdef PRODUCTION
-     printf("%.0f\n",(stop - start)*1000000 );
+     printf("%.0f",(stop - start)*1000000 );
      #endif
      #ifdef TESTING
      printf("papi Time in microseconds: %lld\n", PAPI_stop - PAPI_start);

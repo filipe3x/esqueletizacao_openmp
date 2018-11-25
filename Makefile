@@ -22,11 +22,12 @@ INCLUDES = -I. -I/usr/local/include/
 #CCFLAGS = -O3 -fopenmp -mavx -march=native
 #CCFLAGS = -O0
 #CCFLAGS = -g -pthread -Wall -march=native -fopenmp
-CCFLAGS = -Wall -march=native --std=c++11 -ftree-vectorizer-verbose=3 -ftree-vectorize -ftree-slp-vectorize -fopenmp -fopenmp-simd
+CCFLAGS = -Wall -march=native --std=c++11 -funroll-loops --param max-unroll-times=4 -ftree-vectorizer-verbose=3 -ftree-vectorize -ftree-slp-vectorize -fopenmp -fopenmp-simd
+#CCFLAGS = -Wall -march=native --std=c++11 -ftree-vectorizer-verbose=3 -ftree-vectorize -ftree-slp-vectorize -fopenmp -fopenmp-simd
 #CCFLAGS = -O3
 
 # compiler
-CCC = g++-6
+CCC = g++
 #CCC = /opt/intel/Compiler/11.1/073/bin/ia32/icpc 
 #CCC = g++-4.5
 

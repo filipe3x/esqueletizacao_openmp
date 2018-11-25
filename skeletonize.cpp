@@ -120,7 +120,7 @@ int skeletonize_doublepass_par (int *I, int W, int H) {
 	// every thread will test this condition
 	while(cont0 > 0 || cont1 > 0) {
 
-		#pragma omp barrier // mandatory until all threads are here before we set cont0 and cont1
+		#pragma omp barrier // mandatory to all threads be here before we set cont0 and cont1
 
 		cont0 = 0;
 		cont1 = 0;
@@ -132,13 +132,13 @@ int skeletonize_doublepass_par (int *I, int W, int H) {
 		for(i=0; i < H-1; i++) {
 			for(j=1; j < W-1; j++) {
 
-				if(I[i*W+j] == 0){ chan1to0[i*W+j] = 0; continue; }
+				if(I[i*W+j] == 0){ chan1to0[i*W+j] = 0; continue; } // jump
 
 				total = 0;
 				ans = 0;
 				chan1to0[i*W+j] = 0;
 
-				for(k=0; k < 8; k++) { // get all neighbors
+				for(k=0; k < 8; k++) { // count nr total neighbors
 					total += getNeighbor(i,j,k);
 				}
 
@@ -149,21 +149,21 @@ int skeletonize_doublepass_par (int *I, int W, int H) {
 
 				if(getNeighbor(i,j,7) == 0 && getNeighbor(i,j,0) == 1) ans += 1;
 
-				if(it % 2 != 0 && I[i*W+j] == 1 && total >= 2 && total <= 6 && ans == 1 
-					&& getNeighbor(i,j,0) * getNeighbor(i,j,4) * getNeighbor(i,j,6) == 0 
-					&& getNeighbor(i,j,2) * getNeighbor(i,j,4) * getNeighbor(i,j,6) == 0) {
-					
-					chan1to0[i*W+j] = 1; // we mark pixel for deletion
-					flag0 = 1;
-				}
-
-				if(it % 2 == 0 && I[i*W+j] == 1 && total >= 2 && total <= 6 && ans == 1 
+				if(it % 2 == 0 && total >= 2 && total <= 6 && ans == 1 
 					&& getNeighbor(i,j,0) * getNeighbor(i,j,2) * getNeighbor(i,j,4) == 0 
 					&& getNeighbor(i,j,0) * getNeighbor(i,j,2) * getNeighbor(i,j,6) == 0) {
 					
 					chan1to0[i*W+j] = 1; // we mark pixel for deletion
 					flag1 = 1;
 
+				}
+
+				if(it % 2 != 0 && total >= 2 && total <= 6 && ans == 1 
+					&& getNeighbor(i,j,0) * getNeighbor(i,j,4) * getNeighbor(i,j,6) == 0 
+					&& getNeighbor(i,j,2) * getNeighbor(i,j,4) * getNeighbor(i,j,6) == 0) {
+					
+					chan1to0[i*W+j] = 1; // we mark pixel for deletion
+					flag0 = 1;
 				}
 			}
 		}
@@ -183,8 +183,8 @@ int skeletonize_doublepass_par (int *I, int W, int H) {
 			}
 		}
 
-	}//while
-	}//parallel block
+	}// while
+	}// parallel block
 
 
 	return it/t;

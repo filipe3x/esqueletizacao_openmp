@@ -9,7 +9,7 @@ PAPI = 5.4.1
 
 #DEFINEMACRO = -D PAPI -D TESTING
 #DEFINEMACRO = -D PAPI -D PRODUCTION
-DEFINEMACRO = -D TESTING
+DEFINEMACRO = -D TESTING -D STATIC
 
 # include directories
 #INCLUDES = -I. -I/share/apps/papi/$(PAPI)/include
@@ -60,11 +60,13 @@ depend:  dep
 #dep:
 #	makedepend -- $(CFLAGS) -- $(INCLUDES) $(SRC)
 
+dynamic: DEFINEMACRO = -D TESTING -D DYNAMIC
+dynamic:
 
 papi: DEFINEMACRO += -D PAPI
 papi: $(OUT)
 
-prod: DEFINEMACRO = -D PRODUCTION
+prod: DEFINEMACRO = -D PRODUCTION -D $(schedule)
 prod: $(OUT)
 
 clean:

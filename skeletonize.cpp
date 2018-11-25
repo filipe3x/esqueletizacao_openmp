@@ -130,8 +130,12 @@ int skeletonize_doublepass_par (int *__restrict__ I, int W, int H) {
 		int flag0 = 0;
 		int flag1 = 0;
 		it = it + 1; //every thread will initialize it = 0, and will increment its own private it var, after we exit we broadcast everyones it value
-
+		#ifdef STATIC
 		#pragma omp for private(i, j, k, ans, total) schedule(static)
+		#endif
+		#ifdef DYNAMIC
+		#pragma omp for private(i, j, k, ans, total) schedule(dynamic)
+		#endif
 		for(i=0; i < H-1; i++) {
 			for(j=1; j < W-1; j++) {
 
@@ -303,7 +307,12 @@ int skeletonize_matrixswap_par (int *I, int W, int H) {
 		iterations = iterations + 1;
 		//cout << "it=" << iterations << endl;
 
+		#ifdef DYNAMIC
 		#pragma omp parallel for schedule(dynamic) reduction(+:cont0) reduction(+:cont1)
+		#endif
+		#ifdef STATIC
+		#pragma omp parallel for schedule(static) reduction(+:cont0) reduction(+:cont1)
+		#endif
 		for(int i=1; i < H-1; i++) {
 			for(int j=1; j < W-1; j++) {
 				int ans, total, neigh_ant;

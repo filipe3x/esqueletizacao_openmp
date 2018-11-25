@@ -11,9 +11,9 @@ output=skeleton.pgm
 
 folder=ppmimages
 
-errorlog=joberrors.log
+errorlog=results/joberrors.log
 
-OUTPUTGRAPH=resultsgraph$(date +%d-%m-%Y-%H%M%S).log
+OUTPUTGRAPH=results/resultsgraph$(date +%d-%m-%Y-%H%M%S).log
 
 maxthreads=$1
 

@@ -21,7 +21,9 @@ log="results$(date +%d-%m-%Y-%H%M%S).log"
 
 cd $MYWORKPLACE
 
-./$job > $log
+mkdir -p results
+
+./$job > results/$log
 
 
 

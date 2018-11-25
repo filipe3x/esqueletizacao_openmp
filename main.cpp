@@ -31,8 +31,10 @@ int main (int argc, char *argv[]) {
   if (!read_inp_image (infile, &img)) return 0;
 
   // Initialize Papi and its events
-  //int nbr_papi_runs = papi_init ();
   int nbr_papi_runs = 1; //for testing we just run one time
+  #ifdef PAPI
+  nbr_papi_runs = papi_init ();
+  #endif
   if (!nbr_papi_runs) {
     fprintf (stderr, "Error initializing PAPI and corresponding events!\n");
     return 0;
@@ -50,7 +52,9 @@ int main (int argc, char *argv[]) {
      printf("Image size %d x %d \n", img->height, img->width); 
      printf("changing matrix allocated of size: %ld Kbytes\n", img->height * img->width * sizeof(int)/1024);
 
- //   papi_start_event (i);
+     #ifdef PAPI
+     papi_start_event (i);
+     #endif
 
      switch (fcode) {
        case 0:
@@ -62,7 +66,10 @@ int main (int argc, char *argv[]) {
 	  break;
        case 2:
 	  omp_set_num_threads(num_threads);
-	  it = skeletonize_doublepass_par(img->buf, img->width, img->height);
+	  it = skeletonize_matrixswap_par(img->buf, img->width, img->height);
+	  break;
+       case 3:
+	  it = skeletonize_matrixswap_serial(img->buf, img->width, img->height);
 	  break;
        default:
 	    print_usage ((char *)"Unknown function code!");
@@ -70,22 +77,30 @@ int main (int argc, char *argv[]) {
 	    break;
      }	 
 
-//     papi_stop_event (i);
+     #ifdef PAPI
+     papi_stop_event (i);
+     #endif
 
      if(img->width < 55) print_img (img->buf, img->height, img->width); //print result
 
      stop = omp_get_wtime();
      PAPI_stop = PAPI_get_real_usec();
+     #ifdef PRODUCTION
+     printf("%f\n",(stop - start)*1000000 );
+     #endif
+     #ifdef TESTING
      printf("papi Time in microseconds: %lld\n", PAPI_stop - PAPI_start);
      printf("omp Time in microseconds: %f\n",(stop - start)*1000000 );
      printf("total iterations: %d\n", it);
      printf("time per iteration in us: %.2f\n",  ( (double) (stop-start) * 1000000) /  (double) it );
+     #endif
 
   }
-  
-//  papi_print ();
-  
-//  papi_finalize ();
+
+  #ifdef PAPI  
+  papi_print ();
+  papi_finalize ();
+  #endif
 
 
   if (!write_out_image (outfile, img)) return 0;
@@ -112,7 +127,7 @@ static int verify_command_line (int argc, char *argv[], char *infile, char *outf
 	    printf("running skeletonize parallel (double pass) with %d threads\n", *num_threads);
 	    break;
 	  case 1:
-	    printf("running skeletonize serial\n"); 
+	    printf("running skeletonize serial (double pass)\n"); 
 	    break;
 	  case 2:
 	    if (argc<5) {
@@ -121,6 +136,9 @@ static int verify_command_line (int argc, char *argv[], char *infile, char *outf
 	    }
 	    *num_threads = atoi (argv[4]);
 	    printf("running skeletonize parallel (matrix swap) with %d threads\n", *num_threads); 
+	    break;
+	  case 3:
+	    printf("running skeletonize serial (matrix swap)\n");
 	    break;
 	  default:
 	    print_usage ((char *)"Unknown function code!");
@@ -133,8 +151,10 @@ static int verify_command_line (int argc, char *argv[], char *infile, char *outf
 static void print_usage (char *msg) {
 	fprintf (stderr, "Command Line Error! %s\n", msg);
 	fprintf (stderr, "Usage:\tskeletonize <input filename> <output filename> <function code> [Specific Parameters]\n\n");
-	fprintf (stderr, "\t<function code> = 0 : skeletonize_Parallel [Specific Parameters] = <n_threads>\n");
-	fprintf (stderr, "\t<function code> = 1 : skeletonize_Serial [Specific Parameters] = NULL\n");
+	fprintf (stderr, "\t<function code> = 0 : skeletonize_doublepass_Parallel [Specific Parameters] = <n_threads>\n");
+	fprintf (stderr, "\t<function code> = 1 : skeletonize_doublepass_Serial [Specific Parameters] = NULL\n");
+	fprintf (stderr, "\t<function code> = 2 : skeletonize_matrixswap_Parallel [Specific Parameters] = <n_threads>\n");
+	fprintf (stderr, "\t<function code> = 3 : skeletonize_matrixswap_Serial [Specific Parameters] = NULL\n");
 	fprintf (stderr, "\n");
 }
 

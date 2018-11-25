@@ -7,6 +7,10 @@ OUT = skeletonize
 
 PAPI = 5.4.1
 
+#DEFINEMACRO = -D PAPI -D TESTING
+#DEFINEMACRO = -D PAPI -D PRODUCTION
+DEFINEMACRO = -D TESTING
+
 # include directories
 #INCLUDES = -I. -I/share/apps/papi/$(PAPI)/include
 #INCLUDES = -I. -I/usr/local/papi/include
@@ -25,6 +29,7 @@ CCFLAGS = -Wall -march=native --std=c++11 -ftree-vectorizer-verbose=3 -ftree-vec
 CCC = g++-6
 #CCC = /opt/intel/Compiler/11.1/073/bin/ia32/icpc 
 #CCC = g++-4.5
+
 # library paths
 #LIBS = -L/share/apps/papi/$(PAPI)/lib -lm -lpapi
 LIBS = -L/usr/local/lib/ -lm -lpapi
@@ -46,7 +51,7 @@ default: $(OUT)
 	$(CCC) $(CCFLAGS) $(INCLUDES) -c $< -o $@
 
 $(OUT): $(OBJ)
-	$(CCC) -o $(OUT) $(CCFLAGS) $(OBJ) $(LIBS) 
+	$(CCC) -o $(OUT) $(DEFINEMACRO) $(CCFLAGS) $(OBJ) $(LIBS) 
 
 depend:  dep
 #

@@ -5,7 +5,7 @@ kernel=(skeletonize)
 #kernel=(ske5.30static ske5.30dynamic ske6.50static ske6.50dynamic)
 
 input=(horse 256Kcircle) 
-#input=(horse 256Kcircle 512Kcircle 1Mcircle 4Mcircle 16Mcircle 32Mcircle)
+#input=(horse 256Kcircle 1Mcircle 2Mcircle 4Mcircle 16Mcircle 32Mcircle)
 
 output=skeleton.pgm
 

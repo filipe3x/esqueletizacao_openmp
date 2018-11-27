@@ -181,7 +181,7 @@ int skeletonize_doublepass_par (int *__restrict__ I, int W, int H) {
 		if(flag1 == 1) cont1 = 1;
 	
 		// we delete pixels
-		#pragma omp for private(i,j) schedule(static)
+		#pragma omp single
 		for(i=1; i < H-1; i++) {
 			#pragma omp simd
 			for(j=1; j < W-1; j++) {
@@ -308,7 +308,7 @@ int skeletonize_matrixswap_par (int *I, int W, int H) {
 		//cout << "it=" << iterations << endl;
 
 		#ifdef DYNAMIC
-		#pragma omp parallel for schedule(dynamic) reduction(+:cont0) reduction(+:cont1)
+		#pragma omp parallel for schedule(dynamic,2048) reduction(+:cont0) reduction(+:cont1) collapse(2)
 		#endif
 		#ifdef STATIC
 		#pragma omp parallel for schedule(static) reduction(+:cont0) reduction(+:cont1)

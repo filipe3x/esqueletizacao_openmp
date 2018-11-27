@@ -16,7 +16,7 @@ static int write_out_image (char *outfile, image res_img);
 static void print_usage (char *msg);
 
 int main (int argc, char *argv[]) {
-  image img;
+  image img; //allocate this the best way possible. please
   int f_width, i, fcode, num_threads = 1;
   char infile[256], outfile[256];
 

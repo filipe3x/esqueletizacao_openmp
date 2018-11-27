@@ -61,7 +61,7 @@ depend:  dep
 #	makedepend -- $(CFLAGS) -- $(INCLUDES) $(SRC)
 
 dynamic: DEFINEMACRO = -D TESTING -D DYNAMIC
-dynamic:
+dynamic: $(OUT)
 
 papi: DEFINEMACRO += -D PAPI
 papi: $(OUT)

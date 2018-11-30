@@ -4,6 +4,7 @@
 #include <papi.h>
 #include <omp.h>
 
+#include "mpi_inst.h"
 #include "papi_inst.h"
 
 #include "skeletonize.h"
@@ -72,6 +73,11 @@ int main (int argc, char *argv[]) {
 	  break;
        case 3:
 	  it = skeletonize_matrixswap_serial(img->buf, img->width, img->height);
+	  break;
+       case 999:
+	  mpi_init(argc, argv);
+	  mpi_start(img->buf, img->width, img->height);
+	  mpi_finalize();
 	  break;
        default:
 	    print_usage ((char *)"Unknown function code!");
@@ -151,6 +157,11 @@ static int verify_command_line (int argc, char *argv[], char *infile, char *outf
 	    printf("running skeletonize serial (matrix swap)\n");
             #endif
 	    break;
+	  case 999:
+            #ifdef TESTING
+	    printf("running skeletonize distributed (matrix swap)\n");
+            #endif
+	    break;
 	  default:
 	    print_usage ((char *)"Unknown function code!");
 	    return 0;
@@ -166,6 +177,7 @@ static void print_usage (char *msg) {
 	fprintf (stderr, "\t<function code> = 1 : skeletonize_doublepass_Serial [Specific Parameters] = NULL\n");
 	fprintf (stderr, "\t<function code> = 2 : skeletonize_matrixswap_Parallel [Specific Parameters] = <n_threads>\n");
 	fprintf (stderr, "\t<function code> = 3 : skeletonize_matrixswap_Serial [Specific Parameters] = NULL\n");
+	fprintf (stderr, "\t<function code> = 999 : skeletonize_matrixswap_Distributed [Specific Parameters] = NULL\n");
 	fprintf (stderr, "\n");
 }
 

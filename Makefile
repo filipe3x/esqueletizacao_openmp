@@ -1,5 +1,5 @@
 # source files.
-SRC = img.cpp skeletonize.cpp ppm.cpp utils.cpp papi_inst.cpp main.cpp
+SRC = img.cpp skeletonize.cpp ppm.cpp utils.cpp papi_inst.cpp mpi_inst.cpp main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -28,7 +28,8 @@ CCFLAGS = -Wall -march=native --std=c++11 -funroll-loops --param max-unroll-time
 #CCFLAGS = -O3 -S -Wall -march=native -fopenmp -fopenmp-simd
 
 # compiler
-CCC = g++-7
+#CCC = g++-7
+CCC = mpic++
 #CCC = /opt/intel/Compiler/11.1/073/bin/ia32/icpc 
 #CCC = g++-4.5
 

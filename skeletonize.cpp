@@ -301,6 +301,8 @@ int skeletonize_matrixswap_par (int *I, int W, int H) {
 		ch_image[(H-1)*W + u] = BLACKPIXEL;
 	}
 
+	int chunck = W < 2048 ? W : 2048;
+
 	while((cont0 > 0 || cont1 > 0) || (iterations % 2 != 0)) {
 		cont0 = 0;
 		cont1 = 0;
@@ -308,7 +310,7 @@ int skeletonize_matrixswap_par (int *I, int W, int H) {
 		//cout << "it=" << iterations << endl;
 
 		#ifdef DYNAMIC
-		#pragma omp parallel for schedule(dynamic,2048) reduction(+:cont0) reduction(+:cont1) collapse(2)
+		#pragma omp parallel for schedule(dynamic,chunck) reduction(+:cont0) reduction(+:cont1) collapse(2)
 		#endif
 		#ifdef STATIC
 		#pragma omp parallel for schedule(static) reduction(+:cont0) reduction(+:cont1)

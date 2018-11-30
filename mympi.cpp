@@ -41,19 +41,20 @@ int mpi_start(int *I, int W, int H) {
 	}
 
 	// we work on them
-	for(i=0; i < n_threads; i++) {
-		if(myrank == n_threads - 1) { // i'm with the top
-			skeletonize_matrixswap_serial(I, W, block+1);
-		}
-		if(myrank == n_threads - 1) { // the virtue is in the middle
-			skeletonize_matrixswap_serial(myimg, W, block+2);
-		}
-		if(myrank == n_threads - 1) { // i'm with the bottom part
-			skeletonize_matrixswap_serial(myimg, W, block+1);
-		}
+	if(myrank == 0) { // i'm with the top
+		skeletonize_matrixswap_serial(I, W, block+1);
+	}
+
+	if(myrank != 0 && myrank != n_threads-1) { // the virtue is in the middle
+		skeletonize_matrixswap_serial(myimg, W, block+2);
+	}
+
+	if(myrank == n_threads-1) { // i'm with the bottom part
+		skeletonize_matrixswap_serial(myimg, W, block+1);
 	}
 }
 
 int mpi_finalize() {
+	//only the master thread should call this. In the event of using processes everyone should call it
 	return MPI_Finalize();
 }

@@ -4,6 +4,8 @@
 #include <papi.h>
 #include <malloc.h>
 
+#include "skeletonize.h"
+
 #define BLACKPIXEL 0
 #define WHITEPIXEL 1
 
@@ -301,7 +303,7 @@ int skeletonize_matrixswap_par (int *I, int W, int H) {
 		ch_image[(H-1)*W + u] = BLACKPIXEL;
 	}
 
-	int chunck = W < 2048 ? W : 2048;
+	int chunck = W < 2048 ? (W*3) : 2048;
 
 	while((cont0 > 0 || cont1 > 0) || (iterations % 2 != 0)) {
 		cont0 = 0;
@@ -464,7 +466,7 @@ int skeletonize_matrixswap_serial (int *I, int W, int H) {
     return iterations;
 }
 
-int skeletonize_matrixswap_dist (int *I, int W, int H) {
+int skeletonize_matrixswap_dist (int **I, int W, int H, int passnr) {
 	int *ch_image = (int*) memalign (32, W * H * sizeof(int)); // which pixels we are going to change
 
 	/* Neighbors relative coordenates - P0 = total
@@ -473,7 +475,7 @@ int skeletonize_matrixswap_dist (int *I, int W, int H) {
 	int PY_index[10] = { 0, 0,-1,-1, 0, 1, 1, 1, 0,-1};
 
 	int iterations = 0;		// total iterations count
-	int *im_read = I, *aux = NULL;
+	int *im_read = *I, *aux = NULL;
 
 	int cont0 = 1, cont1 = 1;
 
@@ -487,9 +489,10 @@ int skeletonize_matrixswap_dist (int *I, int W, int H) {
 		ch_image[(H-1)*W + u] = BLACKPIXEL;
 	}
 
-	while(iterations % 2 != 0) {
-		cont0 = 0;
-		cont1 = 0;
+	cont0 = 0;
+	cont1 = 0;
+
+	while(iterations  != 1) {
 		iterations = iterations + 1;
 
 		for(int i=1; i < H-1; i++) {
@@ -514,12 +517,12 @@ int skeletonize_matrixswap_dist (int *I, int W, int H) {
 
 
 					if((total >= 2) && (total <= 6) && (ans == 1)) {
-						if((iterations % 2 == 1) && (((1-im_read[(i+PY_index[4])*W + (j+PX_index[4])]) + (1-im_read[(i+PY_index[6])*W + (j+PX_index[6])]) + ((1-im_read[(i+PY_index[2])*W + (j+PX_index[2])]) * (1-im_read[(i+PY_index[8])*W + (j+PX_index[8])]))) >= 1)) {
+						if((passnr % 2 == 1) && (((1-im_read[(i+PY_index[4])*W + (j+PX_index[4])]) + (1-im_read[(i+PY_index[6])*W + (j+PX_index[6])]) + ((1-im_read[(i+PY_index[2])*W + (j+PX_index[2])]) * (1-im_read[(i+PY_index[8])*W + (j+PX_index[8])]))) >= 1)) {
 							// we remove the pixel
 							ch_image[i*W + j] = BLACKPIXEL;
 							cont0 += 1;
 						} else {
-							if((iterations % 2 == 0) && (((1-im_read[(i+PY_index[2])*W + (j+PX_index[2])]) + (1-im_read[(i+PY_index[8])*W + (j+PX_index[8])]) + ((1-im_read[(i+PY_index[4])*W + (j+PX_index[4])]) * (1-im_read[(i+PY_index[6])*W + (j+PX_index[6])]))) >= 1)) {
+							if((passnr % 2 == 0) && (((1-im_read[(i+PY_index[2])*W + (j+PX_index[2])]) + (1-im_read[(i+PY_index[8])*W + (j+PX_index[8])]) + ((1-im_read[(i+PY_index[4])*W + (j+PX_index[4])]) * (1-im_read[(i+PY_index[6])*W + (j+PX_index[6])]))) >= 1)) {
 								// we remove the pixel
 								ch_image[i*W + j] = BLACKPIXEL;
 								cont1 += 1;
@@ -539,6 +542,16 @@ int skeletonize_matrixswap_dist (int *I, int W, int H) {
 				}
 			}
 		}
+
+
+		// this is temporary
+		for(int i=1; i < H-1; i++) {
+			for(int j=1; j < W-1; j++) {
+				(*I)[i*W+j] = ch_image[i*W+j];
+			}
+		}
+
+		//*I = ch_image;
 
 		aux = im_read;
 		im_read = ch_image;

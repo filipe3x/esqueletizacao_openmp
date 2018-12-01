@@ -83,12 +83,12 @@ void print_gauss (int *f, int U) {
 	}
 }
 
-void print_img (int *f, int H, int W) {
+void print_img (int *f, int W, int H) {
 	int j,i;
 
 	for (j=0 ; j<H ; j++) {
 		for (i=0 ; i<W ; i++) {
-			fprintf (stdout, "%d ", f[H*j + i]);
+			fprintf (stdout, "%d ", f[W*j + i]);
 		}
 		fprintf (stdout, "\n");
 	}

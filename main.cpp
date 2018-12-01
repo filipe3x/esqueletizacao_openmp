@@ -89,7 +89,7 @@ int main (int argc, char *argv[]) {
      papi_stop_event (i);
      #endif
 
-     if(img->width < 55) print_img (img->buf, img->height, img->width); //print result
+     //if(img->width < 55) print_img (img->buf, img->height, img->width); //print result
 
      /* we get statistics */
      stop = omp_get_wtime();

@@ -111,8 +111,11 @@ int main (int argc, char *argv[]) {
   papi_finalize ();
   #endif
 
+  printf("my rank: %d\n", myrank);
 
-  if (!write_out_image (outfile, img)) return 0;
+  if(myrank != 0) return 0;
+
+  if (myrank == 0 && !write_out_image (outfile, img)) return 0;
 
   free_img (img);
 

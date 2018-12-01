@@ -21,6 +21,7 @@ int main (int argc, char *argv[]) {
   int f_width, i, fcode, num_threads = 1;
   char infile[256], outfile[256];
 
+  myrank = 0;
 
   if (!verify_command_line (argc, argv, infile, outfile, &fcode, &f_width, &num_threads)) {
 	return 0;

@@ -18,10 +18,34 @@ int mpi_init(int argc, char** argv) {
 	return 0;
 }
 
+void mpi_ske_scatter(int *I, int block, int middle_block, int bottom_block, int W, int n_threads, int tag) {
+	int i;
+	for(i=1; i < n_threads - 1; i++) { //we shall send 1 line above and 1 line below the block
+		MPI_Ssend( getBlockIndex(block,W,i) - W, middle_block * W, MPI_INT, i, tag, MPI_COMM_WORLD);
+	}
+
+	if(n_threads > 1) {
+		// for the last process, we send a 1 pixel high slice (block-1) and the rest of the image
+		MPI_Ssend( getBlockIndex(block,W,i) - W, bottom_block * W, MPI_INT, i, tag, MPI_COMM_WORLD);
+	}
+
+}
+
+void mpi_ske_gather(int *I, int block, int H, int W, int n_threads, MPI_Status* status) {
+	// we receive blocks
+	int i;
+	for(i=1; i < n_threads - 1; i++) {
+		MPI_Recv(getBlockIndex(block,W,i), block * W, MPI_INT, i, MPI_ANY_TAG, MPI_COMM_WORLD, status);
+	}
+
+	// last block to be received
+	MPI_Recv(getBlockIndex(block,W,i), block * W + (H % n_threads) * W, MPI_INT, i, MPI_ANY_TAG, MPI_COMM_WORLD, status);
+}
+
 int mpi_start(int *I, int W, int H) {
 	int n_threads = 1;
 	int tag = 0;
-	int source = 0;
+	int source;
 	int i;
 	int* myimg;
 
@@ -33,102 +57,67 @@ int mpi_start(int *I, int W, int H) {
 	int bottom_block = 1 + block + (H % n_threads);
 	int middle_block = 1 + block + 1;
 
+	/* scatter image from root into all other processes*/
+
 	if(myrank == 0) {
-		for(i=1; i < n_threads - 1; i++) { //we shall send 1 line above and 1 line below the block
-			MPI_Ssend( getBlockIndex(block,W,i) - W, middle_block * W, MPI_INT, i, tag, MPI_COMM_WORLD);
+		mpi_ske_scatter(I,block,middle_block,bottom_block,W,n_threads,tag);
+	} else {
+		// we receive blocks
+		for(i=1; i < n_threads - 1; i++) {
+			if(myrank == i) {
+				myimg = (int*) memalign(0x20, middle_block * W * sizeof(int));
+				MPI_Recv(myimg , middle_block * W, MPI_INT, source, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
+			}
 		}
-		printf("top block: \n");
-		//print_img( I, W, block + 1 );
-		printf("\n");
 
-		if(n_threads > 1) {
-			// for the last process, we send a 1 pixel high slice (block-1) and the rest of the image
-			// print_img(W * (block - 1) * i + I, W, (block + 1) + (H % n_threads));
-			MPI_Ssend( getBlockIndex(block,W,i) - W, bottom_block * W, MPI_INT, i, tag, MPI_COMM_WORLD);
-			//printf("\nW: %d , H: %d\n", W,(block + 1) + (H % n_threads));
-		}
-	}
-
-
-	// we receive the blocks
-	for(i=1; i < n_threads - 1; i++) {
-		if(myrank == i) {
-			myimg = (int*) memalign(0x20, (block + 2) * W * sizeof(int)); // block+2 to account for the line above and below the block
-			MPI_Recv(myimg , middle_block * W, MPI_INT, source, tag, MPI_COMM_WORLD, &status);
-			printf("middle block received: \n");
-			//print_img( myimg, W, (block + 2) );
-			printf("\n");
+		// last block to be received
+		if(n_threads > 1 && myrank == n_threads - 1) {
+			myimg = (int*) memalign(0x20, bottom_block * W * sizeof(int));
+			MPI_Recv(myimg , bottom_block * W, MPI_INT, source, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
 		}
 	}
-
-	// last block to be received
-	if(n_threads > 1 && myrank == n_threads - 1) {
-		myimg = (int*) memalign(0x20, bottom_block * W * sizeof(int));
-		MPI_Recv(myimg , bottom_block * W, MPI_INT, source, tag, MPI_COMM_WORLD, &status);
-		printf("last block received: \n");
-		//print_img( myimg, W, (block + 1) + (H % n_threads) );
-		printf("\n");
-	}
-
-
-	//sleep(3);
-
 
 	// we work on them
-	int cont = 1;
-	int passnr = 0;
-	while(cont > 0 || passnr < 100) {
-		if(n_threads == 1) { cont = skeletonize_matrixswap_dist(&I, W, block, passnr); printf("cont: %d, block: %d\n",cont,block); continue; }
+	int cont0 = 1;
+	int contOthers = 1;
+	int iteration = 0;
+	while(cont0 > 0) {
+		if(n_threads == 1) { cont0 = skeletonize_matrixswap_dist(&I, W, block, iteration); iteration++; continue; }
 		if(myrank == 0) { // i'm with the top
-			printf("cont: %d, block: %d, pass: %d\n",cont,block,passnr);
-			//print_img(I, W, H);
-			printf("\n");
-			cont = skeletonize_matrixswap_dist(&I, W, block+1, passnr);
-			//printf("result rank0 cont: %d\n",cont);
+			contOthers = skeletonize_matrixswap_dist(&I, W, block+1, iteration);
 
-			/* Gather and Scatter */
+			/* Gather */
 
-			// we receive blocks
-			for(i=1; i < n_threads - 1; i++) {
-				MPI_Recv(getBlockIndex(block,W,i), block * W, MPI_INT, i, tag, MPI_COMM_WORLD, &status);
-			}
-			// last block to be received
-			MPI_Recv(getBlockIndex(block,W,i), block * W + (H % n_threads) * W, MPI_INT, i, tag, MPI_COMM_WORLD, &status);
+			mpi_ske_gather(I,block,H,W,n_threads,&status);
 
 			/* Scatter */
 
-			for(i=1; i < n_threads - 1; i++) { //we shall send 1 line above and 1 line below the block
-				MPI_Ssend( getBlockIndex(block,W,i) - W, middle_block * W, MPI_INT, i, tag, MPI_COMM_WORLD);
-			}
-
-			// for the last process, we send a 1 pixel high slice (block-1) and the rest of the image
-			MPI_Ssend( getBlockIndex(block,W,i) - W, bottom_block * W, MPI_INT, i, tag, MPI_COMM_WORLD);
+			mpi_ske_scatter(I,block,middle_block,bottom_block,W,n_threads,tag);
 		}
 
 		if(myrank != 0 && myrank != n_threads-1) { // the virtue is in the middle
-			cont = skeletonize_matrixswap_dist(&myimg, W, middle_block, passnr);
+			contOthers = skeletonize_matrixswap_dist(&myimg, W, middle_block, iteration);
 			MPI_Ssend( myimg + W, block * W, MPI_INT, source, tag, MPI_COMM_WORLD);
-			MPI_Recv(myimg , middle_block * W, MPI_INT, source, tag, MPI_COMM_WORLD, &status);
+			MPI_Recv(myimg , middle_block * W, MPI_INT, source, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
 		}
 
 		if(myrank == n_threads-1) { // i'm with the bottom part
-			cont = skeletonize_matrixswap_dist(&myimg, W, bottom_block, passnr);
-			//printf("rank1:\n");
-			//print_img(myimg, W, (block + 1) + (H % n_threads));
-			//printf(" -- ^ rank1\n");
+			contOthers = skeletonize_matrixswap_dist(&myimg, W, bottom_block, iteration);
 			MPI_Ssend( myimg + W, block * W + (H % n_threads) * W, MPI_INT, source, tag, MPI_COMM_WORLD);
-			//print_img(myimg, W, (block + 1) + (H % n_threads));
-			MPI_Recv(myimg , bottom_block * W, MPI_INT, source, tag, MPI_COMM_WORLD, &status);
-			//sleep(1);
+			MPI_Recv(myimg , bottom_block * W, MPI_INT, source, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
 		}
 
-		passnr++;
-		
+
+		MPI_Allreduce(&contOthers, &cont0, 1, MPI_INT, MPI_SUM, MPI_COMM_WORLD);
+
+		//if(myrank == 0) printf("cont0: %d\n", cont0);
+
+		iteration++;
 	}
 
 	//MPI_Abort(MPI_COMM_WORLD, 999);
 
-	return 0;
+	return iteration;
 }
 
 int mpi_finalize() {

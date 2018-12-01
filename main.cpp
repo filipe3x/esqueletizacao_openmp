@@ -77,7 +77,7 @@ int main (int argc, char *argv[]) {
 	  break;
        case 999:
 	  mpi_init(argc, argv);
-	  mpi_start(img->buf, img->width, img->height);
+	  it = mpi_start(img->buf, img->width, img->height);
 	  mpi_finalize();
 	  break;
        default:
@@ -112,7 +112,7 @@ int main (int argc, char *argv[]) {
   papi_finalize ();
   #endif
 
-  printf("my rank: %d\n", myrank);
+  //printf("my rank: %d\n", myrank);
 
   if(myrank != 0) return 0;
 

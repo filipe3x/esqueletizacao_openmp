@@ -22,6 +22,7 @@ int main (int argc, char *argv[]) {
   char infile[256], outfile[256];
 
   myrank = 0;
+  //mpi_init(argc, argv);
 
   if (!verify_command_line (argc, argv, infile, outfile, &fcode, &f_width, &num_threads)) {
 	return 0;
@@ -44,21 +45,24 @@ int main (int argc, char *argv[]) {
 
   for (i = 0; i < nbr_papi_runs; i++) {
 
+
      long long PAPI_start, PAPI_stop; 
      double stop, start = omp_get_wtime();
      PAPI_start = PAPI_get_real_usec();
      int it = 0;
 
-     if(img->width < 55) print_img (img->buf, img->height, img->width); //print original image
+     if(myrank == 0) {
+	     if(img->width < 55) print_img (img->buf, img->height, img->width); //print original image
 
-     #ifdef TESTING
-     printf("Image size %d x %d \n", img->height, img->width); 
-     printf("changing matrix allocated of size: %ld Kbytes\n", img->height * img->width * sizeof(int)/1024);
-     #endif
+	     #ifdef TESTING
+	     printf("Image size %d x %d \n", img->height, img->width); 
+	     printf("changing matrix allocated of size: %ld Kbytes\n", img->height * img->width * sizeof(int)/1024);
+	     #endif
 
-     #ifdef PAPI
-     papi_start_event (i);
-     #endif
+	     #ifdef PAPI
+	     papi_start_event (i);
+	     #endif
+     }
 
      switch (fcode) {
        case 0:
@@ -76,7 +80,7 @@ int main (int argc, char *argv[]) {
 	  it = skeletonize_matrixswap_serial(img->buf, img->width, img->height);
 	  break;
        case 999:
-	  mpi_init(argc, argv);
+  	  mpi_init(argc, argv);
 	  it = mpi_start(img->buf, img->width, img->height);
 	  mpi_finalize();
 	  break;
@@ -84,26 +88,29 @@ int main (int argc, char *argv[]) {
 	    print_usage ((char *)"Unknown function code!");
 	    return 0;
 	    break;
-     }	 
+     }
 
-     #ifdef PAPI
-     papi_stop_event (i);
-     #endif
+     if(myrank == 0) { 
 
-     //if(img->width < 55) print_img (img->buf, img->height, img->width); //print result
+	     #ifdef PAPI
+	     papi_stop_event (i);
+	     #endif
 
-     /* we get statistics */
-     stop = omp_get_wtime();
-     PAPI_stop = PAPI_get_real_usec();
-     #ifdef PRODUCTION
-     printf("%.0f",(stop - start)*1000000 );
-     #endif
-     #ifdef TESTING
-     printf("papi Time in microseconds: %lld\n", PAPI_stop - PAPI_start);
-     printf("omp Time in microseconds: %f\n",(stop - start)*1000000 );
-     printf("total iterations: %d\n", it);
-     printf("time per iteration in us: %.2f\n",  ( (double) (stop-start) * 1000000) /  (double) it );
-     #endif
+	     if(img->width < 55) print_img (img->buf, img->height, img->width); //print result
+
+	     /* we get statistics */
+	     stop = omp_get_wtime();
+	     PAPI_stop = PAPI_get_real_usec();
+	     #ifdef PRODUCTION
+	     printf("%.0f",(stop - start)*1000000 );
+	     #endif
+	     #ifdef TESTING
+	     printf("papi Time in microseconds: %lld\n", PAPI_stop - PAPI_start);
+	     printf("omp Time in microseconds: %f\n",(stop - start)*1000000 );
+	     printf("total iterations: %d\n", it);
+	     printf("time per iteration in us: %.2f\n",  ( (double) (stop-start) * 1000000) /  (double) it );
+	     #endif
+      }
 
   }
 
@@ -114,11 +121,8 @@ int main (int argc, char *argv[]) {
 
   //printf("my rank: %d\n", myrank);
 
-  if(myrank != 0) return 0;
-
-  if (myrank == 0 && !write_out_image (outfile, img)) return 0;
-
-  free_img (img);
+  if (myrank != 0) { free_img(img); return 0; }
+  else { if (!write_out_image (outfile, img)) free_img(img); return 0; }
 
 }
 

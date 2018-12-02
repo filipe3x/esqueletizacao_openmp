@@ -47,7 +47,7 @@ int mpi_start(int *I, int W, int H) {
 	int tag = 0;
 	int source;
 	int i;
-	int* myimg, *ch_image;
+	int* myimg, *ch_image, *aux;
 
 	MPI_Status status;
 	MPI_Comm_size(MPI_COMM_WORLD, &n_threads);
@@ -62,12 +62,31 @@ int mpi_start(int *I, int W, int H) {
 	if(myrank == 0) {
 		ch_image = (int*) memalign (32, H * W * sizeof(int)); 
 		mpi_ske_scatter(I,block,middle_block,bottom_block,W,n_threads,tag);
+		// cleaning the padding
+		for(int u = 0; u < H-1; u++) {
+			ch_image[u*W + 0] = 0;
+			ch_image[u*W + (W-1)] = 0;
+		}
+		for(int u = 0; u < W-1; u++) {
+			ch_image[0 + u] = 0;
+			ch_image[(H-1)*W + u] = 0;
+		}
 	} else {
 		// we receive blocks
 		for(i=1; i < n_threads - 1; i++) {
 			if(myrank == i) {
 				myimg = (int*) memalign(0x20, middle_block * W * sizeof(int));
 				ch_image = (int*) memalign (32, middle_block * W * sizeof(int)); 
+				// cleaning the padding
+				for(int u = 0; u < middle_block-1; u++) {
+					ch_image[u*W + 0] = 0;
+					ch_image[u*W + (W-1)] = 0;
+				}
+				for(int u = 0; u < W-1; u++) {
+					ch_image[0 + u] = 0;
+					ch_image[(H-1)*W + u] = 0;
+				}
+				
 				MPI_Recv(myimg , middle_block * W, MPI_INT, source, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
 			}
 		}
@@ -76,6 +95,15 @@ int mpi_start(int *I, int W, int H) {
 		if(n_threads > 1 && myrank == n_threads - 1) {
 			myimg = (int*) memalign(0x20, bottom_block * W * sizeof(int));
 			ch_image = (int*) memalign (32, bottom_block * W * sizeof(int)); 
+			// cleaning the padding
+			for(int u = 0; u < bottom_block-1; u++) {
+				ch_image[u*W + 0] = 0;
+				ch_image[u*W + (W-1)] = 0;
+			}
+			for(int u = 0; u < W-1; u++) {
+				ch_image[0 + u] = 0;
+				ch_image[(H-1)*W + u] = 0;
+			}
 			MPI_Recv(myimg , bottom_block * W, MPI_INT, source, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
 		}
 	}
@@ -85,9 +113,9 @@ int mpi_start(int *I, int W, int H) {
 	int contOthers = 1;
 	int iteration = 0;
 	while(cont0 > 0) {
-		if(n_threads == 1) { cont0 = skeletonize_matrixswap_dist(I, ch_image, W, block, iteration); iteration++; continue; }
+		if(n_threads == 1) { cont0 = skeletonize_matrixswap_dist(&I, &ch_image, W, block, iteration); iteration++; continue; }
 		if(myrank == 0) { // i'm with the top
-			contOthers = skeletonize_matrixswap_dist(I, ch_image, W, block+1, iteration);
+			contOthers = skeletonize_matrixswap_dist(&I, &ch_image, W, block+1, iteration);
 
 			/* Gather */
 
@@ -99,21 +127,20 @@ int mpi_start(int *I, int W, int H) {
 		}
 
 		if(myrank != 0 && myrank != n_threads-1) { // the virtue is in the middle
-			contOthers = skeletonize_matrixswap_dist(myimg, ch_image, W, middle_block, iteration);
+			contOthers = skeletonize_matrixswap_dist(&myimg, &ch_image, W, middle_block, iteration);
 			MPI_Ssend( myimg + W, block * W, MPI_INT, source, tag, MPI_COMM_WORLD);
 			MPI_Recv(myimg , middle_block * W, MPI_INT, source, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
 		}
 
 		if(myrank == n_threads-1) { // i'm with the bottom part
-			contOthers = skeletonize_matrixswap_dist(myimg, ch_image, W, bottom_block, iteration);
+			contOthers = skeletonize_matrixswap_dist(&myimg, &ch_image, W, bottom_block, iteration);
 			MPI_Ssend( myimg + W, block * W + (H % n_threads) * W, MPI_INT, source, tag, MPI_COMM_WORLD);
 			MPI_Recv(myimg , bottom_block * W, MPI_INT, source, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
 		}
 
-
 		MPI_Allreduce(&contOthers, &cont0, 1, MPI_INT, MPI_SUM, MPI_COMM_WORLD);
 
-		//if(myrank == 0) printf("cont0: %d\n", cont0);
+		if(myrank == 0) { printf("cont0: %d\n", cont0); print_img(I,W,H); printf("\n"); }
 
 		iteration++;
 	}

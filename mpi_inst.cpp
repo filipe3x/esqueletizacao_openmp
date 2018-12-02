@@ -18,7 +18,7 @@ int mpi_init(int argc, char** argv) {
 	return 0;
 }
 
-void mpi_ske_scatter(int *I, int block, int middle_block, int bottom_block, int W, int n_threads, int tag) {
+static void mpi_ske_scatter(int *I, int block, int middle_block, int bottom_block, int W, int n_threads, int tag) {
 	int i;
 	for(i=1; i < n_threads - 1; i++) { //we shall send 1 line above and 1 line below the block
 		MPI_Ssend( getBlockIndex(block,W,i) - W, middle_block * W, MPI_INT, i, tag, MPI_COMM_WORLD);
@@ -31,7 +31,7 @@ void mpi_ske_scatter(int *I, int block, int middle_block, int bottom_block, int 
 
 }
 
-void mpi_ske_gather(int *I, int block, int H, int W, int n_threads, MPI_Status* status) {
+static void mpi_ske_gather(int *I, int block, int H, int W, int n_threads, MPI_Status* status) {
 	// we receive blocks
 	int i;
 	for(i=1; i < n_threads - 1; i++) {
@@ -40,6 +40,17 @@ void mpi_ske_gather(int *I, int block, int H, int W, int n_threads, MPI_Status* 
 
 	// last block to be received
 	MPI_Recv(getBlockIndex(block,W,i), block * W + (H % n_threads) * W, MPI_INT, i, MPI_ANY_TAG, MPI_COMM_WORLD, status);
+}
+
+static int cleanup_padding(int *ch_image, int H, int W) {
+	for(int u = 0; u < H-1; u++) {
+		ch_image[u*W + 0] = 0;
+		ch_image[u*W + (W-1)] = 0;
+	}
+	for(int u = 0; u < W-1; u++) {
+		ch_image[0 + u] = 0;
+		ch_image[(H-1)*W + u] = 0;
+	}
 }
 
 int mpi_start(int *I, int W, int H) {
@@ -61,32 +72,17 @@ int mpi_start(int *I, int W, int H) {
 
 	if(myrank == 0) {
 		ch_image = (int*) memalign (32, H * W * sizeof(int)); 
+		cleanup_padding(ch_image, H, W);
+
 		mpi_ske_scatter(I,block,middle_block,bottom_block,W,n_threads,tag);
-		// cleaning the padding
-		for(int u = 0; u < H-1; u++) {
-			ch_image[u*W + 0] = 0;
-			ch_image[u*W + (W-1)] = 0;
-		}
-		for(int u = 0; u < W-1; u++) {
-			ch_image[0 + u] = 0;
-			ch_image[(H-1)*W + u] = 0;
-		}
 	} else {
 		// we receive blocks
 		for(i=1; i < n_threads - 1; i++) {
 			if(myrank == i) {
 				myimg = (int*) memalign(0x20, middle_block * W * sizeof(int));
 				ch_image = (int*) memalign (32, middle_block * W * sizeof(int)); 
-				// cleaning the padding
-				for(int u = 0; u < middle_block-1; u++) {
-					ch_image[u*W + 0] = 0;
-					ch_image[u*W + (W-1)] = 0;
-				}
-				for(int u = 0; u < W-1; u++) {
-					ch_image[0 + u] = 0;
-					ch_image[(H-1)*W + u] = 0;
-				}
-				
+				cleanup_padding(ch_image, H, W);
+
 				MPI_Recv(myimg , middle_block * W, MPI_INT, source, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
 			}
 		}
@@ -95,15 +91,8 @@ int mpi_start(int *I, int W, int H) {
 		if(n_threads > 1 && myrank == n_threads - 1) {
 			myimg = (int*) memalign(0x20, bottom_block * W * sizeof(int));
 			ch_image = (int*) memalign (32, bottom_block * W * sizeof(int)); 
-			// cleaning the padding
-			for(int u = 0; u < bottom_block-1; u++) {
-				ch_image[u*W + 0] = 0;
-				ch_image[u*W + (W-1)] = 0;
-			}
-			for(int u = 0; u < W-1; u++) {
-				ch_image[0 + u] = 0;
-				ch_image[(H-1)*W + u] = 0;
-			}
+			cleanup_padding(ch_image, H, W);
+
 			MPI_Recv(myimg , bottom_block * W, MPI_INT, source, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
 		}
 	}

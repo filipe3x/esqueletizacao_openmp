@@ -81,7 +81,7 @@ int mpi_start(int *I, int W, int H) {
 			if(myrank == i) {
 				myimg = (int*) memalign(0x20, middle_block * W * sizeof(int));
 				ch_image = (int*) memalign (32, middle_block * W * sizeof(int)); 
-				cleanup_padding(ch_image, H, W);
+				cleanup_padding(ch_image, middle_block, W);
 
 				MPI_Recv(myimg , middle_block * W, MPI_INT, source, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
 			}
@@ -91,7 +91,7 @@ int mpi_start(int *I, int W, int H) {
 		if(n_threads > 1 && myrank == n_threads - 1) {
 			myimg = (int*) memalign(0x20, bottom_block * W * sizeof(int));
 			ch_image = (int*) memalign (32, bottom_block * W * sizeof(int)); 
-			cleanup_padding(ch_image, H, W);
+			cleanup_padding(ch_image, bottom_block, W);
 
 			MPI_Recv(myimg , bottom_block * W, MPI_INT, source, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
 		}

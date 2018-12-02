@@ -56,8 +56,8 @@ static int cleanup_padding(int *ch_image, int H, int W) {
 int mpi_start(int *I, int W, int H) {
 	int n_threads = 1;
 	int tag = 0;
-	int source;
-	int i;
+	int source = 0;
+	int i = 0;
 	int* myimg, *ch_image, *aux;
 
 	MPI_Status status;

@@ -7,6 +7,10 @@ kernel=(skeletonize)
 input=(horse 256Kcircle) 
 #input=(horse 256Kcircle 1Mcircle 2Mcircle 4Mcircle 16Mcircle 32Mcircle)
 
+commseq="./$k $i $folder/$output 3"
+commpar="./$k $i $folder/$output 2 $t"
+commmpi="mpirun -np $t ./$k $i $folder/$output 999"
+
 output=skeleton.pgm
 
 folder=ppmimages
@@ -14,8 +18,6 @@ folder=ppmimages
 errorlog=results/joberrors.log
 
 OUTPUTGRAPH=results/resultsgraph$(date +%d-%m-%Y-%H%M%S).log
-
-maxthreads=$1
 
 RESULTS=()
 
@@ -70,7 +72,8 @@ do
       RESULTS=()
       for r in {1..10} ## number of runs for each parallel configuration
       do
-        comm="./$k $i $folder/$output 2 $t"
+        #comm="./$k $i $folder/$output 2 $t"
+        comm="mpirun -np $t ./$k $i $folder/$output 999"
         echo try= $r comm= $comm
         time=$($comm 2>>$errorlog)
         echo - $time -

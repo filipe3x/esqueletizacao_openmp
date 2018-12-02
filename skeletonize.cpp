@@ -101,7 +101,6 @@ int skeletonize_naive_serial (int *I, int W, int H) {
 #pragma GCC optimize("tree-vectorize")
 int skeletonize_doublepass_par (int *__restrict__ I, int W, int H) { 
 	int t = omp_get_max_threads();
-	//int *chan1to0 = (int*) calloc (W*H,sizeof(int)); // which pixels we are going to change
 	int *__restrict__ chan1to0 = (int*) memalign (0x80,W*H*sizeof(int)); // which pixels we are going to change
 
 	__attribute__((aligned(128))) int X_index[8] = {-1,-1,0,1,1,1,0,-1}; // neighbors relative coordinates
@@ -279,9 +278,9 @@ int skeletonize_matrixswap_par (int *I, int W, int H) {
 	//int *cont = (int*) malloc(2 * sizeof(int)); // for checking if we already finished
 
 	/* Neighbors relative coordenates - P0 = total
-						P0 P1 P2 P3 P4 P5 P6 P7 P8 P9 */
-	int PX_index[10] = { 0, 0, 0, 1, 1, 1, 0,-1,-1,-1};
-	int PY_index[10] = { 0, 0,-1,-1, 0, 1, 1, 1, 0,-1};
+				P0 P1 P2 P3 P4 P5 P6 P7 P8 P9 */
+	int PX_index[10] = 	{ 0, 0, 0, 1, 1, 1, 0,-1,-1,-1};
+	int PY_index[10] = 	{ 0, 0,-1,-1, 0, 1, 1, 1, 0,-1};
 
 	int iterations = 0;		// total iterations count
 	//int i, j, k; 			// indexes
@@ -309,7 +308,6 @@ int skeletonize_matrixswap_par (int *I, int W, int H) {
 		cont0 = 0;
 		cont1 = 0;
 		iterations = iterations + 1;
-		//cout << "it=" << iterations << endl;
 
 		#ifdef DYNAMIC
 		#pragma omp parallel for schedule(dynamic,chunck) reduction(+:cont0) reduction(+:cont1) collapse(2)
@@ -320,9 +318,6 @@ int skeletonize_matrixswap_par (int *I, int W, int H) {
 		for(int i=1; i < H-1; i++) {
 			for(int j=1; j < W-1; j++) {
 				int ans, total, neigh_ant;
-				/* error looking
-				if((im_read[i*W + j] != 1) && (im_read[i*W + j] != 0))
-					cout << im_read[i*W + j] << " em " << i << ", " << j << endl;*/
 				// Only will do something if the point where it is at the moment is a 1;
 				if(im_read[i*W + j] != BLACKPIXEL) {
 					total = 0;
@@ -339,10 +334,6 @@ int skeletonize_matrixswap_par (int *I, int W, int H) {
 					}
 					if(im_read[(i+PY_index[9])*W + (j+PX_index[9])] - im_read[(i+PY_index[2])*W + (j+PX_index[2])] == -1)	// same as neigh_ant - neighbors[2]
 						ans++;
-
-					/*for(int u = 0; u < 10; u++)
-						cout << neighbors[u] << ", ";
-					cout << endl;*/
 
 					if((total >= 2) && (total <= 6) && (ans == 1)) {
 						if((iterations % 2 == 1) && (((1-im_read[(i+PY_index[4])*W + (j+PX_index[4])]) + (1-im_read[(i+PY_index[6])*W + (j+PX_index[6])]) + ((1-im_read[(i+PY_index[2])*W + (j+PX_index[2])]) * (1-im_read[(i+PY_index[8])*W + (j+PX_index[8])]))) >= 1)) {
@@ -368,9 +359,6 @@ int skeletonize_matrixswap_par (int *I, int W, int H) {
 					// only copying - sort of
 					ch_image[i*W + j] = BLACKPIXEL;
 				}
-				// error looking
-				//if((ch_image[i*W + j] != 1) && (ch_image[i*W + j] != 0))
-				//	cout << ch_image[i*W + j] << " em " << i << ", " << j << endl;
 			}
 		}
 
@@ -466,12 +454,12 @@ int skeletonize_matrixswap_serial (int *I, int W, int H) {
     return iterations;
 }
 
-int skeletonize_matrixswap_dist (int **I_ptr, int **ch_image_ptr, int W, int H, int passnr) {
+int skeletonize_matrixswap_dist (int **I_ptr, int **ch_image_ptr, int W, int H, int iterations) {
 
 	/* Neighbors relative coordenates - P0 = total
-						P0 P1 P2 P3 P4 P5 P6 P7 P8 P9 */
-	int PX_index[10] = { 0, 0, 0, 1, 1, 1, 0,-1,-1,-1};
-	int PY_index[10] = { 0, 0,-1,-1, 0, 1, 1, 1, 0,-1};
+				P0 P1 P2 P3 P4 P5 P6 P7 P8 P9 */
+	int PX_index[10] = 	{ 0, 0, 0, 1, 1, 1, 0,-1,-1,-1};
+	int PY_index[10] = 	{ 0, 0,-1,-1, 0, 1, 1, 1, 0,-1};
 
 	int *im_read = *I_ptr, *aux = NULL;
 	int *ch_image = *ch_image_ptr;
@@ -501,12 +489,12 @@ int skeletonize_matrixswap_dist (int **I_ptr, int **ch_image_ptr, int W, int H, 
 
 
 				if((total >= 2) && (total <= 6) && (ans == 1)) {
-					if((passnr % 2 == 1) && (((1-im_read[(i+PY_index[4])*W + (j+PX_index[4])]) + (1-im_read[(i+PY_index[6])*W + (j+PX_index[6])]) + ((1-im_read[(i+PY_index[2])*W + (j+PX_index[2])]) * (1-im_read[(i+PY_index[8])*W + (j+PX_index[8])]))) >= 1)) {
+					if((iterations % 2 == 1) && (((1-im_read[(i+PY_index[4])*W + (j+PX_index[4])]) + (1-im_read[(i+PY_index[6])*W + (j+PX_index[6])]) + ((1-im_read[(i+PY_index[2])*W + (j+PX_index[2])]) * (1-im_read[(i+PY_index[8])*W + (j+PX_index[8])]))) >= 1)) {
 						// we remove the pixel
 						ch_image[i*W + j] = BLACKPIXEL;
 						cont0 += 1;
 					} else {
-						if((passnr % 2 == 0) && (((1-im_read[(i+PY_index[2])*W + (j+PX_index[2])]) + (1-im_read[(i+PY_index[8])*W + (j+PX_index[8])]) + ((1-im_read[(i+PY_index[4])*W + (j+PX_index[4])]) * (1-im_read[(i+PY_index[6])*W + (j+PX_index[6])]))) >= 1)) {
+						if((iterations % 2 == 0) && (((1-im_read[(i+PY_index[2])*W + (j+PX_index[2])]) + (1-im_read[(i+PY_index[8])*W + (j+PX_index[8])]) + ((1-im_read[(i+PY_index[4])*W + (j+PX_index[4])]) * (1-im_read[(i+PY_index[6])*W + (j+PX_index[6])]))) >= 1)) {
 							// we remove the pixel
 							ch_image[i*W + j] = BLACKPIXEL;
 							cont1 += 1;

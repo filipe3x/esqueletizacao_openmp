@@ -97,14 +97,15 @@ int skeletonize_naive_serial (int *I, int W, int H) {
 	Double Pass version: For each iteration, we do a FIRST PASS to mark pixels and a SECOND PASS to delete them
 	An aditional matrix int* chan1to0 is created to mark the pixels
 */
-#pragma GCC target("arch=core-avx-i")
-#pragma GCC optimize("tree-vectorize")
-int skeletonize_doublepass_par (int *__restrict__ I, int W, int H) { 
+//#pragma GCC target("arch=core-avx-i")
+//#pragma GCC optimize("tree-vectorize")
+int skeletonize_doublepass_par (int *I, int W, int H) { 
 	int t = omp_get_max_threads();
-	int *__restrict__ chan1to0 = (int*) memalign (0x80,W*H*sizeof(int)); // which pixels we are going to change
+	int *chan1to0 = (int*) memalign (0x80,W*H*sizeof(int)); // which pixels we are going to change
+	//int *__restrict__ __attribute__((aligned(128))) chan1to0 = (int*) memalign (0x80,W*H*sizeof(int)); // which pixels we are going to change
 
-	__attribute__((aligned(128))) int X_index[8] = {-1,-1,0,1,1,1,0,-1}; // neighbors relative coordinates
-	__attribute__((aligned(128))) int Y_index[8] = {0,1,1,1,0,-1,-1,-1};
+	int X_index[8] = {-1,-1,0,1,1,1,0,-1}; // neighbors relative coordinates
+	int Y_index[8] = {0,1,1,1,0,-1,-1,-1};
 
 	int it = 0; // total iterations count
 	int i, j, k; // indexes
@@ -197,7 +198,7 @@ int skeletonize_doublepass_par (int *__restrict__ I, int W, int H) {
 
 	return it/t;
 }
-#pragma GCC reset_options
+//#pragma GCC reset_options
 
 int skeletonize_doublepass_serial (int *I, int W, int H) { 
 	int *chan1to0 = (int*) calloc (W*H,sizeof(int)); // which pixels we are going to change
@@ -454,15 +455,17 @@ int skeletonize_matrixswap_serial (int *I, int W, int H) {
     return iterations;
 }
 
-int skeletonize_matrixswap_dist (int **I_ptr, int **ch_image_ptr, int W, int H, int iterations) {
+#pragma GCC push_options
+#pragma GCC optimize ("unroll-loops")
+int skeletonize_matrixswap_dist (int ** I_ptr, int ** ch_image_ptr, int W, int H, int iterations) {
 
 	/* Neighbors relative coordenates - P0 = total
 				P0 P1 P2 P3 P4 P5 P6 P7 P8 P9 */
 	int PX_index[10] = 	{ 0, 0, 0, 1, 1, 1, 0,-1,-1,-1};
 	int PY_index[10] = 	{ 0, 0,-1,-1, 0, 1, 1, 1, 0,-1};
 
-	int *im_read = *I_ptr, *aux = NULL;
-	int *ch_image = *ch_image_ptr;
+	int * __restrict__ im_read = *I_ptr, *aux = NULL;
+	int * __restrict__ ch_image = *ch_image_ptr;
 
 	int cont0 = 0;
 	int cont1 = 0;
@@ -521,4 +524,4 @@ int skeletonize_matrixswap_dist (int **I_ptr, int **ch_image_ptr, int W, int H, 
 
 	return cont0 + cont1;
 }
-
+#pragma GCC pop_options

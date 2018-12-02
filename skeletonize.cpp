@@ -466,8 +466,7 @@ int skeletonize_matrixswap_serial (int *I, int W, int H) {
     return iterations;
 }
 
-int skeletonize_matrixswap_dist (int **I, int W, int H, int passnr) {
-	int *ch_image = (int*) memalign (32, W * H * sizeof(int)); // which pixels we are going to change
+int skeletonize_matrixswap_dist (int *I, int *ch_image, int W, int H, int passnr) {
 
 	/* Neighbors relative coordenates - P0 = total
 						P0 P1 P2 P3 P4 P5 P6 P7 P8 P9 */
@@ -475,7 +474,7 @@ int skeletonize_matrixswap_dist (int **I, int W, int H, int passnr) {
 	int PY_index[10] = { 0, 0,-1,-1, 0, 1, 1, 1, 0,-1};
 
 	int iterations = 0;		// total iterations count
-	int *im_read = *I, *aux = NULL;
+	int *im_read = I, *aux = NULL;
 
 	int cont0 = 1, cont1 = 1;
 
@@ -547,11 +546,9 @@ int skeletonize_matrixswap_dist (int **I, int W, int H, int passnr) {
 		// this is temporary
 		for(int i=1; i < H-1; i++) {
 			for(int j=1; j < W-1; j++) {
-				(*I)[i*W+j] = ch_image[i*W+j];
+				I[i*W+j] = ch_image[i*W+j];
 			}
 		}
-
-		//*I = ch_image;
 
 		aux = im_read;
 		im_read = ch_image;

@@ -204,12 +204,17 @@ int mpi_start(int *I, int W, int H) {
 
 		if(myrank != 0 && myrank != n_threads-1) { // the virtue is in the middle
 			contOthers = skeletonize_matrixswap_dist(&myimg, &ch_image, W, middle_block, iteration);
-			if(flag0 == 1) MPI_Ssend( &myimg[middle_block-1], W + 1, MPI_INT, source, tag, MPI_COMM_WORLD);
-			if(myimg[0] == 0) flag0 = 0;
-			if(myimg[(middle_block-1)*W] == 0) flag1 = 0;
 
-			if(flag0 == 1) MPI_Recv(myimg, W, MPI_INT, myrank-1, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
-			if(flag1 == 1) MPI_Recv(myimg[(middle_block - 1)*W] , W, MPI_INT, myrank+1, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
+			if(contOthers == 0) { myimg[0] = 1; myimg[(middle_block-1)*W] = 1; }
+
+			if(!flag0 == 1) MPI_Ssend( myimg, W, MPI_INT, rank-1, tag, MPI_COMM_WORLD);
+			if(!flag1 == 1) MPI_Ssend( &myimg[middle_block-1], W, MPI_INT, rank+1, tag, MPI_COMM_WORLD);
+
+			if(myimg[0] == 1) flag0 = 0;
+			if(myimg[(middle_block-1)*W] == 1) flag1 = 0;
+
+			if(!flag0 == 1) MPI_Recv(myimg, W, MPI_INT, myrank-1, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
+			if(!flag1 == 1) MPI_Recv(myimg[(middle_block - 1)*W] , W, MPI_INT, myrank+1, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
 		}
 
 		if(myrank == n_threads-1) { // i'm with the bottom part

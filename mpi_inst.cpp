@@ -189,7 +189,7 @@ int mpi_start(int *I, int W, int H) {
 	int iteration = 0;
 	int flag0 = 1;
 	int flag1 = 1;
-	while(cont0 > 0) {
+	while(contOthers > 0) {
 		if(n_threads == 1) { cont0 = skeletonize_matrixswap_dist(&I, &ch_image, W, block, iteration); iteration++; continue; }
 		if(myrank == 0) { // i'm with the top
 			contOthers = skeletonize_matrixswap_dist(&I, &ch_image, W, block+1, iteration);
@@ -204,7 +204,7 @@ int mpi_start(int *I, int W, int H) {
 		}
 
 
-		// we assume if we finish our work, we don't send anything more, and our neighbors aren't expecting anythong more from us. We just flag them, and we're out in our own way
+		// we assume if we finish our work, we don't send anything more, and our neighbors aren't expecting anything more from us. We just flag them, and we're out in our own way
 		if(contOthers > 0 && myrank != 0 && myrank != n_threads-1) { // the virtue is in the middle
 			contOthers = skeletonize_matrixswap_dist(&myimg, &ch_image, W, middle_block, iteration);
 
@@ -239,7 +239,7 @@ int mpi_start(int *I, int W, int H) {
 			// We keep doing our work nonetheless
 		}
 
-		MPI_Allreduce(&contOthers, &cont0, 1, MPI_INT, MPI_SUM, MPI_COMM_WORLD);
+		//MPI_Allreduce(&contOthers, &cont0, 1, MPI_INT, MPI_SUM, MPI_COMM_WORLD);
 
 		//if(myrank == 0) { printf("cont0: %d\n", cont0); print_img(I,W,H); printf("\n"); }
 

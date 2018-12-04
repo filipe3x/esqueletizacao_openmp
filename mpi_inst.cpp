@@ -187,7 +187,8 @@ int mpi_start(int *I, int W, int H) {
 	int cont0 = 1;
 	int contOthers = 1;
 	int iteration = 0;
-	int flag0 = flag1 = 1;
+	int flag0 = 1;
+	int flag1 = 1;
 	while(cont0 > 0) {
 		if(n_threads == 1) { cont0 = skeletonize_matrixswap_dist(&I, &ch_image, W, block, iteration); iteration++; continue; }
 		if(myrank == 0) { // i'm with the top
@@ -209,12 +210,12 @@ int mpi_start(int *I, int W, int H) {
 
 			if(contOthers == 0) { myimg[0] = 1; myimg[(middle_block-1)*W] = 1; } // I didn't find any pixels, let's flag the neighbors to stop sending. I am finished.
 
-			if(flag0 == 1) MPI_Ssend( myimg, W, MPI_INT, rank-1, tag, MPI_COMM_WORLD); // We send our work if only they are still working as well. If they already finished, we stop bothering them. We must always signal our neighbors first before running away
-			if(flag1 == 1) MPI_Ssend( &myimg[middle_block-1], W, MPI_INT, rank+1, tag, MPI_COMM_WORLD);
+			if(flag0 == 1) MPI_Ssend( myimg, W, MPI_INT, myrank-1, tag, MPI_COMM_WORLD); // We send our work if only they are still working as well. If they already finished, we stop bothering them. We must always signal our neighbors first before running away
+			if(flag1 == 1) MPI_Ssend( &myimg[middle_block-1], W, MPI_INT, myrank+1, tag, MPI_COMM_WORLD);
 
 			// Only if they are still working we wait and receive their messages
 			if(flag0 == 1) MPI_Recv(myimg, W, MPI_INT, myrank-1, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
-			if(flag1 == 1) MPI_Recv(myimg[(middle_block - 1)*W] , W, MPI_INT, myrank+1, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
+			if(flag1 == 1) MPI_Recv(&myimg[(middle_block - 1)*W] , W, MPI_INT, myrank+1, MPI_ANY_TAG, MPI_COMM_WORLD, &status);
 			// We received advice to stop bothering our neighbors. Let's respect that
 			if(myimg[0] == 1) { flag0 = 0; myimg[0] = 0; }
 			if(myimg[(middle_block-1)*W] == 1) { flag1 = 0; myimg[(middle_block-1)*W] = 0; }
@@ -227,7 +228,7 @@ int mpi_start(int *I, int W, int H) {
 
 			if(contOthers == 0) { myimg[0] = 1; myimg[(bottom_block-1)*W] = 1; } // I didn't find any pixels, let's flag the neighbors to stop sending. I am finished.
 
-			if(flag0 == 1) MPI_Ssend(myimg, W, MPI_INT, rank-1, tag, MPI_COMM_WORLD); // We send our work if only they are still working as well. If they already finished, we stop bothering them. We must always signal our neighbors first before running away
+			if(flag0 == 1) MPI_Ssend(myimg, W, MPI_INT, myrank-1, tag, MPI_COMM_WORLD); // We send our work if only they are still working as well. If they already finished, we stop bothering them. We must always signal our neighbors first before running away
 
 			// Only if they are still working we wait and receive their messages
 			if(flag0 == 1) MPI_Recv(myimg, W, MPI_INT, myrank-1, MPI_ANY_TAG, MPI_COMM_WORLD, &status);

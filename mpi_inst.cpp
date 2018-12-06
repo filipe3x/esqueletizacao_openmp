@@ -335,7 +335,7 @@ int mpi_start(int **I, int W, int H) {
 	int tag = 2;
 	int source = 0;
 	int i = 0;
-	int* myimg, *ch_image, *aux;
+	int* myimg, *ch_image;
 	int gather_tag = 1;
 
 	MPI_Status status;
@@ -354,7 +354,6 @@ int mpi_start(int **I, int W, int H) {
 		cleanup_padding(ch_image, H, W);
 
 		mpi_ske_scatter(I,block,middle_block,bottom_block,W,n_threads,tag);
-		//printf("%d x %d\n",top_block,W);
 	} else {
 		// we receive blocks
 		for(i=1; i < n_threads - 1; i++) {
@@ -364,7 +363,6 @@ int mpi_start(int **I, int W, int H) {
 				cleanup_padding(ch_image, middle_block, W);
 
 				MPI_Recv(myimg , middle_block * W, MPI_INT, source, tag, MPI_COMM_WORLD, &status);
-				//printf("%d x %d\n",middle_block,W);
 			}
 		}
 
@@ -375,11 +373,8 @@ int mpi_start(int **I, int W, int H) {
 			cleanup_padding(ch_image, bottom_block, W);
 
 			MPI_Recv(myimg , bottom_block * W, MPI_INT, source, tag, MPI_COMM_WORLD, &status);
-			//printf("%d x %d\n",bottom_block,W);
 		}
 	}
-
-	MPI_Barrier(MPI_COMM_WORLD);
 
 	// we work on them
 	int cont0 = 1;
@@ -393,35 +388,24 @@ int mpi_start(int **I, int W, int H) {
 
 			if(contOthers == 0) { (*I)[(block-1)*W] = 1; }
 
-			//printf("it %d \n",contOthers);
 			MPI_Isend(*I + (block-1)*W, W, MPI_INT, myrank+1, tag, MPI_COMM_WORLD, &req); 
 
 			(*I)[(block-1)*W] = 0;
 
 			MPI_Recv(*I + block*W, W, MPI_INT, myrank+1, tag, MPI_COMM_WORLD, &status);
 
-			//printf("contOthers: %d, rank: %d, it: %d, flag received: %d from rank %d\n", contOthers, myrank, iteration, I[block*W], myrank+1);
-			//printf("\n");
-
-			//print_img(*I,W,top_block);
-
-			//printf("\n");
-
-			if((*I)[block*W] == 1) {
-				(*I)[block*W] = 0;
-			}
+			if((*I)[block*W] == 1) { (*I)[block*W] = 0; }
 
 		}
 
 		if(myrank != 0 && myrank != n_threads-1) { // the virtue is in the middle
 			contOthers = skeletonize_matrixswap_dist(&myimg, &ch_image, W, middle_block, iteration);
 
-			if(contOthers == 0) {	// I didn't find any pixels, let's flag the neighbors to stop sending. My work is done
+			if(contOthers == 0) {	
 				myimg[W] = 1;
 				myimg[(middle_block-2)*W] = 1;
 			} 
 
-			//printf("it %d \n",contOthers);
 			MPI_Isend( myimg + W, W, MPI_INT, myrank-1, tag, MPI_COMM_WORLD, &req);
 
 			MPI_Isend( &myimg[(middle_block-2)*W], W, MPI_INT, myrank+1, tag, MPI_COMM_WORLD, &req);
@@ -429,63 +413,32 @@ int mpi_start(int **I, int W, int H) {
 			myimg[W] = 0;
 			myimg[(middle_block-2)*W] = 0;
 
-			// Only if they are still working we wait and receive their messages
 			MPI_Recv(myimg, W, MPI_INT, myrank-1, tag, MPI_COMM_WORLD, &status);
-			//printf("contOthers: %d, rank: %d, it: %d, flag0 received: %d from rank: %d\n", contOthers, myrank, iteration, myimg[0],myrank-1);
 			MPI_Recv(&myimg[(middle_block - 1)*W] , W, MPI_INT, myrank+1, tag, MPI_COMM_WORLD, &status);
-			//printf("contOthers: %d, rank: %d, it: %d, flag1 received: %d from rank: %d\n", contOthers,myrank, iteration, myimg[(middle_block-1)*W], myrank+1);
 
-			//printf("\n");
+			if(myimg[0] == 1) { myimg[0] = 0; }
 
-			//print_img(myimg,W,middle_block);
+			if(myimg[(block+1)*W] == 1) { myimg[(block+1)*W] = 0; }
 
-			//printf("\n");
-
-			// We received advice to stop bothering our neighbors. Let's respect that
-			if(myimg[0] == 1) {
-				myimg[0] = 0;
-			}
-
-			if(myimg[(block+1)*W] == 1) {
-				myimg[(block+1)*W] = 0;
-			}
-
-			// We keep doing our work nonetheless
-
-			//sleep(1);
 		}
 
 		if(myrank == n_threads-1) { // i'm with the bottom part
 			contOthers = skeletonize_matrixswap_dist(&myimg, &ch_image, W, bottom_block, iteration);
 
-			if(contOthers == 0) { myimg[W] = 1; } // I didn't find any pixels, let's flag the neighbors to stop sending. My work is done
-			//printf("it %d \n",contOthers);
+			if(contOthers == 0) { myimg[W] = 1; } 
+
 			MPI_Isend(myimg + W, W, MPI_INT, myrank-1, tag, MPI_COMM_WORLD,&req);
 
 			myimg[W] = 0;
 
-			// Only if they are still working we wait and receive their messages
 			MPI_Recv(myimg, W, MPI_INT, myrank-1, tag, MPI_COMM_WORLD, &status);
 
-			//printf("contOthers: %d, rank: %d, it: %d, flag received: %d from rank %d\n", contOthers, myrank, iteration, myimg[0],myrank-1);
-			//printf("\n");
-
-			//print_img(myimg,W,bottom_block);
-
-			//printf("\n");
-
-			// We received advice to stop bothering our neighbors. Let's respect that
-			if(myimg[0] == 1) {
-				myimg[0] = 0;
-			}
-
-			// We keep doing our work nonetheless
+			if(myimg[0] == 1) { myimg[0] = 0; }
 
 		}
 
 		MPI_Allreduce(&contOthers, &cont0, 1, MPI_INT, MPI_SUM, MPI_COMM_WORLD);
 
-		//if(myrank == 0) { printf("cont0: %d\n", cont0); print_img(I,W,H); printf("\n"); }
 
 		iteration++;
 	}

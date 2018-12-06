@@ -53,7 +53,6 @@ int main (int argc, char *argv[]) {
 
      if(myrank == 0) {
 	     if(img->width < 55) print_img (img->buf, img->width, img->height); //print original image
-	     printf("I: %ld rank: %d\n", img->buf,myrank);
 
 	     #ifdef TESTING
 	     printf("Image size %d x %d \n", img->height, img->width); 
@@ -81,7 +80,6 @@ int main (int argc, char *argv[]) {
 	  it = skeletonize_matrixswap_serial(img->buf, img->width, img->height);
 	  break;
        case 999:
-	  printf("before calling mpi I: %ld myrank: %d\n", img->buf, myrank);
   	  mpi_init(argc, argv);
 	  it = mpi_start(&(img->buf), img->width, img->height);
 	  mpi_finalize();
@@ -99,7 +97,6 @@ int main (int argc, char *argv[]) {
 	     #endif
 
 	     if(img->width < 55) print_img (img->buf, img->width, img->height); //print result
-	     printf("I: %ld myrank: %d\n", img->buf, myrank);
 
 	     /* we get statistics */
 	     stop = omp_get_wtime();
@@ -122,7 +119,6 @@ int main (int argc, char *argv[]) {
   papi_finalize ();
   #endif
 
-  //printf("my rank: %d\n", myrank);
 
   if (myrank != 0) { free_img(img); return 0; }
   else { if (!write_out_image (outfile, img)) free_img(img); return 0; }

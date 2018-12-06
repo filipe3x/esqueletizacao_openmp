@@ -81,7 +81,7 @@ int main (int argc, char *argv[]) {
 	  break;
        case 999:
   	  mpi_init(argc, argv);
-	  it = mpi_start(&(img->buf), img->width, img->height);
+	  it = mpi_ske_start(&(img->buf), img->width, img->height);
 	  mpi_finalize();
 	  break;
        default:

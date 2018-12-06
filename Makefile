@@ -22,7 +22,7 @@ INCLUDES = -I. -I/usr/local/include/
 #CCFLAGS = -O3 -fopenmp -mavx -march=native
 #CCFLAGS = -O0
 #CCFLAGS = -g -pthread -Wall -march=native -fopenmp
-CCFLAGS = -O3 -Wall -march=native --std=c++11 -fopenmp
+CCFLAGS = -O0 -Wall -march=native --std=c++11 -fopenmp
 #CCFLAGS = -Wall -march=native --std=c++11 -ftree-vectorizer-verbose=3 -ftree-vectorize -ftree-slp-vectorize -fopenmp -fopenmp-simd
 #CCFLAGS = -O3
 #CCFLAGS = -O3 -S -Wall -march=native -fopenmp -fopenmp-simd

@@ -52,7 +52,8 @@ int main (int argc, char *argv[]) {
      int it = 0;
 
      if(myrank == 0) {
-	     if(img->width < 55) print_img (img->buf, img->height, img->width); //print original image
+	     if(img->width < 55) print_img (img->buf, img->width, img->height); //print original image
+	     printf("I: %ld rank: %d\n", img->buf,myrank);
 
 	     #ifdef TESTING
 	     printf("Image size %d x %d \n", img->height, img->width); 
@@ -80,8 +81,9 @@ int main (int argc, char *argv[]) {
 	  it = skeletonize_matrixswap_serial(img->buf, img->width, img->height);
 	  break;
        case 999:
+	  printf("before calling mpi I: %ld myrank: %d\n", img->buf, myrank);
   	  mpi_init(argc, argv);
-	  it = mpi_start(img->buf, img->width, img->height);
+	  it = mpi_start(&(img->buf), img->width, img->height);
 	  mpi_finalize();
 	  break;
        default:
@@ -96,7 +98,8 @@ int main (int argc, char *argv[]) {
 	     papi_stop_event (i);
 	     #endif
 
-	     if(img->width < 55) print_img (img->buf, img->height, img->width); //print result
+	     if(img->width < 55) print_img (img->buf, img->width, img->height); //print result
+	     printf("I: %ld myrank: %d\n", img->buf, myrank);
 
 	     /* we get statistics */
 	     stop = omp_get_wtime();

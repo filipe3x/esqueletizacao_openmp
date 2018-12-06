@@ -27,7 +27,6 @@ static void mpi_ske_scatter(int **I, int block, int middle_block, int bottom_blo
 	if(n_threads > 1) {
 		// for the last process, we send a 1 pixel high slice (block-1) and the rest of the image
 		MPI_Ssend( getBlockIndex(block,W,i) - W, bottom_block * W, MPI_INT, i, tag, MPI_COMM_WORLD);
-		//printf("%d x %d\n",bottom_block,W);
 	}
 
 }
@@ -41,8 +40,6 @@ static void mpi_ske_gather(int **I, int block, int H, int W, int n_threads, int 
 
 	// last block to be received
 	MPI_Recv(getBlockIndex(block,W,i), block * W + (H % n_threads) * W, MPI_INT, i, gather_tag, MPI_COMM_WORLD, status);
-	//print_img(getBlockIndex(block,W,i),W,H);
-	//printf("\n");
 }
 
 static void cleanup_padding(int *ch_image, int H, int W) {

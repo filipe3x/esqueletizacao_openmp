@@ -395,7 +395,6 @@ int mpi_start(int **I, int W, int H) {
 			MPI_Recv(*I + block*W, W, MPI_INT, myrank+1, tag, MPI_COMM_WORLD, &status);
 
 			if((*I)[block*W] == 1) { (*I)[block*W] = 0; }
-
 		}
 
 		if(myrank != 0 && myrank != n_threads-1) { // the virtue is in the middle
@@ -407,7 +406,6 @@ int mpi_start(int **I, int W, int H) {
 			} 
 
 			MPI_Isend( myimg + W, W, MPI_INT, myrank-1, tag, MPI_COMM_WORLD, &req);
-
 			MPI_Isend( &myimg[(middle_block-2)*W], W, MPI_INT, myrank+1, tag, MPI_COMM_WORLD, &req);
 
 			myimg[W] = 0;
@@ -419,7 +417,6 @@ int mpi_start(int **I, int W, int H) {
 			if(myimg[0] == 1) { myimg[0] = 0; }
 
 			if(myimg[(block+1)*W] == 1) { myimg[(block+1)*W] = 0; }
-
 		}
 
 		if(myrank == n_threads-1) { // i'm with the bottom part
@@ -434,11 +431,9 @@ int mpi_start(int **I, int W, int H) {
 			MPI_Recv(myimg, W, MPI_INT, myrank-1, tag, MPI_COMM_WORLD, &status);
 
 			if(myimg[0] == 1) { myimg[0] = 0; }
-
 		}
 
 		MPI_Allreduce(&contOthers, &cont0, 1, MPI_INT, MPI_SUM, MPI_COMM_WORLD);
-
 
 		iteration++;
 	}

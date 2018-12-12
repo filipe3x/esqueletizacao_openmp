@@ -11,7 +11,6 @@
 int myrank;
 
 int mpi_init(int argc, char** argv) {
-	MPI_Status status;
 	MPI_Init(&argc, &argv);
 	MPI_Comm_rank( MPI_COMM_WORLD, &myrank );
 
@@ -191,7 +190,6 @@ int mpi_ske_start(int **I, int W, int H) {
 	int iteration = 0;
 	while(cont0 > 0) {
 		if(n_threads == 1) { cont0 = skeletonize_matrixswap_dist(I, &ch_image, W, block, iteration); iteration++; continue; } // jump
-
 		if(myrank == 0) { // i'm with the top
 			contOthers = skeletonize_matrixswap_dist(I, &ch_image, W, top_block, iteration);
 

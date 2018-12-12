@@ -5,13 +5,11 @@
 #PBS -l nodes=1:r641:ppn=32
 
 #PBS -m abe
+#PBS -M luis.fonseca156@gmail.com
 #PBS -M filipe3x@hotmail.com
 
-module load papi/5.4.1
-
-export OMP_WAIT_POLICY=active
-export OMP_DYNAMIC=false
-export OMP_PROC_BIND=true
+#source ./load_openmp.sh
+source ./load_mpi.sh
 
 MYWORKPLACE="/home/a57812/PCP/esqueletizacao_openmp/"
 

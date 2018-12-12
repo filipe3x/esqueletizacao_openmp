@@ -12,3 +12,5 @@ make prod schedule=<STATIC/DYNAMIC>
 ## Dependencies
 gcc 6.5
 openmp 4.5
+openmpi 1.8.4
+papi 5.4.1

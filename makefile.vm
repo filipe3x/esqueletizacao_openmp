@@ -1,0 +1,56 @@
+# source files.
+SRC = img.cpp skeletonize.cpp ppm.cpp utils.cpp papi_inst.cpp mpi_inst.cpp main.cpp
+
+OBJ = $(SRC:.cpp=.o)
+
+OUT = skeletonize
+
+PAPI = 5.4.1
+
+DEFINEMACRO = -D TESTING -D STATIC
+
+# include directories
+INCLUDES = -I. -I/usr/local/include/
+ 
+# C++ compiler flags (-g -O2 -Wall)
+CCFLAGS = -O3 -Wall -march=native --std=c++11 -fopenmp
+
+# compiler
+CCC = mpic++
+
+# library paths
+LIBS = -L/usr/local/lib/ -lm -lpapi
+
+# compile flags
+LDFLAGS = -g
+
+.SUFFIXES: .cpp .c 
+
+
+default: $(OUT)
+
+.cpp.o:
+	$(CCC) $(DEFINEMACRO) $(CCFLAGS) $(INCLUDES)  -c $< -o $@
+
+.c.o:
+	$(CCC) $(DEFINEMACRO) $(CCFLAGS) $(INCLUDES) -c $< -o $@
+
+$(OUT): $(OBJ)
+	$(CCC) -o $(OUT) $(CCFLAGS) $(OBJ) $(LIBS) 
+
+depend:  dep
+#
+#dep:
+#	makedepend -- $(CFLAGS) -- $(INCLUDES) $(SRC)
+
+dynamic: DEFINEMACRO = -D TESTING -D DYNAMIC
+dynamic: $(OUT)
+
+papi: DEFINEMACRO += -D PAPI
+papi: $(OUT)
+
+prod: DEFINEMACRO = -D PRODUCTION -D $(schedule)
+prod: $(OUT)
+
+clean:
+	rm -f *.o .a *~ Makefile.bak 

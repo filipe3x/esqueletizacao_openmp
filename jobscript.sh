@@ -48,7 +48,7 @@ calc() {
 
 for k in "${kernel[@]}"
 do
-  if [ $k == "skeletonize" ]; then module load gcc/5.3.0 2>>$errorlog; fi ## if we need specific modules for this kernel
+#  if [ $k == "skeletonize" ]; then module load gcc/5.3.0 2>>$errorlog; fi ## if we need specific modules for this kernel
   echo "** $k kernel | $(date)" | tee -a $OUTPUTGRAPH
   for i in "${input[@]}"
   do
@@ -69,7 +69,7 @@ do
     KBESTSEQ=$(calc_kbest "${THREEBEST[@]}")
     echo k-best score = $KBESTSEQ
     echo "(1, 1)" >> $OUTPUTGRAPH
-    for t in {2..32} ## number of total threads here
+    for t in {2..8} ## number of total threads here
     do
       echo "threads = $t"
       RESULTS=()

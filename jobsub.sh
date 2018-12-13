@@ -2,7 +2,7 @@
 #
 #PBS -N skeletonize
 #PBS -l walltime=47:59:59
-#PBS -l nodes=2:r641:ppn=32
+#PBS -l nodes=2:r641:ppn=32:myri
 
 #PBS -m abe
 #PBS -M luis.fonseca156@gmail.com

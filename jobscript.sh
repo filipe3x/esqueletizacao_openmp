@@ -10,7 +10,7 @@ input=(horse 256Kcircle)
 commseq="./$k $i $folder/$output 3"
 commpar="./$k $i $folder/$output 2 $t"
 commmpi="mpirun -np $t ./$k $i $folder/$output 999"
-commmpi="mpirun -bynode -mca btl ^openib -np $t ./$k $i $folder/$output 999"
+commmpi="mpirun -bynode -mca btl mx ^openib -np $t ./$k $i $folder/$output 999"
 commmpi="mpirun --report-bindings --map-by node -mca btl ^openib -np $t ./$k $i $folder/$output 999"
 commmpi="mpirun --map-by node -mca btl ^openib,mx,sm,self -np $t ./$k $i $folder/$output 999"
 
@@ -76,7 +76,7 @@ do
       for r in {1..10} ## number of runs for each parallel configuration
       do
         #comm="./$k $i $folder/$output 2 $t"
-        comm="mpirun --map-by node -mca btl ^openib -np $t ./$k $i $folder/$output 999"
+        comm="mpirun -bynode -mca btl mx ^openib -np $t ./$k $i $folder/$output 999"
         echo try= $r comm= $comm
         time=$($comm 2>>$errorlog)
         echo - $time -

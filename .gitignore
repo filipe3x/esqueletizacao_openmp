@@ -3,5 +3,6 @@
 *.o
 ppmimages/skeleton.pgm
 !results/*.log
+results/joberrors.log
 .DS_Store
 skeletonize

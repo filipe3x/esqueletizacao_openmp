@@ -4,13 +4,13 @@
 kernel=(skeletonize) 
 #kernel=(ske5.30static ske5.30dynamic ske6.50static ske6.50dynamic)
 
-input=(horse 256Kcircle) 
-#input=(horse 256Kcircle 1Mcircle 2Mcircle 4Mcircle 16Mcircle 32Mcircle)
+#input=(horse 256Kcircle) 
+input=(horse 256Kcircle 1Mcircle 2Mcircle 4Mcircle 16Mcircle 32Mcircle)
 
 commseq="./$k $i $folder/$output 3"
 commpar="./$k $i $folder/$output 2 $t"
 commmpi="mpirun -np $t ./$k $i $folder/$output 999"
-commmpi="mpirun -bynode -mca mpi_leave_pinned 1 btl ^openib -np $t ./$k $i $folder/$output 999"
+commmpi="mpirun -bynode -bind-to-core -report-bindings -mca mpi_leave_pinned 1 -mca btl ^openib -np $t ./$k $i $folder/$output 999"
 commmpi="mpirun --report-bindings --map-by node -mca btl ^openib -np $t ./$k $i $folder/$output 999"
 commmpi="mpirun --map-by node -mca btl ^openib,mx,sm,self -np $t ./$k $i $folder/$output 999"
 
@@ -21,6 +21,7 @@ folder=ppmimages
 errorlog=results/joberrors.log
 
 OUTPUTGRAPH=results/resultsgraph$(date +%d-%m-%Y-%H%M%S).log
+OUTPUTTIMES=results/resultstimes$(date +%d-%m-%Y-%H%M%S).csv
 
 RESULTS=()
 
@@ -49,7 +50,7 @@ calc() {
 for k in "${kernel[@]}"
 do
 #  if [ $k == "skeletonize" ]; then module load gcc/5.3.0 2>>$errorlog; fi ## if we need specific modules for this kernel
-  echo "** $k kernel | $(date)" | tee -a $OUTPUTGRAPH
+  echo "** $k kernel | $(date)" | tee -a $OUTPUTGRAPH $OUTPUTTIMES
   for i in "${input[@]}"
   do
     i=$folder/$i.pgm
@@ -68,15 +69,16 @@ do
     THREEBEST=($(calc_3_lower "${RESULTS[@]}"))
     KBESTSEQ=$(calc_kbest "${THREEBEST[@]}")
     echo k-best score = $KBESTSEQ
+    echo -n "$KBESTSEQ; " >> $OUTPUTTIMES
     echo "(1, 1)" >> $OUTPUTGRAPH
-    for t in {2..8} ## number of total threads here
+    for t in {2..32} ## number of total threads here
     do
       echo "threads = $t"
       RESULTS=()
       for r in {1..10} ## number of runs for each parallel configuration
       do
         #comm="./$k $i $folder/$output 2 $t"
-        comm="mpirun -bynode -mca btl ^openib -np $t ./$k $i $folder/$output 999"
+        comm="mpirun -bynode -bind-to-core -mca btl ^openib -np $t ./$k $i $folder/$output 999"
         echo try= $r comm= $comm
         time=$($comm 2>>$errorlog)
         echo - $time -
@@ -87,8 +89,10 @@ do
       KBESTPAR=$(calc_kbest "${THREEBEST[@]}")
       echo k-best score = $KBESTPAR
       echo speedup = $(calc $KBESTSEQ/$KBESTPAR)
+      echo -n "$KBESTPAR; " >> $OUTPUTTIMES
       echo "($t, $(calc $KBESTSEQ/$KBESTPAR))" >> $OUTPUTGRAPH
     done
+    echo " " >> $OUTPUTTIMES
   done
 done
 

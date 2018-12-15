@@ -8,7 +8,9 @@
 #PBS -M luis.fonseca156@gmail.com
 #PBS -M filipe3x@hotmail.com
 
-MYWORKPLACE="/home/a57812/PCP/esqueletizacao_openmp/"
+#PBS -j oe
+
+MYWORKPLACE="/home/$USER/PCP/esqueletizacao_openmp/"
 
 job="jobscript.sh"
 

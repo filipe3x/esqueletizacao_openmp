@@ -268,6 +268,142 @@ int mpi_ske_start(int **I, int W, int H) {
 	return iteration;
 }
 
+int mpi_ske_start_comm(int **I, int W, int H, int num_it) {
+	int n_threads = 1;
+	int tag = 2;
+	int source = 0;
+	int i = 0;
+	int* myimg, *ch_image;
+	int gather_tag = 1;
+
+	MPI_Status status;
+	MPI_Request req;
+	MPI_Comm_size(MPI_COMM_WORLD, &n_threads);
+
+	int block = H/n_threads; //number of lines for each process
+	int top_block = block + 1;
+	int bottom_block = 1 + block + (H % n_threads);
+	int middle_block = 1 + block + 1;
+
+	/* scatter image from root into all other processes*/
+
+	if(myrank == 0) {
+		ch_image = (int*) memalign (32, H * W * sizeof(int)); 
+		cleanup_padding(ch_image, H, W);
+
+		mpi_ske_scatter(I,block,middle_block,bottom_block,W,n_threads,tag);
+	} else {
+		// we receive blocks
+		for(i=1; i < n_threads - 1; i++) {
+			if(myrank == i) {
+				myimg = (int*) memalign(0x20, (middle_block * W) * sizeof(int));
+				ch_image = (int*) memalign (32, middle_block * W * sizeof(int)); 
+				cleanup_padding(ch_image, middle_block, W);
+
+				MPI_Recv(myimg , middle_block * W, MPI_INT, source, tag, MPI_COMM_WORLD, &status);
+			}
+		}
+
+		// last block to be received
+		if(n_threads > 1 && myrank == n_threads - 1) {
+			myimg = (int*) memalign(0x20, bottom_block * W * sizeof(int));
+			ch_image = (int*) memalign (32, bottom_block * W * sizeof(int)); 
+			cleanup_padding(ch_image, bottom_block, W);
+
+			MPI_Recv(myimg , bottom_block * W, MPI_INT, source, tag, MPI_COMM_WORLD, &status);
+		}
+	}
+
+	// we work on them
+	int cont0 = 1;
+	int contOthers = 1;
+	int iteration = 0;
+	while(cont0 > 0) {
+		if(n_threads == 1) { cont0 = skeletonize_matrixswap_dist(I, &ch_image, W, block, iteration); iteration++; continue; } // jump
+		if(myrank == 0) { // i'm with the top
+			//contOthers = skeletonize_matrixswap_dist(I, &ch_image, W, top_block, iteration);
+			num_it = num_it - 1;
+			contOthers = num_it;
+
+			if(contOthers == 0) { (*I)[(block-1)*W] = 1; }
+
+			MPI_Isend(*I + (block-1)*W, W, MPI_INT, myrank+1, tag, MPI_COMM_WORLD, &req); 
+
+			(*I)[(block-1)*W] = 0;
+
+			MPI_Recv(*I + block*W, W, MPI_INT, myrank+1, tag, MPI_COMM_WORLD, &status);
+
+			if((*I)[block*W] == 1) { (*I)[block*W] = 0; }
+		}
+
+		if(myrank != 0 && myrank != n_threads-1) { // the virtue is in the middle
+			//contOthers = skeletonize_matrixswap_dist(&myimg, &ch_image, W, middle_block, iteration);
+			num_it = num_it - 1;
+			contOthers = num_it;
+
+			if(contOthers == 0) {	
+				myimg[W] = 1;
+				myimg[(middle_block-2)*W] = 1;
+			} 
+
+			MPI_Isend( myimg + W, W, MPI_INT, myrank-1, tag, MPI_COMM_WORLD, &req);
+			MPI_Isend( &myimg[(middle_block-2)*W], W, MPI_INT, myrank+1, tag, MPI_COMM_WORLD, &req);
+
+			myimg[W] = 0;
+			myimg[(middle_block-2)*W] = 0;
+
+			MPI_Recv(myimg, W, MPI_INT, myrank-1, tag, MPI_COMM_WORLD, &status);
+			MPI_Recv(&myimg[(middle_block - 1)*W] , W, MPI_INT, myrank+1, tag, MPI_COMM_WORLD, &status);
+
+			if(myimg[0] == 1) { myimg[0] = 0; }
+
+			if(myimg[(block+1)*W] == 1) { myimg[(block+1)*W] = 0; }
+		}
+
+		if(myrank == n_threads-1) { // i'm with the bottom part
+			//contOthers = skeletonize_matrixswap_dist(&myimg, &ch_image, W, bottom_block, iteration);
+			num_it = num_it - 1;
+			contOthers = num_it;
+
+			if(contOthers == 0) { myimg[W] = 1; } 
+
+			MPI_Isend(myimg + W, W, MPI_INT, myrank-1, tag, MPI_COMM_WORLD,&req);
+
+			myimg[W] = 0;
+
+			MPI_Recv(myimg, W, MPI_INT, myrank-1, tag, MPI_COMM_WORLD, &status);
+
+			if(myimg[0] == 1) { myimg[0] = 0; }
+		}
+
+		MPI_Allreduce(&contOthers, &cont0, 1, MPI_INT, MPI_SUM, MPI_COMM_WORLD);
+
+		iteration++;
+	}
+
+	/* Gather */
+
+	if(n_threads > 1) {
+
+		if(myrank == 0) { // I'm with the top 
+			mpi_ske_gather(I,block,H,W,n_threads,gather_tag,&status);
+		}
+
+		if(myrank != 0 && myrank != n_threads-1) { // the virtue is in the middle
+			MPI_Ssend( myimg + W, block * W, MPI_INT, source, gather_tag, MPI_COMM_WORLD);
+		}
+
+		if(myrank == n_threads-1) { // I'm with the bottom part
+			MPI_Ssend( myimg + W, block * W + (H % n_threads) * W, MPI_INT, source, gather_tag, MPI_COMM_WORLD);
+		}
+
+	}
+
+	//MPI_Abort(MPI_COMM_WORLD, 999);
+
+	return iteration;
+}
+
 int mpi_finalize() {
 	//only the master thread should call this. In the event of using processes everyone should call it
 	return MPI_Finalize();

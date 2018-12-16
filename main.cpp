@@ -17,8 +17,9 @@ static int write_out_image (char *outfile, image res_img);
 static void print_usage (char *msg);
 
 int main (int argc, char *argv[]) {
-  image img; //allocate this the best way possible. please
+  image img; //allocate this the best way possible
   int f_width, i, fcode, num_threads = 1;
+  int num_it = 1;
   char infile[256], outfile[256];
 
   myrank = 0;
@@ -79,9 +80,14 @@ int main (int argc, char *argv[]) {
        case 3:
 	  it = skeletonize_matrixswap_serial(img->buf, img->width, img->height);
 	  break;
-       case 999:
+       case 4:
   	  mpi_init(argc, argv);
 	  it = mpi_ske_start(&(img->buf), img->width, img->height);
+	  mpi_finalize();
+	  break;
+       case 5:
+  	  mpi_init(argc, argv);
+	  it = mpi_ske_start_comm(&(img->buf), img->width, img->height, num_it);
 	  mpi_finalize();
 	  break;
        default:
@@ -125,7 +131,7 @@ int main (int argc, char *argv[]) {
 
 }
 
-static int verify_command_line (int argc, char *argv[], char *infile, char *outfile, int *fcode, int *f_width, int *num_threads) {
+static int verify_command_line (int argc, char *argv[], char *infile, char *outfile, int *fcode, int *f_width, int *num_threads, int *num_it) {
 	if (argc<4) {
 		print_usage ((char *)"At least 3 arguments are required!");
 		return 0;
@@ -164,9 +170,19 @@ static int verify_command_line (int argc, char *argv[], char *infile, char *outf
 	    printf("running skeletonize serial (matrix swap)\n");
             #endif
 	    break;
-	  case 999:
+	  case 4:
             #ifdef TESTING
 	    printf("running skeletonize distributed (matrix swap)\n");
+            #endif
+	    break;
+	  case 5:
+	    if (argc<5) {
+		print_usage ((char *)"skeletonize distributed communication requires number of iterations!");
+		return 0;
+	    }
+	    *num_it = atoi (argv[4]);
+            #ifdef TESTING
+	    printf("running skeletonize distributed communication with %d iterations\n", *num_it); 
             #endif
 	    break;
 	  default:
@@ -184,7 +200,8 @@ static void print_usage (char *msg) {
 	fprintf (stderr, "\t<function code> = 1 : skeletonize_doublepass_Serial [Specific Parameters] = NULL\n");
 	fprintf (stderr, "\t<function code> = 2 : skeletonize_matrixswap_Parallel [Specific Parameters] = <n_threads>\n");
 	fprintf (stderr, "\t<function code> = 3 : skeletonize_matrixswap_Serial [Specific Parameters] = NULL\n");
-	fprintf (stderr, "\t<function code> = 999 : skeletonize_matrixswap_Distributed [Specific Parameters] = NULL\n");
+	fprintf (stderr, "\t<function code> = 4 : skeletonize_matrixswap_Distributed [Specific Parameters] = NULL\n");
+	fprintf (stderr, "\t<function code> = 5 : skeletonize_communicationsOnly_Distributed [Specific Parameters] = <nr_iterations>\n");
 	fprintf (stderr, "\n");
 }
 

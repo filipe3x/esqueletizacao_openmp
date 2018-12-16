@@ -11,7 +11,7 @@
 #include "ppm.h"
 #include "utils.h"
 
-static int verify_command_line (int argc, char *argv[], char *infile, char *outfile, int *fcode, int *f_width, int *num_threads);
+static int verify_command_line (int argc, char *argv[], char *infile, char *outfile, int *fcode, int *f_width, int *num_threads, int *num_it);
 static int read_inp_image (char *infile, image *img);
 static int write_out_image (char *outfile, image res_img);
 static void print_usage (char *msg);
@@ -25,7 +25,7 @@ int main (int argc, char *argv[]) {
   myrank = 0;
   //mpi_init(argc, argv);
 
-  if (!verify_command_line (argc, argv, infile, outfile, &fcode, &f_width, &num_threads)) {
+  if (!verify_command_line (argc, argv, infile, outfile, &fcode, &f_width, &num_threads, &num_it)) {
 	return 0;
   }
     //printf("here is line %d\n", __LINE__); //for debugging

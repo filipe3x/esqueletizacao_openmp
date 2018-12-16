@@ -17,15 +17,15 @@ int mpi_init(int argc, char** argv) {
 	return 0;
 }
 
-static void mpi_ske_scatter(int **I, int block, int middle_block, int bottom_block, int W, int n_threads, int tag) {
+static void mpi_ske_scatter(int **I, int block, int middle_block, int bottom_block, int W, int n_threads, int tag, MPI_Request *req) {
 	int i;
 	for(i=1; i < n_threads - 1; i++) { //we shall send 1 line above and 1 line below the block
-		MPI_Ssend( getBlockIndex(block,W,i) - W, middle_block * W, MPI_INT, i, tag, MPI_COMM_WORLD);
+		MPI_Isend( getBlockIndex(block,W,i) - W, middle_block * W, MPI_INT, i, tag, MPI_COMM_WORLD, req);
 	}
 
 	if(n_threads > 1) {
 		// for the last process, we send a 1 pixel high slice (block-1) and the rest of the image
-		MPI_Ssend( getBlockIndex(block,W,i) - W, bottom_block * W, MPI_INT, i, tag, MPI_COMM_WORLD);
+		MPI_Isend( getBlockIndex(block,W,i) - W, bottom_block * W, MPI_INT, i, tag, MPI_COMM_WORLD, req);
 	}
 
 }
@@ -60,6 +60,7 @@ int mpi_ske_start_centralized(int **I, int W, int H) {
 	int* myimg, *ch_image, *aux;
 
 	MPI_Status status;
+	MPI_Request req;
 	MPI_Comm_size(MPI_COMM_WORLD, &n_threads);
 
 	int block = H/n_threads; //number of lines for each process
@@ -73,7 +74,7 @@ int mpi_ske_start_centralized(int **I, int W, int H) {
 		ch_image = (int*) memalign (32, H * W * sizeof(int)); 
 		cleanup_padding(ch_image, H, W);
 
-		mpi_ske_scatter(I,block,middle_block,bottom_block,W,n_threads,tag);
+		mpi_ske_scatter(I,block,middle_block,bottom_block,W,n_threads,tag,&req);
 	} else {
 		// we receive blocks
 		for(i=1; i < n_threads - 1; i++) {
@@ -111,7 +112,7 @@ int mpi_ske_start_centralized(int **I, int W, int H) {
 
 			/* Scatter */
 
-			mpi_ske_scatter(I,block,middle_block,bottom_block,W,n_threads,tag);
+			mpi_ske_scatter(I,block,middle_block,bottom_block,W,n_threads,tag,&req);
 		}
 
 		if(myrank != 0 && myrank != n_threads-1) { // the virtue is in the middle
@@ -161,7 +162,7 @@ int mpi_ske_start(int **I, int W, int H) {
 		ch_image = (int*) memalign (32, H * W * sizeof(int)); 
 		cleanup_padding(ch_image, H, W);
 
-		mpi_ske_scatter(I,block,middle_block,bottom_block,W,n_threads,tag);
+		mpi_ske_scatter(I,block,middle_block,bottom_block,W,n_threads,tag, &req);
 	} else {
 		// we receive blocks
 		for(i=1; i < n_threads - 1; i++) {
@@ -291,7 +292,7 @@ int mpi_ske_start_comm(int **I, int W, int H, int num_it) {
 		ch_image = (int*) memalign (32, H * W * sizeof(int)); 
 		cleanup_padding(ch_image, H, W);
 
-		mpi_ske_scatter(I,block,middle_block,bottom_block,W,n_threads,tag);
+		mpi_ske_scatter(I,block,middle_block,bottom_block,W,n_threads,tag,&req);
 	} else {
 		// we receive blocks
 		for(i=1; i < n_threads - 1; i++) {

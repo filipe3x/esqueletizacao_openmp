@@ -87,6 +87,7 @@ int main (int argc, char *argv[]) {
 	  break;
        case 5:
   	  mpi_init(argc, argv);
+	  if(num_it < 0) num_it = (int) ((float) img->width) / 1.41436464;
 	  it = mpi_ske_start_comm(&(img->buf), img->width, img->height, num_it);
 	  mpi_finalize();
 	  break;
@@ -182,7 +183,8 @@ static int verify_command_line (int argc, char *argv[], char *infile, char *outf
 	    }
 	    *num_it = atoi (argv[4]);
             #ifdef TESTING
-	    printf("running skeletonize distributed communication with %d iterations\n", *num_it); 
+	    if(*num_it > 0) printf("running skeletonize distributed communication with %d iterations\n", *num_it); 
+	    else printf("running skeletonize distributed communication with a dynamic number of iterations\n"); 
             #endif
 	    break;
 	  default:

@@ -1,7 +1,7 @@
 #!/bin/sh
 #
-#PBS -N skeletonize
-#PBS -l walltime=47:59:59
+#PBS -N ske_comm
+#PBS -l walltime=04:59:59
 #PBS -l nodes=8:r641:ppn=32:myri
 
 #PBS -m abe

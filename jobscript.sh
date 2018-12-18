@@ -5,8 +5,8 @@ kernel=(skeletonize)
 #kernel=(ske5.30static ske5.30dynamic ske6.50static ske6.50dynamic)
 
 #input=(horse 256Kcircle) 
-input=(horse 256Kcircle 1Mcircle 2Mcircle 4Mcircle 16Mcircle 32Mcircle)
-input=(32Mcircle 64Mcircle)
+input=(horse 256Kcircle 1Mcircle 2Mcircle 4Mcircle 16Mcircle 32Mcircle 64Mcircle)
+#input=(32Mcircle 64Mcircle)
 
 commseq="./$k $i $folder/$output 3"
 commpar="./$k $i $folder/$output 2 $t"
@@ -79,7 +79,7 @@ do
       for r in {1..10} ## number of runs for each parallel configuration
       do
         #comm="./$k $i $folder/$output 2 $t"
-        comm="mpirun -bynode -bind-to-core -mca btl ^openib -np $t ./$k $i $folder/$output 5"
+        comm="mpirun -bynode -bind-to-core -mca btl ^openib -np $t ./$k $i $folder/$output 5 -1"
         echo try= $r comm= $comm
         time=$($comm 2>>$errorlog)
         echo - $time -

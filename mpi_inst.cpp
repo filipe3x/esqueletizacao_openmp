@@ -115,7 +115,7 @@ int mpi_ske_start_centralized(int **I, int W, int H) {
 			mpi_ske_scatter(I,block,middle_block,bottom_block,W,n_threads,tag,&req);
 		}
 
-		if(myrank != 0 && myrank != n_threads-1) { // the virtue is in the middle
+		if(myrank != 0 && myrank != n_threads-1) { // middle
 			contOthers = skeletonize_matrixswap_dist(&myimg, &ch_image, W, middle_block, iteration);
 			MPI_Send( myimg + W, block * W, MPI_INT, source, tag, MPI_COMM_WORLD);
 			MPI_Recv(myimg , middle_block * W, MPI_INT, source, tag, MPI_COMM_WORLD, &status);
@@ -133,8 +133,6 @@ int mpi_ske_start_centralized(int **I, int W, int H) {
 
 		iteration++;
 	}
-
-	//MPI_Abort(MPI_COMM_WORLD, 999);
 
 	return iteration;
 }
@@ -194,51 +192,29 @@ int mpi_ske_start(int **I, int W, int H) {
 		if(myrank == 0) { // i'm with the top
 			contOthers = skeletonize_matrixswap_dist(I, &ch_image, W, top_block, iteration);
 
-			if(contOthers == 0) { (*I)[(block-1)*W] = 1; }
-
 			MPI_Isend(*I + (block-1)*W, W, MPI_INT, myrank+1, tag, MPI_COMM_WORLD, &req); 
-
-			(*I)[(block-1)*W] = 0;
 
 			MPI_Recv(*I + block*W, W, MPI_INT, myrank+1, tag, MPI_COMM_WORLD, &status);
 
-			if((*I)[block*W] == 1) { (*I)[block*W] = 0; }
 		}
 
-		if(myrank != 0 && myrank != n_threads-1) { // the virtue is in the middle
+		if(myrank != 0 && myrank != n_threads-1) { // middle
 			contOthers = skeletonize_matrixswap_dist(&myimg, &ch_image, W, middle_block, iteration);
-
-			if(contOthers == 0) {	
-				myimg[W] = 1;
-				myimg[(middle_block-2)*W] = 1;
-			} 
 
 			MPI_Isend( myimg + W, W, MPI_INT, myrank-1, tag, MPI_COMM_WORLD, &req);
 			MPI_Isend( &myimg[(middle_block-2)*W], W, MPI_INT, myrank+1, tag, MPI_COMM_WORLD, &req);
 
-			myimg[W] = 0;
-			myimg[(middle_block-2)*W] = 0;
-
 			MPI_Recv(myimg, W, MPI_INT, myrank-1, tag, MPI_COMM_WORLD, &status);
 			MPI_Recv(&myimg[(middle_block - 1)*W] , W, MPI_INT, myrank+1, tag, MPI_COMM_WORLD, &status);
 
-			if(myimg[0] == 1) { myimg[0] = 0; }
-
-			if(myimg[(block+1)*W] == 1) { myimg[(block+1)*W] = 0; }
 		}
 
 		if(myrank == n_threads-1) { // i'm with the bottom part
 			contOthers = skeletonize_matrixswap_dist(&myimg, &ch_image, W, bottom_block, iteration);
 
-			if(contOthers == 0) { myimg[W] = 1; } 
-
 			MPI_Isend(myimg + W, W, MPI_INT, myrank-1, tag, MPI_COMM_WORLD,&req);
 
-			myimg[W] = 0;
-
 			MPI_Recv(myimg, W, MPI_INT, myrank-1, tag, MPI_COMM_WORLD, &status);
-
-			if(myimg[0] == 1) { myimg[0] = 0; }
 		}
 
 		MPI_Allreduce(&contOthers, &cont0, 1, MPI_INT, MPI_SUM, MPI_COMM_WORLD);
@@ -254,7 +230,7 @@ int mpi_ske_start(int **I, int W, int H) {
 			mpi_ske_gather(I,block,H,W,n_threads,gather_tag,&status);
 		}
 
-		if(myrank != 0 && myrank != n_threads-1) { // the virtue is in the middle
+		if(myrank != 0 && myrank != n_threads-1) { // middle
 			MPI_Ssend( myimg + W, block * W, MPI_INT, source, gather_tag, MPI_COMM_WORLD);
 		}
 
@@ -263,8 +239,6 @@ int mpi_ske_start(int **I, int W, int H) {
 		}
 
 	}
-
-	//MPI_Abort(MPI_COMM_WORLD, 999);
 
 	return iteration;
 }
@@ -337,7 +311,7 @@ int mpi_ske_start_comm(int **I, int W, int H, int num_it) {
 			if((*I)[block*W] == 1) { (*I)[block*W] = 0; }
 		}
 
-		if(myrank != 0 && myrank != n_threads-1) { // the virtue is in the middle
+		if(myrank != 0 && myrank != n_threads-1) { // middle
 			//contOthers = skeletonize_matrixswap_dist(&myimg, &ch_image, W, middle_block, iteration);
 			num_it = num_it - 1;
 			contOthers = num_it;
@@ -390,7 +364,7 @@ int mpi_ske_start_comm(int **I, int W, int H, int num_it) {
 			mpi_ske_gather(I,block,H,W,n_threads,gather_tag,&status);
 		}
 
-		if(myrank != 0 && myrank != n_threads-1) { // the virtue is in the middle
+		if(myrank != 0 && myrank != n_threads-1) { // middle
 			MPI_Ssend( myimg + W, block * W, MPI_INT, source, gather_tag, MPI_COMM_WORLD);
 		}
 
@@ -399,8 +373,6 @@ int mpi_ske_start_comm(int **I, int W, int H, int num_it) {
 		}
 
 	}
-
-	//MPI_Abort(MPI_COMM_WORLD, 999);
 
 	return iteration;
 }
